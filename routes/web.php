@@ -19,12 +19,20 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/report','HomeController@report');
-
+Route::get('/calendario', 'EventoController@index');
 
 
 Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
-    Route::get('/usuarios','UserController@index');
-    Route::get('/proyectos','ProjectController@index');
-    Route::get('/config','ConfigController@index');
+    
+    //Eventos
+    
+    //Asignaturas
+    Route::get('/asignaturas','AsignaturaController@index');
+    Route::post('/asignaturas','AsignaturaController@store');
+    Route::get('/asignaturas/{id}','AsignaturaController@edit');
+    Route::post('/asignaturas/{id}','AsignaturaController@update');
+    Route::get('/asignaturas/{id}/eliminar','AsignaturaController@delete');
+
+    
+    
 });

@@ -4,35 +4,45 @@
     <div class="card-body">
 
         <div class="list-group">
+
             @if (auth()->check())
-            <a href="{{ url('/home') }}" class="list-group-item list-group-item">
+            <a href="{{ url('/home') }}" class="list-group-item @if(request()->is('home')) active @endif">
                 Inicio
             </a>
-            <a href="{{ url('/ver') }}" class="list-group-item list-group-item">
-                Ver incidencias
-            </a>
-            <a href="{{ url('/report') }}" class="list-group-item list-group-item">
-                Reportar incidencias
-            </a>
-            <a href="{{ url('/usuarios') }}" class="list-group-item list-group-item">
-                Usuarios
-            </a>
-            <a href="{{ url('/proyectos') }}" class="list-group-item list-group-item">
-                Proyectos
-            </a>
-            <a href="{{ url('/config') }}" class="list-group-item list-group-item">
-                Configuración
+            <a href="{{ url('/calendario') }}" class="list-group-item @if(request()->is('calendario')) active @endif">
+                Calendario
             </a>
             
+                @if (auth()->user()->is_admin)
+                <a href="{{ url('/crearevento') }}" class="list-group-item @if(request()->is('crearevento')) active @endif">
+                    Crear Evento
+                </a>
+                <a href="{{ url('/listaeventos') }}" class="list-group-item @if(request()->is('listaeventos')) active @endif">
+                    Editar Evento
+                </a>
+
+                <a href="{{ url('/informes') }}" class="list-group-item @if(request()->is('informes')) active @endif">
+                    Ver Informes
+                </a>
+
+                <ul class="list-group-item list-group-flush @if(request()->is('salas')) active @endif @if(request()->is('profesores')) active @endif @if(request()->is('asignaturas')) active @endif">
+                    <a class="nav-item dropdown">
+                        <a class="nav-link- dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administrar</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/salas">Administrar Salas</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/profesores">Administrar Profesores</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/asignaturas">Administrar Asignaturas</a>
+                        </div>
+                    </a>
+
+                </ul>
+                @endif
+
             @else
-            <a href="{{ url('/') }}" class="list-group-item list-group-item">
-                Bienvenido
-            </a>
-            <a href="{{ url('/') }}" class="list-group-item list-group-item">
-                Instrucciones
-            </a>
-            <a href="{{ url('/') }}" class="list-group-item list-group-item">
-                Créditos
+            <a href="{{ url('/home') }}" class="list-group-item list-group-item">
+                Inicio
             </a>
             @endif
         </div>

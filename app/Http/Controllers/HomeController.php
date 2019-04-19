@@ -26,7 +26,5 @@ class HomeController extends Controller
     {
         return view('home', ['name' => Auth::user()->name ]);
     }
-    public function report() {
-        return view('report');
-    }
+    
 }
