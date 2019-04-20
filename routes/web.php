@@ -32,7 +32,18 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/asignaturas/{id}','AsignaturaController@edit');
     Route::post('/asignaturas/{id}','AsignaturaController@update');
     Route::get('/asignaturas/{id}/eliminar','AsignaturaController@delete');
-
     
+    //Salas
+    Route::get('/salas','SalaController@index');
+    Route::post('/salas','SalaController@store');
+    Route::get('/salas/{id}','SalaController@edit');
+    Route::post('/salas/{id}','SalaController@update');
+    Route::get('/salas/{id}/eliminar','SalaController@delete');
+
+    //TiposSala
+    
+    //Profesor
+    
+    //Simulador
     
 });

@@ -29,11 +29,13 @@
                     <a class="nav-item dropdown">
                         <a class="nav-link- dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administrar</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/salas">Administrar Salas</a>
+                            <a class="dropdown-item" href="/salas">Salas</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/profesores">Administrar Profesores</a>
+                            <a class="dropdown-item" href="/profesores">Profesores</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/asignaturas">Administrar Asignaturas</a>
+                            <a class="dropdown-item" href="/asignaturas">Asignaturas</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/otros">Otros</a>
                         </div>
                     </a>
 

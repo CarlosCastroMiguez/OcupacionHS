@@ -34,23 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 right: 'resourceTimeGridDay,listDay'
             },
 
-            resources: [{
-                    id: '1',
-                    title: 'Room A'
-                },
-                {
-                    id: '2',
-                    title: 'Room B'
-                },
-                {
-                    id: '3',
-                    title: 'Room C'
-                },
-                {
-                    id: '4',
-                    title: 'Room D'
-                }
-            ],
+            resources: '/api/resources/salas',
             weekends: false,
             events:'api/eventos/calendar'
             //format start: "2019-04-19T07:30:00+00:00",

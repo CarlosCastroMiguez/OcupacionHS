@@ -11,7 +11,7 @@ use App\Evento;
 class AsignaturaController extends Controller
 {   
         
-    //He de definir esta funcion para la api ya que en el controlador de eventos requiere autenticacion y no recibo la respuesta.  
+    //He de definir esta funcion para la API ya que en el controlador de eventos requiere autenticacion y no recibo la respuesta.  
     public function eventos(){
         
         $events = Evento::all("id", "nombre as title", "start_date as start", "end_date as end", "id_sala as resourceId")->toArray();
