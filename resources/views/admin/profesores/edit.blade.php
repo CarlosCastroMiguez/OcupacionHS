@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="card border-primary mb-3">
-    <div class="card-header">Editar Sala</div>
+    <div class="card-header">Editar Profesor</div>
     <div class="card-body">
 
         @if(session('notification'))
@@ -26,22 +26,22 @@
             {{ csrf_field() }}
 
             <div class="form-group">
-                <label for="tipo">Tipo de Sala</label>
-                <select name="tipo" class="form-control">
-
-                    @foreach($tipos_sala as $tipo)
-                    <option value="{{ old('tipo', $sala->tipo) }}">{{ old('tipo', $sala->tipo) }}</option>
-                    <option value="{{ $tipo -> nombre }}">{{ $tipo -> nombre }}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="capacidad">Capacidad de la sala</label>
-                <input name="capacidad" name="capacidad" class="form-control" value="{{ old('capacidad' , $sala->capacidad) }}"></input>
+                <label for="nombre">Nombre del profesor</label>
+                <input name="nombre" name="nombre" class="form-control" value="{{ old('nombre', $profesor->nombre) }}"></input>
             </div>
 
             <div class="form-group">
-                <button class="btn btn-primary">Actualizar Sala</button>
+                <label for="apellido">Apellido del profesor</label>
+                <input name="apellido" name="apellido" class="form-control" value="{{ old('apellido', $profesor->apellido) }}"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="departamento">Departamento</label>
+                <input name="departamento" name="departamento" class="form-control" value="{{ old('departamento', $profesor->departamento) }}"></input>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary">Actualizar Profesor</button>
             </div>
 
         </form>

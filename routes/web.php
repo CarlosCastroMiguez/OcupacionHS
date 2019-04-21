@@ -43,7 +43,23 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
     //TiposSala
     
     //Profesor
+    Route::get('/profesores','ProfesorController@index');
+    Route::post('/profesores','ProfesorController@store');
+    Route::get('/profesores/{id}','ProfesorController@edit');
+    Route::post('/profesores/{id}','ProfesorController@update');
+    Route::get('/profesores/{id}/eliminar','ProfesorController@delete');
+    
+    //Simulador y Tipo sala
+    Route::get('/otros','SimuladorController@index');
     
     //Simulador
+    Route::post('/simuladores','SimuladorController@store');
+    Route::post('/simuladores/editar','SimuladorController@update');
+    Route::get('/simuladores/{id}/eliminar','SimuladorController@delete');
+    
+    //Tipo Sala
+    Route::post('/tiposala','TipoSalaController@store');
+    Route::post('/tiposala/editar','TipoSalaController@update');
+    Route::get('/tiposala/{id}/eliminar','TipoSalaController@delete');
     
 });

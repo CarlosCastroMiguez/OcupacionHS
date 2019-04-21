@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
             },
 
             resources: '/api/resources/salas',
-            weekends: false,
             events:'api/eventos/calendar'
             //format start: "2019-04-19T07:30:00+00:00",
         });
