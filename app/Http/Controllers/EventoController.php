@@ -24,11 +24,11 @@ class EventoController extends Controller
     
     public function index(){   
         $eventos = Evento::all();
-        return view('admin.eventos.index')->with(compact('eventos'));
+        return view('eventos.index')->with(compact('eventos'));
     }
     
     public function show($id){   
-        $evento = Evento::findOrFail($id);
+        $evento = Evento::findOrFail($id)->first();
         return view ('eventos.show')->with(compact('evento'));
     }
     
@@ -62,7 +62,15 @@ class EventoController extends Controller
         return back()->with('notification', 'Evento añadido correctamente');
     }
     
-    public function edit() {
+    public function edit($id) {
+        
+        $evento = Evento::find($id);
+        $profesores = Profesor::all();
+        $asignaturas = Asignatura::all();
+        $simuladores = Simulador::all();
+        $salas = Sala::all();
+        
+        return view('admin.eventos.edit')->with(compact('evento', 'profesores', 'salas', 'simuladores', 'asignaturas'));
         
         
     }
@@ -72,8 +80,12 @@ class EventoController extends Controller
         
     }
     
-    public function delete() {
+    public function delete($id) {
         
+        Evento::findOrFail($id)->delete();
+        $eventos = Evento::all();
+        
+        return redirect('/eventos')->with('notification', 'Evento eliminado correctamente')->with(compact('eventos'));
         
     }
     

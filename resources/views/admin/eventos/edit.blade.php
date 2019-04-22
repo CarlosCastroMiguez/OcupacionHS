@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="card border-primary mb-3">
-    <div class="card-header">Editar Sala</div>
+    <div class="card-header">Editar Evento</div>
     <div class="card-body">
 
         @if(session('notification'))
@@ -23,27 +23,76 @@
         @endif
 
         <form action="" method="POST">
-            {{ csrf_field() }}
+            {{csrf_field() }}
 
             <div class="form-group">
-                <label for="tipo">Tipo de Sala</label>
-                <select name="tipo" class="form-control">
-
-                    @foreach($tipos_sala as $tipo)
-                    <option value="{{ old('tipo', $sala->tipo) }}">{{ old('tipo', $sala->tipo) }}</option>
-                    <option value="{{ $tipo -> nombre }}">{{ $tipo -> nombre }}</option>
-                    @endforeach
-                </select>
+                <label for="nombre">Nombre del evento</label>
+                <input type="text" class="form-control" name="nombre" placeholder="Introduce el nombre" value="{{ old('nombre', $evento->nombre) }}" required></input>
             </div>
             <div class="form-group">
-                <label for="capacidad">Capacidad de la sala</label>
-                <input name="capacidad" name="capacidad" class="form-control" value="{{ old('capacidad' , $sala->capacidad) }}"></input>
+                <label for="numAlumnos">Número de alumnos</label>
+                <input type="text" class="form-control" name="numAlumnos" placeholder="Introduce el numero de alumnos" value="{{ old('numAlumnos', $evento->numAlumnos) }}" required></input>
             </div>
+            <div class="row">
 
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="start_date">Fecha de inicio</label>
+                        <input type="datetime-local" class="form-control" name="start_date" placeholder="Introduce la fecha de inicio" value="{{ old('start_date' , $evento->start_date) }}" required></input>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="end_date">Fecha de fin</label>
+                        <input type="datetime-local" class="form-control" name="end_date" placeholder="Introduce la fecha de fin" value="{{ old('end_date', $evento->end_date) }}" required></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="sala">Sala</label>
+                        <select name="sala" class="form-control">
+                            <option value="{{ old('sala', $evento->id_sala) }}">{{ old('sala', $evento->id_sala) }}</option>
+                            @foreach($salas as $sala)
+                                <option value="{{ $sala -> id }}"> {{$sala->tipo}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="asignatura">Asignatura</label>
+                        <select name="asignatura" class="form-control">
+                            <option value="{{ old('asignatura', $evento->id_asignatura) }}">{{ old('asignatura', $evento->id_asignatura) }}</option>
+                            @foreach($asignaturas as $asignatura)
+                                <option value="{{ $asignatura -> id }}"> {{$asignatura->nombre}}</option>
+                            @endforeach
+                        </select>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="profesor">Profesor</label>
+                        <select name="profesor" class="form-control">
+                            <option value="{{ old('profesor', $evento->id_profesor) }}">{{ old('profesor', $evento->id_profesor) }}</option>
+                            @foreach($profesores as $profesor)
+                                <option value="{{ $profesor -> id }}"> {{$profesor->nombre}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="simulador">Simulador</label>
+                        <select name="simulador" class="form-control">
+                            <option value="{{ old('simulador', $evento->id_simulador) }}">{{ old('simulador', $evento->id_simulador) }}</option>
+                            @foreach($simuladores as $simulador)
+                                <option value="{{ $simulador -> id }}"> {{$simulador->nombre}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                </div>
+            </div>
             <div class="form-group">
-                <button class="btn btn-primary">Actualizar Sala</button>
-            </div>
+                <button class="btn btn-primary">Registrar Evento</button>
+                <a href="/calendario" class="btn btn-info"> Atrás </a>
 
+            </div>
         </form>
 
     </div>

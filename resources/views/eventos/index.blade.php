@@ -34,7 +34,9 @@
                     <th>Fecha de inicio</th>
                     <th>Fecha de fin</th>
                     <th>Sala</th>
+                    @if(auth()->user()->is_admin)
                     <th>Opciones</th>
+                    @endif
                 </tr>
             </thead>
             @foreach($eventos as $evento)
@@ -50,6 +52,7 @@
                     <td>{{ $evento->start_date }}</td>
                     <td>{{ $evento->end_date }}</td>
                     <td>{{ $evento->id_sala }}</td>
+                    @if(auth()->user()->is_admin)
                     <td>
                         <a href="/eventos/{{ $evento-> id }}" class="btn btn-info" title="Editar">
                             <i class="fas fa-edit"></i>
@@ -58,7 +61,7 @@
                             <i class="fas fa-trash"></i>
                         </a>
                     </td>
-
+                    @endif
                 </tr>
             </tbody>
             @endforeach

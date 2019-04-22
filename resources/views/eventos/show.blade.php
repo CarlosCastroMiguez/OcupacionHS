@@ -2,6 +2,8 @@
 
 @section('content')
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 <div class="card border-primary mb-3">
     <div class="card-header">Detalles del evento</div>
 
@@ -41,7 +43,7 @@
                     <td>{{ $evento->end_date }}</td>
                 </tr>
             </tbody>
-            
+
         </table>
 
         <table class="table table-bordered table-striped table-hover ">
@@ -76,7 +78,16 @@
 
         </table>
 
+        <a href="/eventos" class="btn btn-info"> Atrás </a>
+        
+        @if(auth()->user()->is_admin)
+        <a href="/eventos/{{ $evento-> id }}/eliminar" class="btn btn-danger" title="Eliminar">
+            <i class="fas fa-trash"></i>
+        </a>
+
+        @endif
 
     </div>
+
 </div>
 @endsection

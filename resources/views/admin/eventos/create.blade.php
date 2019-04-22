@@ -31,7 +31,7 @@
             </div>
             <div class="form-group">
                 <label for="numAlumnos">Número de alumnos</label>
-                <input type="text" class="form-control" name="numAlumnos" placeholder="Introduce el numero de alumnos" value="{{ old('nombre') }}" required></input>
+                <input type="text" class="form-control" name="numAlumnos" placeholder="Introduce el numero de alumnos" value="{{ old('numAlumnos') }}" required></input>
             </div>
             <div class="row">
 
@@ -89,8 +89,6 @@
 
             </div>
         </form>
-
-
 
     </div>
 </div>

@@ -39,4 +39,9 @@ class Asignatura extends Model
             'grupo.max' => 'El grupo debe estar compuesto por 3 caracteres',
             
         ];
+    
+    public function eventos(){
+        
+        return $this->hasMany('App\Evento');
+    }
 }

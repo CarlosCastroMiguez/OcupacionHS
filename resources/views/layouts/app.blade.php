@@ -19,10 +19,10 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
-    <link rel="stylesheet" href="fullcalendar/packages/core/main.css" />
-    <link rel="stylesheet" href="fullcalendar/packages/daygrid/main.css" />
-    <link rel="stylesheet" href="fullcalendar/packages/timegrid/main.css" />
-    <link rel="stylesheet" href="fullcalendar/packages/list/main.css" />
+    <link rel="stylesheet" href="/fullcalendar/packages/core/main.css" />
+    <link rel="stylesheet" href="/fullcalendar/packages/daygrid/main.css" />
+    <link rel="stylesheet" href="/fullcalendar/packages/timegrid/main.css" />
+    <link rel="stylesheet" href="/fullcalendar/packages/list/main.css" />
     
     
 </head>
