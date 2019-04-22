@@ -12,13 +12,13 @@
             <a href="{{ url('/calendario') }}" class="list-group-item @if(request()->is('calendario')) active @endif">
                 Calendario
             </a>
-            
+            <a href="{{ url('/eventos') }}" class="list-group-item @if(request()->is('eventos')) active @endif">
+                Lista eventos
+            </a>
+
                 @if (auth()->user()->is_admin)
                 <a href="{{ url('/crearevento') }}" class="list-group-item @if(request()->is('crearevento')) active @endif">
                     Crear Evento
-                </a>
-                <a href="{{ url('/listaeventos') }}" class="list-group-item @if(request()->is('listaeventos')) active @endif">
-                    Editar Evento
                 </a>
 
                 <a href="{{ url('/informes') }}" class="list-group-item @if(request()->is('informes')) active @endif">

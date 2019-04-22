@@ -33,6 +33,8 @@ class CreateEventosTable extends Migration
             
             $table->unsignedInteger('id_simulador')->nullable();
             $table->foreign('id_simulador')->references('id')->on('simuladors');
+            
+            $table->timestamps();
         });
     }
 

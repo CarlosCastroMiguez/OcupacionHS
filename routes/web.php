@@ -19,14 +19,29 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/calendario', 'EventoController@index');
+//calendario -> Admin & client
+Route::get('/calendario', 'EventoController@calendar');
+
+//Ver eventos-> Admin & client
+Route::get('/eventos','EventoController@index');
+Route::get('/ver/{id}','EventoController@show');
 
 
-Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
+//rutas que requieren ser admin.
+Route::group(['middleware' => 'admin'], function () {
     
     //Eventos
+    Route::get('/crearevento','EventoController@create');
+    Route::post('/crearevento','EventoController@store');
+    Route::get('/eventos/{id}','EventoController@edit');
+    Route::post('/eventos/{id}','EventoController@update');
+    Route::get('/eventos/{id}/eliminar','EventoController@delete');
+});
+
+//rutas que requieren ser admin y estan en \Admin:
+Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
     
-    //Asignaturas
+   //Asignaturas
     Route::get('/asignaturas','AsignaturaController@index');
     Route::post('/asignaturas','AsignaturaController@store');
     Route::get('/asignaturas/{id}','AsignaturaController@edit');
