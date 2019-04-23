@@ -60,7 +60,9 @@
 
             <div class="form-group">
                 <button class="btn btn-primary">Actualizar Asignatura</button>
+                <a href="/asignaturas" class="btn btn-info"> Atrás </a>
             </div>
+            
 
         </form>
 

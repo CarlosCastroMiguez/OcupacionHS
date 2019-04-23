@@ -48,7 +48,7 @@
                     <div class="form-group">
                         <label for="sala">Sala</label>
                         <select name="sala" class="form-control">
-                            <option value="{{ old('sala', $evento->id_sala) }}">{{ old('sala', $evento->id_sala) }}</option>
+                            <option value="{{ old('sala', $evento->id_sala) }}">{{ old('sala', $evento->sala->tipo) }}</option>
                             @foreach($salas as $sala)
                                 <option value="{{ $sala -> id }}"> {{$sala->tipo}}</option>
                             @endforeach
@@ -60,7 +60,7 @@
                     <div class="form-group">
                         <label for="asignatura">Asignatura</label>
                         <select name="asignatura" class="form-control">
-                            <option value="{{ old('asignatura', $evento->id_asignatura) }}">{{ old('asignatura', $evento->id_asignatura) }}</option>
+                            <option value="{{ old('asignatura', $evento->id_asignatura) }}">{{ old('asignatura', $evento->asignatura->nombre) }}</option>
                             @foreach($asignaturas as $asignatura)
                                 <option value="{{ $asignatura -> id }}"> {{$asignatura->nombre}}</option>
                             @endforeach
@@ -70,7 +70,7 @@
                     <div class="form-group">
                         <label for="profesor">Profesor</label>
                         <select name="profesor" class="form-control">
-                            <option value="{{ old('profesor', $evento->id_profesor) }}">{{ old('profesor', $evento->id_profesor) }}</option>
+                            <option value="{{ old('profesor', $evento->id_profesor) }}">{{ old('profesor', $evento->profesor->nombre) }}</option>
                             @foreach($profesores as $profesor)
                                 <option value="{{ $profesor -> id }}"> {{$profesor->nombre}}</option>
                             @endforeach
@@ -79,7 +79,7 @@
                     <div class="form-group">
                         <label for="simulador">Simulador</label>
                         <select name="simulador" class="form-control">
-                            <option value="{{ old('simulador', $evento->id_simulador) }}">{{ old('simulador', $evento->id_simulador) }}</option>
+                            <option value="{{ old('simulador', $evento->id_simulador) }}">{{ old('simulador', $evento->nombre_simulador) }}</option>
                             @foreach($simuladores as $simulador)
                                 <option value="{{ $simulador -> id }}"> {{$simulador->nombre}}</option>
                             @endforeach
@@ -89,8 +89,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary">Registrar Evento</button>
-                <a href="/calendario" class="btn btn-info"> Atrás </a>
+                <button class="btn btn-primary">Actualizar Evento</button>
+                    <a href="/eventos" class="btn btn-info"> Atrás </a>
 
             </div>
         </form>

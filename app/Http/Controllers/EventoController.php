@@ -65,6 +65,7 @@ class EventoController extends Controller
     public function edit($id) {
         
         $evento = Evento::find($id);
+        
         $profesores = Profesor::all();
         $asignaturas = Asignatura::all();
         $simuladores = Simulador::all();
@@ -75,9 +76,24 @@ class EventoController extends Controller
         
     }
     
-    public function update() {
+    public function update($id, Request $request) {
         
+        $evento = Evento::find($id);
         
+        //$this->validate($request, Evento::$rules, Evento::$messages );
+        
+        $evento->nombre = $request->input('nombre');
+        $evento->numAlumnos = $request->input('numAlumnos');
+        $evento->start_date = $request->input('start_date');
+        $evento->end_date = $request->input('end_date');
+        $evento->id_asignatura = $request->input('asignatura');
+        $evento->id_profesor = $request->input('profesor');
+        $evento->id_sala = $request->input('sala');
+        $evento->id_simulador = $request->input('simulador');
+        
+        $evento->save();
+        
+        return redirect('eventos')->with('notification', 'Evento actualizado correctamente');
     }
     
     public function delete($id) {

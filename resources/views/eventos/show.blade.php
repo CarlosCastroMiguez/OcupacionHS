@@ -56,22 +56,22 @@
                 </tr>
                 <tr>
                     <th>Sala</th>
-                    <td>{{ $evento ->id_sala }}</td>
+                    <td>{{ $evento ->sala->tipo }}</td>
 
                 </tr>
                 <tr>
                     <th>Profesor</th>
-                    <td>{{ $evento ->id_profesor }}</td>
+                    <td>{{ $evento ->profesor->nombre }}</td>
 
                 </tr>
                 <tr>
                     <th>Asignatura</th>
-                    <td>{{ $evento ->id_asignatura }}</td>
+                    <td>{{ $evento ->asignatura->nombre }}</td>
 
                 </tr>
                 <tr>
                     <th>Simulador</th>
-                    <td>{{ $evento ->id_simulador ?: 'Sin simulador' }}</td>
+                    <td>{{ $evento ->nombre_simulador }}</td>
 
                 </tr>
             </tbody>
@@ -79,8 +79,11 @@
         </table>
 
         <a href="/eventos" class="btn btn-info"> Atrás </a>
-        
+
         @if(auth()->user()->is_admin)
+        <a href="/eventos/{{ $evento-> id }}" class="btn btn-info" title="Editar">
+            <i class="fas fa-edit"></i>
+        </a>
         <a href="/eventos/{{ $evento-> id }}/eliminar" class="btn btn-danger" title="Eliminar">
             <i class="fas fa-trash"></i>
         </a>

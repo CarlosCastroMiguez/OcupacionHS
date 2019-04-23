@@ -6,19 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Asignatura; 
-use App\Evento; 
 
 class AsignaturaController extends Controller
 {   
         
-    //He de definir esta funcion para la API ya que en el controlador de eventos requiere autenticacion y no recibo la respuesta.  
-    public function eventos(){
-        
-        $events = Evento::all("id", "nombre as title", "start_date as start", "end_date as end", "id_sala as resourceId")->toArray();
-        //BB DD 2019-04-19 10:00:00.000000
-        //2019-04-18 11:00:00
-        return response()->json($events);
-    }
     
     public function index() {
         

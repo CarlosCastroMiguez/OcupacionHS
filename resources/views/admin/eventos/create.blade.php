@@ -40,34 +40,57 @@
                         <label for="start_date">Fecha de inicio</label>
                         <input type="datetime-local" class="form-control" name="start_date" placeholder="Introduce la fecha de inicio" value="{{ old('start_date') }}" required></input>
                     </div>
-                    <div class="form-group">
-                        <label for="end_date">Fecha de fin</label>
-                        <input type="datetime-local" class="form-control" name="end_date" placeholder="Introduce la fecha de fin" value="{{ old('end_date') }}" required></input>
-                    </div>
+
                     <div class="form-group">
                         <label for="sala">Sala</label>
                         <select name="sala" class="form-control">
                             @foreach($salas as $sala)
-                                <option value="{{ $sala -> id }}"> {{$sala->tipo}}</option>
+                            <option value="{{ $sala -> id }}"> {{$sala->tipo}}</option>
                             @endforeach
                         </select>
                     </div>
                     
-                </div>
-                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="grado">Grado</label>
+                        <select name="grado" class="form-control">
+                            @foreach($asignaturas as $asignatura)
+                            <option value="{{ $asignatura -> id }}"> {{$asignatura->nombre}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                
                     <div class="form-group">
                         <label for="asignatura">Asignatura</label>
                         <select name="asignatura" class="form-control">
                             @foreach($asignaturas as $asignatura)
-                                <option value="{{ $asignatura -> id }}"> {{$asignatura->nombre}}</option>
+                            <option value="{{ $asignatura -> id }}"> {{$asignatura->nombre}}</option>
                             @endforeach
                         </select>
                     </div>
+                    
+
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="end_date">Fecha de fin</label>
+                        <input type="datetime-local" class="form-control" name="end_date" placeholder="Introduce la fecha de fin" value="{{ old('end_date') }}" required></input>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grupo">Grupo</label>
+                        <select name="grupo" class="form-control">
+                            @foreach($asignaturas as $asignatura)
+                            <option value="{{ $asignatura -> id }}"> {{$asignatura->nombre}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <label for="profesor">Profesor</label>
                         <select name="profesor" class="form-control">
                             @foreach($profesores as $profesor)
-                                <option value="{{ $profesor -> id }}"> {{$profesor->nombre}}</option>
+                            <option value="{{ $profesor -> id }}"> {{$profesor->nombre}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -76,7 +99,7 @@
                         <select name="simulador" class="form-control">
                             <option value=" ">Sin simulador</option>
                             @foreach($simuladores as $simulador)
-                                <option value="{{ $simulador -> id }}"> {{$simulador->nombre}}</option>
+                            <option value="{{ $simulador -> id }}"> {{$simulador->nombre}}</option>
                             @endforeach
                         </select>
                     </div>

@@ -42,6 +42,8 @@
 
             <div class="form-group">
                 <button class="btn btn-primary">Actualizar Profesor</button>
+                <a href="/profesores" class="btn btn-info"> Atrás </a>
+
             </div>
 
         </form>

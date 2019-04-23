@@ -1,29 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-        
-        /*
-        var evt = [];
-        $.ajax({
-            url: "/api/prueba",
-            type: "GET",
-            dataType: "JSON",
-            async:false
-        }).done(function(r){
-            evt=r;
-        })
-        */
             
         var calendarEl = document.getElementById('calendar');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
             schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
             locale: 'es',
-            plugins: ['resourceTimeGrid', 'list'],
+            plugins: ['resourceTimeGrid'],
             timeZone: 'local',
             defaultView: 'resourceTimeGridDay',
             views: {
-                listDay: {
-                    buttonText: 'Lista'
-                },
                 resourceTimeGridDay: {
                     buttonText: 'Día'
                 },
@@ -31,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             header: {
                 left: 'prev,next today',
                 center: 'title',
-                right: 'resourceTimeGridDay,listDay'
+                right: 'resourceTimeGridDay'
             },
 
             resources: '/api/resources/salas',

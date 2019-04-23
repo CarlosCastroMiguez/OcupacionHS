@@ -41,6 +41,8 @@
 
             <div class="form-group">
                 <button class="btn btn-primary">Actualizar Sala</button>
+                <a href="/salas" class="btn btn-info"> Atrás </a>
+
             </div>
 
         </form>

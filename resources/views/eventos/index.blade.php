@@ -51,7 +51,7 @@
                     <td>{{ $evento->numAlumnos }}</td>
                     <td>{{ $evento->start_date }}</td>
                     <td>{{ $evento->end_date }}</td>
-                    <td>{{ $evento->id_sala }}</td>
+                    <td>{{ $evento->sala->tipo }}</td>
                     @if(auth()->user()->is_admin)
                     <td>
                         <a href="/eventos/{{ $evento-> id }}" class="btn btn-info" title="Editar">

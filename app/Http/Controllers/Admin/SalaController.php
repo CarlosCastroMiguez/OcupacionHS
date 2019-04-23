@@ -10,13 +10,6 @@ use App\TipoSala;
 
 class SalaController extends Controller
 {   
-    //api
-    public function salas(){
-        
-        $salas = Sala::all("id", "tipo as title")->toArray();
-        return response()->json($salas);
-    }
-    
     
     public function index() {
         
