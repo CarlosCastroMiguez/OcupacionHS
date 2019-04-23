@@ -28,9 +28,8 @@
             <div class="form-group">
                 <label for="tipo">Tipo de Sala</label>
                 <select name="tipo" class="form-control">
-
-                    @foreach($tipos_sala as $tipo)
                     <option value="{{ old('tipo', $sala->tipo) }}">{{ old('tipo', $sala->tipo) }}</option>
+                    @foreach($tipos_sala as $tipo)
                     <option value="{{ $tipo -> nombre }}">{{ $tipo -> nombre }}</option>
                     @endforeach
                 </select>

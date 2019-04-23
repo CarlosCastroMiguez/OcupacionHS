@@ -28,7 +28,7 @@ class EventoController extends Controller
     }
     
     public function show($id){   
-        $evento = Evento::findOrFail($id)->first();
+        $evento = Evento::find($id);
         return view ('eventos.show')->with(compact('evento'));
     }
     
