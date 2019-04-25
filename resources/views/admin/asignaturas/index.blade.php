@@ -41,7 +41,14 @@
 
             <div class="form-group">
                 <label for="grado">Grado</label>
-                <input name="grado" name="grado" class="form-control" value="{{ old('grado') }}"></input>
+                <select name="grado" class="form-control">
+                    <option value="Fisioterapia">Fisioterapia</option>
+                    <option value="Enfermeria">Enfermería</option>
+                    <option value="Farmacia">Farmacia</option>
+                    <option value="Medicina">Medicina</option>
+                    <option value="Odontologia">Odontología</option>
+                    <option value="Biotecnologia">Biotecnología</option>
+                </select>
             </div>
 
             <div class="form-group">

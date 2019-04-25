@@ -52,19 +52,20 @@
                     
                     <div class="form-group">
                         <label for="grado">Grado</label>
-                        <select name="grado" class="form-control">
-                            @foreach($asignaturas as $asignatura)
-                            <option value="{{ $asignatura -> id }}"> {{$asignatura->nombre}}</option>
-                            @endforeach
+                        <select name="grado" class="form-control" id="select-grado">
+                            <option value="Fisioterapia">Fisioterapia</option>
+                            <option value="Enfermeria">Enfermería</option>
+                            <option value="Farmacia">Farmacia</option>
+                            <option value="Medicina">Medicina</option>
+                            <option value="Odontologia">Odontología</option>
+                            <option value="Biotecnologia">Biotecnología</option>
                         </select>
                     </div>
                 
                     <div class="form-group">
                         <label for="asignatura">Asignatura</label>
-                        <select name="asignatura" class="form-control">
-                            @foreach($asignaturas as $asignatura)
-                            <option value="{{ $asignatura -> id }}"> {{$asignatura->nombre}}</option>
-                            @endforeach
+                        <select name="asignatura" class="form-control" id="select-asignatura">
+                            <option value=""> Seleccione asignatura</option>
                         </select>
                     </div>
                     
@@ -79,10 +80,8 @@
 
                     <div class="form-group">
                         <label for="grupo">Grupo</label>
-                        <select name="grupo" class="form-control">
-                            @foreach($asignaturas as $asignatura)
-                            <option value="{{ $asignatura -> id }}"> {{$asignatura->nombre}}</option>
-                            @endforeach
+                        <select name="grupo" class="form-control" id="select-grupo">
+                            <option value=""> Seleccione grupo</option>
                         </select>
                     </div>
 
@@ -115,4 +114,8 @@
 
     </div>
 </div>
+@endsection
+
+@section('scripts')
+    <script src="/js/admin/evento/crear.js"></script>
 @endsection

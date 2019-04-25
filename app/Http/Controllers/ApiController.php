@@ -27,18 +27,41 @@ class ApiController extends Controller
         return response()->json($salas);
     }
     
-    //api/asignaturas/grados
-    public function grados(){
+    //api/asignaturas/{grado_val}
+    public function byAsignatura($grad){
         
-        //$grados = Asignatura::groupBy('grado')->get();
-        //$grados = Asignatura::groupBy('grado')->select('grado', Asignatura::raw('count(*) as total'))->get();
-        
-        $grados = DB::table('tfg.asignaturas')
-                 ->select('grado', DB::raw('count(*) as total'))
-                 ->groupBy('grado')
+        //Agrupame por nombre de asignatura y que pertenezcan al grado indicado(me quito las que se repiten pero tienen dist grupo)
+        $asignaturas = DB::table('tfg.asignaturas')
+                 ->select('nombre', DB::raw('count(*) as total'))
+                 ->groupBy('nombre')->where('grado', $grad)
                  ->get();
         
-        return response()->json($grados);
+        return $asignaturas;
     }
+    
+    //api/grupos/{grado_val}/{asignatura_val}
+    public function byGrupo($grad, $asig){
+        
+        //Agrupame por nombre de asignatura y que pertenezcan al grado indicado(me quito las que se repiten pero tienen dist grupo)
+        $grupos = DB::table('tfg.asignaturas')
+                 ->select("grupo", DB::raw('count(*) as total'))
+                 ->groupBy("grupo")->where('grado', $grad)->where('nombre', $asig)
+                 ->get();
+        
+        return $grupos;
+    }
+    
+    //Api para obtener todos los datos sobre la asignatura que desea implementar el usuario en crear evento.
+    
+    //api/id/{grado_val}/{asignatura_val}/{grup_val}
+    public function idAsignatura($grad, $asig, $grup){
+        
+        //Agrupame por nombre de asignatura y que pertenezcan al grado indicado(me quito las que se repiten pero tienen dist grupo)
+        $id = Asignatura::where('grado', $grad)->where('nombre', $asig)->where('grupo', $grup)->get();
+        
+        return $id;
+    }
+    
+    
     
 }
