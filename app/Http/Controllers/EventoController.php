@@ -52,8 +52,8 @@ class EventoController extends Controller
         $evento->numAlumnos = $request->input('numAlumnos');
         $evento->start_date = $request->input('start_date');
         $evento->end_date = $request->input('end_date');
-        $evento->id_asignatura = $request->input('asignatura');
         $evento->id_profesor = $request->input('profesor');
+        $evento->id_asignatura = $request->input('id_asignatura');
         $evento->id_sala = $request->input('sala');
         $evento->id_simulador = $request->input('simulador');
             

@@ -61,13 +61,15 @@
                             <option value="Biotecnologia">Biotecnología</option>
                         </select>
                     </div>
-                
+                    
+                    <input type="hidden" name="id_asignatura" value="" id="id_asignatura"></input>
                     <div class="form-group">
                         <label for="asignatura">Asignatura</label>
                         <select name="asignatura" class="form-control" id="select-asignatura">
                             <option value=""> Seleccione asignatura</option>
                         </select>
                     </div>
+                    
                     
 
 

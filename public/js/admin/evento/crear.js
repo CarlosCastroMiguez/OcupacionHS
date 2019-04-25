@@ -1,10 +1,13 @@
 $(function(){
     $('#select-grado').on('change', onSelectGradoChange);
     $('#select-asignatura').on('change', onSelectAsignaturaChange);
+    $('#select-grupo').on('change', onSelectGrupoChange);
 });
 
 var grado_val = 0;
+var asignatura_val = 0;
 
+//Cuando selecciono un grado cargo las asignaturas.
 function onSelectGradoChange(){
     
     grado_val = $(this).val();
@@ -24,10 +27,10 @@ function onSelectGradoChange(){
         $('#select-asignatura').html(html_select);
     })
 }
-
+//Cuando selecciono una asignatura cargo los grupos
 function onSelectAsignaturaChange(){
     
-    var asignatura_val = $(this).val();
+    asignatura_val = $(this).val();
     
     if(!asignatura_val){
         $('#select-grupo').html('<option value=""> Seleccione grupo </option>');
@@ -40,6 +43,24 @@ function onSelectAsignaturaChange(){
             html_select += '<option value="'+ data[i].grupo + '"> '+ data[i].grupo + '</option>';
         
         $('#select-grupo').html(html_select);
+    })
+    
+}
+//modifico el valor de mi campo hidden paraa agregarle el valor del id de la asignatura.
+function onSelectGrupoChange(){
+    
+    var grupo_val = $(this).val();
+    
+    if(!grupo_val){
+        $('#select-grupo').html('<option value=""> Seleccione grupo </option>');
+        return;
+    }
+    //Ajax
+    $.get('/api/id/'+grado_val +'/'+asignatura_val +'/'+ grupo_val, function(data){
+        
+        var id_asig = document.getElementById('id_asignatura').value = data[0].id;
+        
+        $('#id_asignatura').html(id_asig);
     })
     
 }
