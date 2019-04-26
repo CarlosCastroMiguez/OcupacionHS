@@ -32,7 +32,7 @@
             <div class="form-group">
                 <label for="tipo">Tipo de Sala</label>
                 <select name="tipo" class="form-control">
-
+                    <option value="{{ old('tipo')}} ">{{ old('tipo' , 'Seleccione tipo de sala') }}</option>
                     @foreach($tipos_sala as $tipo)
                     <option value="{{ $tipo -> nombre }}">{{ $tipo -> nombre }}</option>
                     @endforeach
