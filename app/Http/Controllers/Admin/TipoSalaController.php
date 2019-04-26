@@ -12,7 +12,7 @@ class TipoSalaController extends Controller
     public function store(Request $request) {
                 
         //si la validacion no se cumple no se avanza
-        //$this->validate($request, TipoSala::$rules, TipoSala::$messages );
+        $this->validate($request, TipoSala::$rules, TipoSala::$messages );
         
         //Forma 2 de crear incident:
         $tipo_sala = new TipoSala();
@@ -26,7 +26,7 @@ class TipoSalaController extends Controller
     }
     public function update(Request $request) {
         
-        $this->validate($request, ['nombre' => 'required'], ['nombre.required' => 'El nombre es requerido'] );  
+        $this->validate($request, TipoSala::$rules, TipoSala::$messages );  
         
         $tiposala_id = $request->input('tiposala_id');    
         $tiposala = TipoSala::find($tiposala_id);

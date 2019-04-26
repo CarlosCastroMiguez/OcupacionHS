@@ -38,7 +38,7 @@
             <tbody>
                 <tr>
                     <td>{{ $evento->id }}</td>
-                    <td>{{ $evento->nombre }}</td>
+                    <td>{{ $evento->nombre_short }}</td>
                     <td>{{ $evento->start_date }}</td>
                     <td>{{ $evento->end_date }}</td>
                 </tr>

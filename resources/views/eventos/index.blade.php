@@ -47,7 +47,7 @@
                             {{ $evento->id }}
                         </a>
                     </td>
-                    <td>{{ $evento->nombre }}</td>
+                    <td>{{ $evento->nombre_short }}</td>
                     <td>{{ $evento->numAlumnos }}</td>
                     <td>{{ $evento->start_date }}</td>
                     <td>{{ $evento->end_date }}</td>

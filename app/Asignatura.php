@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Asignatura extends Model
 {
         public static $rules = [
+            
             'nombre' => 'required|min:5|max:150',
             'codigo' => 'required|integer|digits_between:1,10',
             'grado' => 'required|min:5|max:150',

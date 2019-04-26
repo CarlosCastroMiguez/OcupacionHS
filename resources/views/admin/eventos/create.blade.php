@@ -27,23 +27,24 @@
 
             <div class="form-group">
                 <label for="nombre">Nombre del evento</label>
-                <input type="text" class="form-control" name="nombre" placeholder="Introduce el nombre" value="{{ old('nombre') }}" required></input>
+                <input type="text" class="form-control" name="nombre" placeholder="Introduce el nombre" value="{{ old('nombre') }}" ></input>
             </div>
             <div class="form-group">
                 <label for="numAlumnos">Número de alumnos</label>
-                <input type="text" class="form-control" name="numAlumnos" placeholder="Introduce el numero de alumnos" value="{{ old('numAlumnos') }}" required></input>
+                <input type="text" class="form-control" name="numAlumnos" placeholder="Introduce el numero de alumnos" value="{{ old('numAlumnos') }}" ></input>
             </div>
             <div class="row">
 
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="start_date">Fecha de inicio</label>
-                        <input type="datetime-local" class="form-control" name="start_date" placeholder="Introduce la fecha de inicio" value="{{ old('start_date') }}" required></input>
+                        <input type="datetime-local" class="form-control" name="start_date" placeholder="Introduce la fecha de inicio" value="{{ old('start_date') }}"></input>
                     </div>
 
                     <div class="form-group">
                         <label for="sala">Sala</label>
                         <select name="sala" class="form-control">
+                            <option value=""> Seleccione sala</option>
                             @foreach($salas as $sala)
                             <option value="{{ $sala -> id }}"> {{$sala->tipo}}</option>
                             @endforeach
@@ -53,6 +54,7 @@
                     <div class="form-group">
                         <label for="grado">Grado</label>
                         <select name="grado" class="form-control" id="select-grado">
+                            <option value=" ">Seleccione grado</option>
                             <option value="Fisioterapia">Fisioterapia</option>
                             <option value="Enfermeria">Enfermería</option>
                             <option value="Farmacia">Farmacia</option>
@@ -69,14 +71,11 @@
                         </select>
                     </div>
                     
-                    
-
-
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="end_date">Fecha de fin</label>
-                        <input type="datetime-local" class="form-control" name="end_date" placeholder="Introduce la fecha de fin" value="{{ old('end_date') }}" required></input>
+                        <input type="datetime-local" class="form-control" name="end_date" placeholder="Introduce la fecha de fin" value="{{ old('end_date') }}"  ></input>
                     </div>
 
                     <div class="form-group">
@@ -89,6 +88,7 @@
                     <div class="form-group">
                         <label for="profesor">Profesor</label>
                         <select name="profesor" class="form-control">
+                            <option value=""> Seleccione profesor</option>
                             @foreach($profesores as $profesor)
                             <option value="{{ $profesor -> id }}"> {{$profesor->nombre}}</option>
                             @endforeach

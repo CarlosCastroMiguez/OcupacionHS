@@ -44,7 +44,7 @@ class EventoController extends Controller
 
     public function store(Request $request) {
         
-        //$this->validate($request, Evento::$rules, Evento::$messages );
+        $this->validate($request, Evento::$rules, Evento::$messages );
         
         //obtengo la asignatura resultante para usar su id.
         //Gracias a esto evito hacerlo mediante js->ajax y aumento la seguridad de la web
@@ -96,7 +96,7 @@ class EventoController extends Controller
         
         $evento = Evento::find($id);
         
-        //$this->validate($request, Evento::$rules, Evento::$messages );
+        $this->validate($request, Evento::$rules, Evento::$messages );
         
         $evento->nombre = $request->input('nombre');
         $evento->numAlumnos = $request->input('numAlumnos');

@@ -19,7 +19,7 @@ class SimuladorController extends Controller
     public function store(Request $request) {
                 
         //si la validacion no se cumple no se avanza
-        //$this->validate($request, Simulador::$rules, Simulador::$messages );
+        $this->validate($request, Simulador::$rules, Simulador::$messages );
         
         //Forma 2 de crear incident:
         $simulador = new Simulador();
@@ -33,7 +33,7 @@ class SimuladorController extends Controller
     }
     public function update(Request $request) {
         
-        $this->validate($request, ['nombre' => 'required'], ['nombre.required' => 'El nombre es requerido'] );  
+        $this->validate($request, Simulador::$rules, Simulador::$messages );  
         
         $simulador_id = $request->input('simulador_id');    
         $simulador = Simulador::find($simulador_id);

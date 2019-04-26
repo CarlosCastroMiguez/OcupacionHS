@@ -5,6 +5,17 @@
 {{-- Link para los estilos de los iconos --}}
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+                @if(count($errors)>0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+
 <div class="row">
 
     <div class="col-md-6">
@@ -15,16 +26,6 @@
                 @if(session('notification1'))
                 <div class="alert alert-success">
                     {{ session('notification1') }}
-                </div>
-                @endif
-
-                @if(count($errors)>0)
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
                 </div>
                 @endif
 
@@ -88,22 +89,12 @@
                 </div>
                 @endif
 
-                @if(count($errors)>0)
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
-
                 <form action="/tiposala" method="POST">
                     {{ csrf_field() }}
 
                     <div class="form-group">
                         <label for="nombre">Nombre del tipo de Sala</label>
-                        <input name="nombre" name="nombre" class="form-control" value="{{ old('nombre') }}"></input>
+                        <input name="nombre" name="nombre" class="form-control" value="{{ old('nombre') }} "></input>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary">Agregar Tipo de Sala</button>

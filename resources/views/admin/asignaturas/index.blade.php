@@ -42,6 +42,7 @@
             <div class="form-group">
                 <label for="grado">Grado</label>
                 <select name="grado" class="form-control">
+                    <option value=" ">Seleccione grado</option>
                     <option value="Fisioterapia">Fisioterapia</option>
                     <option value="Enfermeria">Enfermería</option>
                     <option value="Farmacia">Farmacia</option>
@@ -54,6 +55,7 @@
             <div class="form-group">
                 <label for="curso">Curso</label>
                 <select name="curso" class="form-control">
+                    <option value=" ">Seleccione curso</option>
                     <option value="1">1º</option>
                     <option value="2">2º</option>
                     <option value="3">3º</option>
