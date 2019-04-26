@@ -1,11 +1,10 @@
 $(function(){
     $('#select-grado').on('change', onSelectGradoChange);
     $('#select-asignatura').on('change', onSelectAsignaturaChange);
-    $('#select-grupo').on('change', onSelectGrupoChange);
+    //$('#select-grupo').on('change', onSelectGrupoChange);
 });
 
 var grado_val = 0;
-var asignatura_val = 0;
 
 //Cuando selecciono un grado cargo las asignaturas.
 function onSelectGradoChange(){
@@ -30,7 +29,7 @@ function onSelectGradoChange(){
 //Cuando selecciono una asignatura cargo los grupos
 function onSelectAsignaturaChange(){
     
-    asignatura_val = $(this).val();
+    var asignatura_val = $(this).val();
     
     if(!asignatura_val){
         $('#select-grupo').html('<option value=""> Seleccione grupo </option>');
@@ -46,6 +45,8 @@ function onSelectAsignaturaChange(){
     })
     
 }
+
+/*
 //modifico el valor de mi campo hidden paraa agregarle el valor del id de la asignatura.
 function onSelectGrupoChange(){
     
@@ -64,3 +65,4 @@ function onSelectGrupoChange(){
     })
     
 }
+*/

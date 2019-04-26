@@ -27,7 +27,7 @@
 
             <div class="form-group">
                 <label for="nombre">Nombre del evento</label>
-                <input type="text" class="form-control" name="nombre" placeholder="Introduce el nombre" value="{{ old('nombre', $evento->nombre) }}" required></input>
+                <input type="text" class="form-control" name="nombre" placeholder="Introduce el nombre" value="{{ old('nombre', $evento->nombre) }}" required></input> 
             </div>
             <div class="form-group">
                 <label for="numAlumnos">Número de alumnos</label>
@@ -38,41 +38,62 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="start_date">Fecha de inicio</label>
-                        <input type="datetime-local" class="form-control" name="start_date" placeholder="Introduce la fecha de inicio" value="{{ old('start_date' , $evento->start_date) }}" required></input>
-                        
+                        <input type="datetime-local" class="form-control" name="start_date" placeholder="Introduce la fecha de inicio" value="{{ old('start_date') }}" required></input>
                     </div>
-                    <div class="form-group">
-                        <label for="end_date">Fecha de fin</label>
-                        <input type="datetime-local" class="form-control" name="end_date" placeholder="Introduce la fecha de fin" value="{{ old('end_date', $evento->end_date) }}" required></input>
-                    </div>
+
                     <div class="form-group">
                         <label for="sala">Sala</label>
                         <select name="sala" class="form-control">
-                            <option value="{{ old('sala', $evento->id_sala) }}">{{ old('sala', $evento->sala->tipo) }}</option>
+                            <option value="{{ $evento->sala->tipo }}">{{ $evento->sala->tipo }}</option>
                             @foreach($salas as $sala)
-                                <option value="{{ $sala -> id }}"> {{$sala->tipo}}</option>
+                            <option value="{{ $sala -> id }}"> {{$sala->tipo}}</option>
                             @endforeach
                         </select>
                     </div>
-                    
+
+                    <div class="form-group">
+                        <label for="grado">Grado</label>
+                        <select name="grado" class="form-control" id="select-grado">
+                            <option value="{{ $evento->asignatura->grado }}">{{ $evento->asignatura->grado }}</option>
+                            <option value="Fisioterapia">Fisioterapia</option>
+                            <option value="Enfermeria">Enfermería</option>
+                            <option value="Farmacia">Farmacia</option>
+                            <option value="Medicina">Medicina</option>
+                            <option value="Odontologia">Odontología</option>
+                            <option value="Biotecnologia">Biotecnología</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asignatura">Asignatura</label>
+                        <select name="asignatura" class="form-control" id="select-asignatura">
+                            <option value="{{ $evento->asignatura->nombre }}">{{ $evento->asignatura->nombre }}</option>
+                        </select>
+                    </div>
+
+
+
+
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="asignatura">Asignatura</label>
-                        <select name="asignatura" class="form-control">
-                            <option value="{{ old('asignatura', $evento->id_asignatura) }}">{{ old('asignatura', $evento->asignatura->nombre) }}</option>
-                            @foreach($asignaturas as $asignatura)
-                                <option value="{{ $asignatura -> id }}"> {{$asignatura->nombre}}</option>
-                            @endforeach
-                        </select>
-                        
+                        <label for="end_date">Fecha de fin</label>
+                        <input type="datetime-local" class="form-control" name="end_date" placeholder="Introduce la fecha de fin" value="{{ old('end_date') }}" required></input>
                     </div>
+
+                    <div class="form-group">
+                        <label for="grupo">Grupo</label>
+                        <select name="grupo" class="form-control" id="select-grupo">
+                            <option value="{{ $evento->asignatura->grupo }}">{{ $evento->asignatura->grupo }}</option>
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <label for="profesor">Profesor</label>
                         <select name="profesor" class="form-control">
                             <option value="{{ old('profesor', $evento->id_profesor) }}">{{ old('profesor', $evento->profesor->nombre) }}</option>
                             @foreach($profesores as $profesor)
-                                <option value="{{ $profesor -> id }}"> {{$profesor->nombre}}</option>
+                            <option value="{{ $evento -> id }}"> {{$profesor->nombre}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -80,8 +101,9 @@
                         <label for="simulador">Simulador</label>
                         <select name="simulador" class="form-control">
                             <option value="{{ old('simulador', $evento->id_simulador) }}">{{ old('simulador', $evento->nombre_simulador) }}</option>
+                            <option value=" ">Sin simulador</option>
                             @foreach($simuladores as $simulador)
-                                <option value="{{ $simulador -> id }}"> {{$simulador->nombre}}</option>
+                            <option value="{{ $simulador -> id }}"> {{$simulador->nombre}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -90,7 +112,7 @@
             </div>
             <div class="form-group">
                 <button class="btn btn-primary">Actualizar Evento</button>
-                    <a href="/eventos" class="btn btn-info"> Atrás </a>
+                <a href="/calendario" class="btn btn-info"> Atrás </a>
 
             </div>
         </form>
@@ -99,3 +121,6 @@
 </div>
 @endsection
 
+@section('scripts')
+    <script src="/js/admin/evento/crear.js"></script>
+@endsection

@@ -46,6 +46,14 @@ class EventoController extends Controller
         
         //$this->validate($request, Evento::$rules, Evento::$messages );
         
+        //obtengo la asignatura resultante para usar su id.
+        //Gracias a esto evito hacerlo mediante js->ajax y aumento la seguridad de la web
+        //para no exponer mi BBDD.
+        $asig = Asignatura::where('grado', $request->input('grado'))
+                                    ->where('nombre', $request->input('asignatura'))
+                                        ->where('grupo', $request->input('grupo'))->first();
+        
+        
         $evento = new Evento();
         
         $evento->nombre = $request->input('nombre');
@@ -53,10 +61,11 @@ class EventoController extends Controller
         $evento->start_date = $request->input('start_date');
         $evento->end_date = $request->input('end_date');
         $evento->id_profesor = $request->input('profesor');
-        $evento->id_asignatura = $request->input('id_asignatura');
+        $evento->id_asignatura = $asig->id;
         $evento->id_sala = $request->input('sala');
         $evento->id_simulador = $request->input('simulador');
-            
+        
+        
         $evento->save();
         
         return back()->with('notification', 'Evento añadido correctamente');
@@ -78,6 +87,13 @@ class EventoController extends Controller
     
     public function update($id, Request $request) {
         
+        //obtengo la asignatura resultante para usar su id.
+        //Gracias a esto evito hacerlo mediante js->ajax y aumento la seguridad de la web
+        //para no exponer mi BBDD.
+        $asig = Asignatura::where('grado', $request->input('grado'))
+                                    ->where('nombre', $request->input('asignatura'))
+                                        ->where('grupo', $request->input('grupo'))->first();
+        
         $evento = Evento::find($id);
         
         //$this->validate($request, Evento::$rules, Evento::$messages );
@@ -86,7 +102,7 @@ class EventoController extends Controller
         $evento->numAlumnos = $request->input('numAlumnos');
         $evento->start_date = $request->input('start_date');
         $evento->end_date = $request->input('end_date');
-        $evento->id_asignatura = $request->input('asignatura');
+        $evento->id_asignatura = $asig->id;
         $evento->id_profesor = $request->input('profesor');
         $evento->id_sala = $request->input('sala');
         $evento->id_simulador = $request->input('simulador');
