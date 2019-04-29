@@ -30,6 +30,7 @@
                 <tr class="warning">
                     <th>Id</th>
                     <th>Nombre</th>
+                    <th>Alumnos</th>
                     <th>Fecha de inicio</th>
                     <th>Fecha de fin</th>
                 </tr>
@@ -39,6 +40,7 @@
                 <tr>
                     <td>{{ $evento->id }}</td>
                     <td>{{ $evento->nombre_short }}</td>
+                    <td>{{ $evento ->numAlumnos }}</td>
                     <td>{{ $evento->start_date }}</td>
                     <td>{{ $evento->end_date }}</td>
                 </tr>
@@ -49,11 +51,6 @@
         <table class="table table-bordered table-striped table-hover ">
 
             <tbody>
-                <tr>
-                    <th>Alumnos</th>
-                    <td>{{ $evento ->numAlumnos }}</td>
-
-                </tr>
                 <tr>
                     <th>Sala</th>
                     <td>{{ $evento ->sala->tipo }}</td>
@@ -66,7 +63,7 @@
                 </tr>
                 <tr>
                     <th>Asignatura</th>
-                    <td>{{ $evento ->asignatura->nombre }}</td>
+                    <td>{{ $evento -> info_academica}}</td>
 
                 </tr>
                 <tr>
@@ -74,6 +71,7 @@
                     <td>{{ $evento ->nombre_simulador }}</td>
 
                 </tr>
+
             </tbody>
 
         </table>

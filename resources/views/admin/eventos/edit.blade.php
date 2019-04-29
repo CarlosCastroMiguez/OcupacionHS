@@ -44,7 +44,7 @@
                     <div class="form-group">
                         <label for="sala">Sala</label>
                         <select name="sala" class="form-control">
-                            <option value="{{ $evento->sala->tipo }}">{{ $evento->sala->tipo }}</option>
+                            <option value="{{ $evento->sala->id }}">{{ $evento->tipo_sala }}</option>
                             @foreach($salas as $sala)
                             <option value="{{ $sala -> id }}"> {{$sala->tipo}}</option>
                             @endforeach
@@ -54,7 +54,7 @@
                     <div class="form-group">
                         <label for="grado">Grado</label>
                         <select name="grado" class="form-control" id="select-grado">
-                            <option value="{{ $evento->asignatura->grado }}">{{ $evento->asignatura->grado }}</option>
+                            <option value=""> Seleccione grado </option>
                             <option value="Fisioterapia">Fisioterapia</option>
                             <option value="Enfermeria">Enfermería</option>
                             <option value="Farmacia">Farmacia</option>
@@ -67,7 +67,7 @@
                     <div class="form-group">
                         <label for="asignatura">Asignatura</label>
                         <select name="asignatura" class="form-control" id="select-asignatura">
-                            <option value="{{ $evento->asignatura->nombre }}">{{ $evento->asignatura->nombre }}</option>
+                            <option value=""> Seleccione asignatura </option>
                         </select>
                     </div>
                 
@@ -81,23 +81,23 @@
                     <div class="form-group">
                         <label for="grupo">Grupo</label>
                         <select name="grupo" class="form-control" id="select-grupo">
-                            <option value="{{ $evento->asignatura->grupo }}">{{ $evento->asignatura->grupo }}</option>
+                            <option value=""> Seleccione grupo </option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="profesor">Profesor</label>
                         <select name="profesor" class="form-control">
-                            <option value="{{ old('profesor', $evento->id_profesor) }}">{{ old('profesor', $evento->profesor->nombre) }}</option>
+                            <option value="{{ $evento->id_profesor }}">{{ $evento->profesor->nombre }}</option>
                             @foreach($profesores as $profesor)
-                            <option value="{{ $evento -> id }}"> {{$profesor->nombre}}</option>
+                            <option value="{{ $profesor->id }}"> {{$profesor->nombre}}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="simulador">Simulador</label>
                         <select name="simulador" class="form-control">
-                            <option value="{{ old('simulador', $evento->id_simulador) }}">{{ old('simulador', $evento->nombre_simulador) }}</option>
+                            <option value="{{ $evento->id_simulador }}">{{ $evento->nombre_simulador }}</option>
                             <option value=" ">Sin simulador</option>
                             @foreach($simuladores as $simulador)
                             <option value="{{ $simulador -> id }}"> {{$simulador->nombre}}</option>

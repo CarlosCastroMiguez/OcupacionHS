@@ -29,6 +29,30 @@ class Evento extends Model
         else
             return 'Sin simulador';
     }
+    
+    public function getTipoSalaAttribute(){
+        if($this->sala){
+            return $this->sala->tipo;
+        }
+        else
+            return 'Sin sala';
+    }
+    
+    public function getInfoAcademicaAttribute(){
+        if($this->asignatura){
+            $asig = $this->asignatura->nombre;
+            $grad = $this->asignatura->grado;
+            $curs = $this->asignatura->curso;
+            $grup = $this->asignatura->grupo;
+            
+            $info = $grad  . ' - ' . $curs . 'º - ' . $asig . ' - ' . $grup;
+        
+            return $info;
+            
+        }
+        
+    }
+    
     public function getNombreShortAttribute(){
          
         return mb_strimwidth($this->nombre,0,10,'...');        

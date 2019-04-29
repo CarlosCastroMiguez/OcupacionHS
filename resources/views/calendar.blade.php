@@ -23,6 +23,8 @@
     <div class="card-body">
 
         <div id="calendar"></div>
+        <br>
+        <div id="calendar2"></div>
 
     </div>
 </div>
