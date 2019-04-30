@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var calendar = new FullCalendar.Calendar(calendarEl, {
         schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
         locale: 'es',
-        plugins: ['resourceTimeGrid'],
+        plugins: ['resourceTimeGrid', 'interaction'],
+        editable: true,
+        droppable: true,
         timeZone: 'local',
         defaultView: 'resourceTimeGridDay',
         allDaySlot:false,
@@ -24,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
             left: 'prev,next today',
             center: 'title',
             right: 'resourceTimeGridDay'
+        },
+        eventDrop : function(eventDropInfo) {
+            alert('ID: '+ eventDropInfo.event.id +' Titulo: '+  eventDropInfo.event.title);
+        
         },
 
         resources: '/api/resources/salas',

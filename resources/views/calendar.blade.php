@@ -8,6 +8,7 @@
 
 <script src="/fullcalendar/packages/core/main.js"></script>
 <script src="/fullcalendar/packages/core/locales/es.js"></script>
+<script src="/fullcalendar/packages/interaction/main.js"></script>
 
 <script src="/fullcalendar/packages/timegrid/main.js"></script>
 <script src="/fullcalendar/packages/daygrid/main.js"></script>
