@@ -54,8 +54,22 @@ class Evento extends Model
     }
     
     public function getNombreShortAttribute(){
-         
+    
         return mb_strimwidth($this->nombre,0,10,'...');        
+        
+    }
+    
+    public function getFechaFinalAttribute(){
+        
+        $e_date = strftime('%Y-%m-%dT%H:%M:%S', strtotime($this->end_date));
+        return $e_date;
+        
+    }
+    
+    public function getFechaInicioAttribute(){
+        
+        $s_date = strftime('%Y-%m-%dT%H:%M:%S', strtotime($this->start_date));
+        return $s_date;
         
     }
     

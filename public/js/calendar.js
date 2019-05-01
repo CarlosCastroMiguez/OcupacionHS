@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    
+
     var currentDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
     var day = currentDate.getDate()
     var month = currentDate.getMonth() + 1
@@ -14,9 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
         plugins: ['resourceTimeGrid', 'interaction'],
         editable: true,
         droppable: true,
+        eventDurationEditable: false,
         timeZone: 'local',
         defaultView: 'resourceTimeGridDay',
-        allDaySlot:false,
+        allDaySlot: false,
         views: {
             resourceTimeGridDay: {
                 buttonText: 'Día'
@@ -27,9 +28,33 @@ document.addEventListener('DOMContentLoaded', function () {
             center: 'title',
             right: 'resourceTimeGridDay'
         },
-        eventDrop : function(eventDropInfo) {
-            alert('ID: '+ eventDropInfo.event.id +' Titulo: '+  eventDropInfo.event.title);
-        
+        eventDrop: function (eventDropInfo) {
+            
+            //si no lo cambio de sala
+            if (eventDropInfo.newResource == null) {
+                
+                console.log(eventDropInfo.event.id);
+                console.log('start: ' + eventDropInfo.event.start.toISOString().slice(0, -5) + 'End:' + eventDropInfo.event.end.toISOString().slice(0, -5));
+                
+                
+            } else { //si lo cambio de sala
+                
+                console.log(eventDropInfo.event.id);
+                console.log(eventDropInfo.newResource.id +' - '+ eventDropInfo.newResource.title);
+                console.log('start: ' + eventDropInfo.event.start.toISOString().slice(0, -5) + 'End:' + eventDropInfo.event.end.toISOString().slice(0, -5));
+                
+            }
+            
+            /*
+            if (!confirm("Are you sure about this change?")) {
+                eventDropInfo.revert();
+            }
+            */
+
+        },
+        eventClick: function (info) {
+            var eventObj = info.event;
+            location.href = "/ver/" + eventObj.id;
         },
 
         resources: '/api/resources/salas',
@@ -47,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         plugins: ['resourceTimeGrid'],
         timeZone: 'local',
         defaultView: 'resourceTimeGridDay',
-        allDaySlot:false,
+        allDaySlot: false,
         views: {
             resourceTimeGridDay: {
                 buttonText: 'Día'

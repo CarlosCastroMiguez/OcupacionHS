@@ -6,26 +6,26 @@
         <div class="list-group">
 
             @if (auth()->check())
-            <a href="{{ url('/home') }}" class="list-group-item @if(request()->is('home')) active @endif">
+            <a href="{{ url('/home') }}" class="list-group-item @if(request()->is('home*')) active @endif">
                 Inicio
             </a>
-            <a href="{{ url('/calendario') }}" class="list-group-item @if(request()->is('calendario')) active @endif">
+            <a href="{{ url('/calendario') }}" class="list-group-item @if(request()->is('calendario*')) active @endif">
                 Calendario
             </a>
-            <a href="{{ url('/eventos') }}" class="list-group-item @if(request()->is('eventos')) active @endif">
+            <a href="{{ url('/eventos') }}" class="list-group-item @if(request()->is('eventos*')) active @endif @if(request()->is('ver*')) active @endif">
                 Lista eventos
             </a>
 
                 @if (auth()->user()->is_admin)
-                <a href="{{ url('/crearevento') }}" class="list-group-item @if(request()->is('crearevento')) active @endif">
+                <a href="{{ url('/crearevento') }}" class="list-group-item @if(request()->is('crearevento*')) active @endif">
                     Crear Evento
                 </a>
 
-                <a href="{{ url('/informes') }}" class="list-group-item @if(request()->is('informes')) active @endif">
+                <a href="{{ url('/informes') }}" class="list-group-item @if(request()->is('informes*')) active @endif">
                     Ver Informes
                 </a>
 
-                <ul class="list-group-item list-group-flush @if(request()->is('salas')) active @endif @if(request()->is('profesores')) active @endif @if(request()->is('asignaturas')) active @endif @if(request()->is('otros')) active @endif">
+                <ul class="list-group-item list-group-flush @if(request()->is('salas')) active @endif @if(request()->is('profesores*')) active @endif @if(request()->is('asignaturas*')) active @endif @if(request()->is('otros*')) active @endif">
                     <a class="nav-item dropdown">
                         <a class="nav-link- dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administrar</a>
                         <div class="dropdown-menu">

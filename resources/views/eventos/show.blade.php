@@ -76,8 +76,6 @@
 
         </table>
 
-        <a href="/eventos" class="btn btn-info"> Atrás </a>
-
         @if(auth()->user()->is_admin)
         <a href="/eventos/{{ $evento-> id }}" class="btn btn-info" title="Editar">
             <i class="fas fa-edit"></i>
