@@ -26,6 +26,8 @@ Route::get('/calendario', 'EventoController@calendar');
 Route::get('/eventos','EventoController@index');
 Route::get('/ver/{id}','EventoController@show');
 
+Route::post('/eventos','EventoController@update2');
+
 
 //rutas que requieren ser admin.
 Route::group(['middleware' => 'admin'], function () {

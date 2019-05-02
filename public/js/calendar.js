@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
         timeZone: 'local',
         defaultView: 'resourceTimeGridDay',
         allDaySlot: false,
+        minTime: "08:00:00",
+        maxTime: "23:00:00",
+        eventBackgroundColor: "#E3FA9B",
+        eventBorderColor : "#FE5050",
         views: {
             resourceTimeGridDay: {
                 buttonText: 'Día'
@@ -29,21 +33,47 @@ document.addEventListener('DOMContentLoaded', function () {
             right: 'resourceTimeGridDay'
         },
         eventDrop: function (eventDropInfo) {
-            
-            //si no lo cambio de sala
+
+            var evento_id = eventDropInfo.event.id;
+            var evento_name = eventDropInfo.event.title;
+            /*
+            var evento_start = eventDropInfo.event.start.toISOString();
+            var evento_end = eventDropInfo.event.end.toISOString().slice(0, -5);
+            */
+
+            var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
+            var evento_start = (new Date(eventDropInfo.event.start - tzoffset)).toISOString().slice(0, -5);
+            var evento_end = (new Date(eventDropInfo.event.end - tzoffset)).toISOString().slice(0, -5);
+
+
+
+            $('#evento_id').val(evento_id);
+            $('#evento_name').val(evento_name);
+            $('#evento_start').val(evento_start);
+            $('#evento_end').val(evento_end);
+
+
+            //si lo cambio de sala
             if (eventDropInfo.newResource == null) {
-                
-                console.log(eventDropInfo.event.id);
-                console.log('start: ' + eventDropInfo.event.start.toISOString().slice(0, -5) + 'End:' + eventDropInfo.event.end.toISOString().slice(0, -5));
-                
-                
-            } else { //si lo cambio de sala
-                
-                console.log(eventDropInfo.event.id);
-                console.log(eventDropInfo.newResource.id +' - '+ eventDropInfo.newResource.title);
-                console.log('start: ' + eventDropInfo.event.start.toISOString().slice(0, -5) + 'End:' + eventDropInfo.event.end.toISOString().slice(0, -5));
-                
+
+                document.getElementById("nombre_sala").style.visibility = "hidden";
+                document.getElementById("titulo_sala").style.visibility = "hidden";
+
+            } else {
+
+                document.getElementById("nombre_sala").style.visibility = "visible";
+                document.getElementById("titulo_sala").style.visibility = "visible";
+
+                var id_sala = eventDropInfo.newResource.id;
+                var nombre_sala = eventDropInfo.newResource.title;
+
+                $('#id_sala').val(id_sala);
+                $('#nombre_sala').val(nombre_sala);
             }
+
+
+
+            $('#modalDropEvent').modal('show');
             
             /*
             if (!confirm("Are you sure about this change?")) {

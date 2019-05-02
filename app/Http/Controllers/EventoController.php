@@ -86,7 +86,7 @@ class EventoController extends Controller
     }
     
     public function update($id, Request $request) {
-        
+        dd($request);
         //obtengo la asignatura resultante para usar su id.
         //Gracias a esto evito hacerlo mediante js->ajax y aumento la seguridad de la web
         //para no exponer mi BBDD.
@@ -118,6 +118,32 @@ class EventoController extends Controller
         $eventos = Evento::all();
         
         return redirect('/eventos')->with('notification', 'Evento eliminado correctamente')->with(compact('eventos'));
+        
+    }
+    
+    public function update2 (Request $request) {
+        
+        $rules = [
+            
+            'id_sala' => 'nullable',
+            
+        ];
+        
+        $this->validate($request, $rules);  
+        
+        $evento_id = $request->input('evento_id');    
+        $evento = Evento::find($evento_id);
+        
+        $evento->start_date = $request->input('start_date');
+        $evento->end_date = $request->input('end_date'); 
+        
+        $id_sala = $request->input('id_sala');
+        if($id_sala)
+            $evento->id_sala = $id_sala;
+            
+        $evento->save();
+        
+        return back();
         
     }
     
