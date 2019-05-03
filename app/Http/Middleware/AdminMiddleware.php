@@ -16,10 +16,10 @@ class AdminMiddleware
     public function handle($request, Closure $next)
     {   
         if (!auth()->check()) { //si no ha iniciado sesión al login
-            return redirect('login');
+            return redirect('login')->with('notification', 'Inicia sesión para utilizar esas funciones.');
         }
         if (auth()->user()->role != 0 ) { //not admin
-            return redirect('home');
+            return redirect('home')->with('notification', 'Necesitas permisos de administrador para acceder a esas funciones.');
         }
         return $next($request);
     }

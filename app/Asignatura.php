@@ -9,7 +9,7 @@ class Asignatura extends Model
         public static $rules = [
             
             'nombre' => 'required|min:5|max:150',
-            'codigo' => 'required|integer|digits_between:1,10',
+            'codigo' => 'required|integer|digits:10',
             'grado' => 'required|min:5|max:150',
             'curso' => 'required|integer|between:1,6',
             'grupo' => 'required|min:3|max:3',
@@ -28,7 +28,7 @@ class Asignatura extends Model
             'nombre.max' => 'El nombre debe presentar como máximo 150 caracteres',
             
             'codigo.integer' => 'El codigo debe ser un numero entero', 
-            'codigo.digits_between' => 'El codigo debe tener una longitud de entre 1 y 10 números.',
+            'codigo.digits' => 'El codigo debe tener una longitud de 10 números.',
             
             'grado.min' => 'El grado debe presentar al menos 5 caracteres', 
             'grado.max' => 'El grado debe presentar como máximo 150 caracteres',

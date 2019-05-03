@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var calendar = new FullCalendar.Calendar(calendarEl, {
         schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
         locale: 'es',
-        plugins: ['resourceTimeGrid', 'interaction'],
+        plugins: ['resourceTimeGrid', 'interaction', 'dayGrid'],
         editable: true,
         droppable: true,
         eventDurationEditable: false,
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'resourceTimeGridDay'
+            right: 'resourceTimeGridDay dayGridMonth'
         },
         eventDrop: function (eventDropInfo) {
 
