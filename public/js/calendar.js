@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'resourceTimeGridDay dayGridMonth'
+            right: 'resourceTimeGridDay,dayGridMonth'
         },
         eventDrop: function (eventDropInfo) {
 
@@ -88,13 +88,29 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         resources: '/api/resources/salas',
-        events: 'api/eventos/calendar'
-        //format start: "2019-04-19T07:30:00+00:00",
+        eventSources: [
+
+            // your event source
+            {
+                url: '/api/eventos1/calendar', // use the `url` property
+                color: '#93FFFB', // an option!
+                textColor: 'black', // an option!
+                borderColor: 'red'
+            },
+            {
+                url: '/api/eventos2/calendar', // use the `url` property      
+                borderColor: 'red'
+            }
+
+            // any other sources...
+
+        ]
+
     });
 
 
     calendar.render();
-
+    /*
     var calendarEl2 = document.getElementById('calendar2');
     var calendar2 = new FullCalendar.Calendar(calendarEl2, {
         schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
@@ -123,4 +139,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     calendar2.render();
+    */
 });

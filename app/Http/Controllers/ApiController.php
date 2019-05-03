@@ -11,13 +11,36 @@ use App\Asignatura;
 
 class ApiController extends Controller
 {
-    //api/eventos/calendar
-    public function eventos(){
+    //api/eventos1/calendar
+    public function eventos1(){
         
-        $events = Evento::all("id", "nombre as title", "start_date as start", "end_date as end", "id_sala as resourceId")->toArray();
-        //BB DD 2019-04-19 10:00:00.000000
-        //2019-04-18 11:00:00
-        return response()->json($events);
+        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Fisioterapia")->get();
+        $array =[];
+        foreach($enfermeria as $obj){
+            $array[] = $obj->id;
+        }
+        
+        $events = DB::table('tfg.eventos')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                        ->whereIn('id_asignatura', $array)->get();
+        
+        return $events;
+        
+    }
+    public function eventos2(){
+        
+        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Enfermería")->get();
+        $array =[];
+        foreach($enfermeria as $obj){
+            $array[] = $obj->id;
+        }
+        
+        $events = DB::table('tfg.eventos')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                        ->whereIn('id_asignatura', $array)->get();
+        
+        return $events;
+        
     }
     
     //api/resources/salas
