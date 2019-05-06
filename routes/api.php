@@ -18,12 +18,20 @@ Route::get ('/asignaturas/{grad}/{asig}', 'ApiController@byGrupo');
 Route::get ('/id/{grad}/{asig}/{grup}', 'ApiController@idAsignatura');
 
 
-//api/eventos1/calendar
-Route::get ('/eventos1/calendar', 'ApiController@eventos1');
+//api/eventosFisioterapia/calendar
+Route::get ('/eventosFisioterapia/calendar', 'ApiController@eventosFisioterapia');
 
-//api/eventos2/calendar
-Route::get ('/eventos2/calendar', 'ApiController@eventos2');
+//api/eventosEnfermeria/calendar
+Route::get ('/eventosEnfermeria/calendar', 'ApiController@eventosEnfermeria');
 
+//api/eventosFarmacia/calendar
+Route::get ('/eventosFarmacia/calendar', 'ApiController@eventosFarmacia');
 
+//api/eventosMedicina/calendar
+Route::get ('/eventosMedicina/calendar', 'ApiController@eventosMedicina');
 
+//api/eventosOdontologia/calendar
+Route::get ('/eventosOdontologia/calendar', 'ApiController@eventosOdontologia');
 
+//api/eventosBiotecnologia/calendar
+Route::get ('/eventosBiotecnologia/calendar', 'ApiController@eventosBiotecnologia');

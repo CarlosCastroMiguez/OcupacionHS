@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         minTime: "08:00:00",
         maxTime: "23:00:00",
         eventBackgroundColor: "#E3FA9B",
-        eventBorderColor : "#FE5050",
+        eventBorderColor: "#FE5050",
         views: {
             resourceTimeGridDay: {
                 buttonText: 'Día'
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
             $('#modalDropEvent').modal('show');
-            
+
             /*
             if (!confirm("Are you sure about this change?")) {
                 eventDropInfo.revert();
@@ -90,21 +90,39 @@ document.addEventListener('DOMContentLoaded', function () {
         resources: '/api/resources/salas',
         eventSources: [
 
-            // your event source
             {
-                url: '/api/eventos1/calendar', // use the `url` property
-                color: '#93FFFB', // an option!
-                textColor: 'black', // an option!
+                url: '/api/eventosFisioterapia/calendar',
+                color: '#93FFFB',
                 borderColor: 'red'
             },
             {
-                url: '/api/eventos2/calendar', // use the `url` property      
+                url: '/api/eventosEnfermeria/calendar',
+                color: '#E3FA9B',
                 borderColor: 'red'
-            }
-
-            // any other sources...
+            },
+            {
+                url: '/api/eventosFarmacia/calendar',
+                color: '#FCFC84',
+                borderColor: 'red'
+            },
+            {
+                url: '/api/eventosMedicina/calendar',
+                color: '#FC9A84',
+                borderColor: 'red'
+            },
+            {
+                url: '/api/eventosOdontologia/calendar',
+                color: '#9384FC',
+                borderColor: 'red'
+            },
+            {
+                url: '/api/eventosBiotecnologia/calendar',
+                color: '#FC84D7',
+                borderColor: 'red'
+            },
 
         ]
+        
 
     });
 

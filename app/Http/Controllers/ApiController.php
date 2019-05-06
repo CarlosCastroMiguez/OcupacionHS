@@ -11,8 +11,8 @@ use App\Asignatura;
 
 class ApiController extends Controller
 {
-    //api/eventos1/calendar
-    public function eventos1(){
+    //api/eventosFisioterapia/calendar
+    public function eventosFisioterapia(){
         
         $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Fisioterapia")->get();
         $array =[];
@@ -27,9 +27,74 @@ class ApiController extends Controller
         return $events;
         
     }
-    public function eventos2(){
+    //api/eventosEnfermeria/calendar
+    public function eventosEnfermeria(){
         
-        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Enfermería")->get();
+        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Enfermeria")->get();
+        $array =[];
+        foreach($enfermeria as $obj){
+            $array[] = $obj->id;
+        }
+        
+        $events = DB::table('tfg.eventos')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                        ->whereIn('id_asignatura', $array)->get();
+        
+        return $events;
+        
+    }
+    //api/eventosFarmacia/calendar
+    public function eventosFarmacia(){
+        
+        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Farmacia")->get();
+        $array =[];
+        foreach($enfermeria as $obj){
+            $array[] = $obj->id;
+        }
+        
+        $events = DB::table('tfg.eventos')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                        ->whereIn('id_asignatura', $array)->get();
+        
+        return $events;
+        
+    }
+    //api/eventosMedicina/calendar
+    public function eventosMedicina(){
+        
+        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Medicina")->get();
+        $array =[];
+        foreach($enfermeria as $obj){
+            $array[] = $obj->id;
+        }
+        
+        $events = DB::table('tfg.eventos')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                        ->whereIn('id_asignatura', $array)->get();
+        
+        return $events;
+        
+    }
+    //api/eventosOdontologia/calendar
+    public function eventosOdontologia(){
+        
+        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Odontologia")->get();
+        $array =[];
+        foreach($enfermeria as $obj){
+            $array[] = $obj->id;
+        }
+        
+        $events = DB::table('tfg.eventos')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                        ->whereIn('id_asignatura', $array)->get();
+        
+        return $events;
+        
+    }
+    //api/eventosBiotecnologia/calendar
+    public function eventosBiotecnologia(){
+        
+        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Biotecnologia")->get();
         $array =[];
         foreach($enfermeria as $obj){
             $array[] = $obj->id;

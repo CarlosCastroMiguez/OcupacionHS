@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SalasTableSeeder::class);
         $this->call(SimuladoresTableSeeder::class);
         $this->call(TipoSalasTableSeeder::class);
-        //$this->call(EventosTableSeeder::class);
+        $this->call(EventosTableSeeder::class);
     }
 }
