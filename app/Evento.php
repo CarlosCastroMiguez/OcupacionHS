@@ -21,7 +21,7 @@ class Evento extends Model
     public function simulador(){
         return $this->belongsTo('App\Simulador', 'id_simulador');
     }
-    
+    //Si tiene asignado un simulador devuelve el nombre, sino "Sin Simulador"
     public function getNombreSimuladorAttribute(){
         if($this->simulador){
             return $this->simulador->nombre;
@@ -29,7 +29,15 @@ class Evento extends Model
         else
             return 'Sin simulador';
     }
-    
+    //Si tiene actor devuelve la descripcion, sino "No hay actores asignados a este evento."
+    public function getDescripcionActorAttribute(){
+        if($this->actor){
+            return $this->actor;
+        }
+        else
+            return 'No hay actores asignados a este evento.';
+    }
+    //Si tiene sala devuelve su tipo(nombre) sino "Sin sala"
     public function getTipoSalaAttribute(){
         if($this->sala){
             return $this->sala->tipo;
@@ -37,7 +45,7 @@ class Evento extends Model
         else
             return 'Sin sala';
     }
-    
+    //Agrupa la informacion academica en un string.
     public function getInfoAcademicaAttribute(){
         if($this->asignatura){
             $asig = $this->asignatura->nombre;
@@ -48,24 +56,22 @@ class Evento extends Model
             $info = $grad  . ' - ' . $curs . 'º - ' . $asig . ' - ' . $grup;
         
             return $info;
-            
         }
-        
     }
-    
+    //Si el nombre es mas largo de 10 caracteres
     public function getNombreShortAttribute(){
     
-        return mb_strimwidth($this->nombre,0,10,'...');        
+        return mb_strimwidth($this->nombre,0,11,'...');        
         
     }
-    
+    //devuelve la fecha final del evento
     public function getFechaFinalAttribute(){
         
         $e_date = strftime('%Y-%m-%dT%H:%M:%S', strtotime($this->end_date));
         return $e_date;
         
     }
-    
+    //devuelve la fecha de inicio del evento
     public function getFechaInicioAttribute(){
         
         $s_date = strftime('%Y-%m-%dT%H:%M:%S', strtotime($this->start_date));
@@ -84,6 +90,7 @@ class Evento extends Model
             'asignatura' => 'required',
             'grupo' => 'required',
             'profesor' => 'required',
+            'actor' => 'nullable|min:15',
             
         ];
         
@@ -107,6 +114,8 @@ class Evento extends Model
             'asignatura.required' => 'Es necesario seleccionar una asignatura',
             'grupo.required' => 'Es necesario seleccionar un grupo',
             'profesor.required' => 'Es necesario seleccionar un profesor',
+            
+            'actor.min' => 'La descripcion debe tener una longitud mínima de 15 caracteres.',
             
         ];
     

@@ -71,6 +71,11 @@
                     <td>{{ $evento ->nombre_simulador }}</td>
 
                 </tr>
+                <tr>
+                    <th>Actor</th>
+                    <td>{{ $evento ->descripcion_actor }}</td>
+
+                </tr>
 
             </tbody>
 

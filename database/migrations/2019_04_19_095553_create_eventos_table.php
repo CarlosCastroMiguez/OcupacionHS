@@ -18,7 +18,7 @@ class CreateEventosTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->TinyInteger('numAlumnos');
-            //$table->Date('date');
+            
             $table->datetime('start_date');
             $table->datetime('end_date');
             
@@ -33,6 +33,8 @@ class CreateEventosTable extends Migration
             
             $table->unsignedInteger('id_simulador')->nullable();
             $table->foreign('id_simulador')->references('id')->on('simuladors');
+            
+            $table->string('actor')->nullable();
             
             $table->timestamps();
         });

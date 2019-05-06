@@ -106,10 +106,14 @@
                         </select>
                     </div>
 
-
-
                 </div>
+
             </div>
+            <div class="form-group">
+                <label for="actor">Descripción del actor<em> - Introducir en caso de requerir sus servicios</em></label> 
+                <textarea name="actor" class="form-control" placeholder="Introducir en caso de requerir sus servicios">{{ old('actor') }}</textarea>
+            </div>
+
             <div class="form-group">
                 <button class="btn btn-primary">Registrar Evento</button>
                 <a href="/calendario" class="btn btn-info"> Atrás </a>

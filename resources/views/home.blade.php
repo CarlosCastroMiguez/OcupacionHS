@@ -23,7 +23,7 @@
 
     <div class="card-body">
 
-        <p>Hola, {{ $name }}, has iniciado sesión hoy {{ date('d-m-Y') }}</p>
+        <p>Hola, {{ $name }}, has iniciado sesión hoy {{ date('d-m-Y H:m:s') }}</p>
 
     </div>
 </div>

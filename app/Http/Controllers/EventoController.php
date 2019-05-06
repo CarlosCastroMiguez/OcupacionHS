@@ -64,6 +64,7 @@ class EventoController extends Controller
         $evento->id_asignatura = $asig->id;
         $evento->id_sala = $request->input('sala');
         $evento->id_simulador = $request->input('simulador');
+        $evento->actor = $request->input('actor');
         
         
         $evento->save();
@@ -106,6 +107,7 @@ class EventoController extends Controller
         $evento->id_profesor = $request->input('profesor');
         $evento->id_sala = $request->input('sala');
         $evento->id_simulador = $request->input('simulador');
+        $evento->actor = $request->input('actor');
         
         $evento->save();
         
