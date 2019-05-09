@@ -32,7 +32,7 @@ class EventosTableSeeder extends Seeder
             'id_asignatura' => 3,
             'id_profesor' => 1,
             'id_sala' => 2,
-            'id_simulador' => 1
+            'id_simulador' => 2
         ]);
         Evento::create([
             'nombre' => 'Clase Farmacia',
@@ -42,7 +42,7 @@ class EventosTableSeeder extends Seeder
             'id_asignatura' => 5,
             'id_profesor' => 1,
             'id_sala' => 3,
-            'id_simulador' => 1
+            'id_simulador' => 3
         ]);
         Evento::create([
             'nombre' => 'Clase Medicina',
@@ -52,7 +52,7 @@ class EventosTableSeeder extends Seeder
             'id_asignatura' => 7,
             'id_profesor' => 1,
             'id_sala' => 4,
-            'id_simulador' => 1
+            'id_simulador' => 2
         ]);
         Evento::create([
             'nombre' => 'Clase Odontologia',
@@ -62,7 +62,7 @@ class EventosTableSeeder extends Seeder
             'id_asignatura' => 9,
             'id_profesor' => 1,
             'id_sala' => 5,
-            'id_simulador' => 1
+            'id_simulador' => 4
         ]);
         Evento::create([
             'nombre' => 'Clase Psicología',
@@ -72,7 +72,7 @@ class EventosTableSeeder extends Seeder
             'id_asignatura' => 11,
             'id_profesor' => 1,
             'id_sala' => 6,
-            'id_simulador' => 1
+            'id_simulador' => 5
         ]);
         Evento::create([
             'nombre' => 'Clase Ciclos',
@@ -82,7 +82,7 @@ class EventosTableSeeder extends Seeder
             'id_asignatura' => 13,
             'id_profesor' => 1,
             'id_sala' => 6,
-            'id_simulador' => 1
+            'id_simulador' => 2
         ]);
         Evento::create([
             'nombre' => 'Clase Ciclos2',
@@ -92,7 +92,7 @@ class EventosTableSeeder extends Seeder
             'id_asignatura' => 14,
             'id_profesor' => 1,
             'id_sala' => 1,
-            'id_simulador' => 1
+            'id_simulador' => 4
         ]);
     
     }

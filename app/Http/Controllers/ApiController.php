@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Evento;
 use App\Sala;
 use App\Asignatura;
+use App\Simulador;
 
 class ApiController extends Controller
 {
@@ -125,6 +126,13 @@ class ApiController extends Controller
         
     }
     
+    //api/simuladores
+    public function simuladores(){
+        
+        $simuladores = Simulador::all('id', 'nombre')->toArray();
+        return response()->json($simuladores);
+    }
+
     //api/resources/salas
     public function salas(){
         

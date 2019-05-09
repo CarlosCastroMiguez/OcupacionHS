@@ -8,7 +8,7 @@ class Sala extends Model
 {
         public static $rules = [
             
-                'tipo' => 'required|in:Consulta,Simulación Compleja,Task Training,Hospitalización,Farmacia,Quirófano,Farmacia Comunitaria,Ambulancia',
+                'tipo' => 'required',
                 'capacidad' => 'required|integer|between:2,75',
         ];
         

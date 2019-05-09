@@ -17,6 +17,8 @@ Route::get ('/asignaturas/{grad}/{asig}', 'ApiController@byGrupo');
 //api/id/{grado_val}/{asignatura_val}/{grup_val}
 Route::get ('/id/{grad}/{asig}/{grup}', 'ApiController@idAsignatura');
 
+//api/simuladores
+Route::get ('/simuladores', 'ApiController@simuladores');
 
 //api/eventosFisioterapia/calendar
 Route::get ('/eventosFisioterapia/calendar', 'ApiController@eventosFisioterapia');

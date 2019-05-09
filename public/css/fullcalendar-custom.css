@@ -1,0 +1,17 @@
+.fc-timeGrid-view{
+    overflow-x: scroll;
+}
+
+.fc-timeGrid-view > table {
+    width: 215%;
+}
+
+.th.fc-resource-cell {
+    vertical-align: middle;
+}
+
+/*
+.fc-view .fc-resourceTimeGridDay-view > table{
+    overflow-y: visible;
+}
+*/

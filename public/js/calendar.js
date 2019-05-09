@@ -1,12 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-
-    var currentDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
-    var day = currentDate.getDate()
-    var month = currentDate.getMonth() + 1
-    var year = currentDate.getFullYear()
-
     var calendarEl = document.getElementById('calendar');
+    
+    var simuladores = [];
+    //antes de cargar el calendario guardamos las tuplas de idy nombre de simulador en un array.
+    //Esto lo hacemos para evitar que por cada evento se realice una consulta a la BBDD.
+    //Pasamos esta variable a la funcion eventRender
+    $.get('/api/simuladores', function (data) {
+
+        for (var i = 0; i < data.length; i++) {
+            var simulador = [data[i].id, data[i].nombre];
+            simuladores.push(simulador);
+        }
+    });
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
         schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
@@ -20,8 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
         allDaySlot: false,
         minTime: "08:00:00",
         maxTime: "23:00:00",
-        eventBackgroundColor: "#E3FA9B",
-        eventBorderColor: "#FE5050",
+        eventBackgroundColor: "#EAEAEA",
+        eventBorderColor: "#000000",
+        eventLimit: true,
+        eventLimitText: "Eventos, haz click aquí",
         views: {
             resourceTimeGridDay: {
                 buttonText: 'Día'
@@ -53,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
             $('#evento_end').val(evento_end);
 
 
-            //si lo cambio de sala
+            //si no lo cambio de sala
             if (eventDropInfo.newResource == null) {
 
                 document.getElementById("nombre_sala").style.visibility = "hidden";
@@ -71,8 +79,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 $('#nombre_sala').val(nombre_sala);
             }
 
-
-
             $('#modalDropEvent').modal('show');
 
             /*
@@ -86,30 +92,29 @@ document.addEventListener('DOMContentLoaded', function () {
             var eventObj = info.event;
             location.href = "/ver/" + eventObj.id;
         },
-        
-        eventRender: function(info) {
+        //Por cada evento que renderizamos agregamos la siguiente información
+        eventRender: function (info) {
             
-            var newcontent = document.createElement('div');
-            newcontent.innerHTML = info.event.extendedProps.id_simulador;
+            //creamos una variable simulador
+            var nombre_sim = 'SIMULADOR';
+            //por cada elemento/conjunto en el array simuladores (Este array lo cargamos antes que el calendario)
+            for (var i = 0; i < simuladores.length; ++i) {
+                //Si el primer valor de la tupla es igual al id del simulador del evento en el que estamos:
+                if (simuladores[i][0] == info.event.extendedProps.id_simulador) {
+                    //guardamos en la varable nombre_sim el nombre de dicho simulador.
+                    nombre_sim = simuladores[i][1];
 
+                }
+            }
+            //creamos un nuevo elemento con el valor del nombre y lo agregamos al evento
+            var newcontent = document.createElement('div');
+            newcontent.innerHTML = nombre_sim;
+            //Mientras tenga un valor lo agregamos al HTML (Siempre tiene valor "simulador por defecto")
             while (newcontent.firstChild) {
                 info.el.appendChild(newcontent.firstChild);
             }
-            
-	        //console.log(info.el);
-            //info.el.firstChild.innerHTML = info.event.extendedProps.id_simulador;
-            
-            
-            //console.log(eventData.event.extendedProps.id_simulador);
-            //$('#fc-title').html(eventData.event.extendedProps.id_simulador);
-            //var a = eventData.event.extendedProps.id_simulador;
-            //console.log(a);
-            
-            //document.getElementsByClassName("fc-title").html(eventData.event.extendedProps.id_simulador);
-            //document.find('fc-title').html(eventData.event.extendedProps.id_simulador);
-            
         },
-        
+
         resources: '/api/resources/salas',
         eventSources: [
             //psicologia ciclos form 

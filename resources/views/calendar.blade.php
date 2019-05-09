@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="fullcalendar/packages/timegrid/main.css" />
 <link rel="stylesheet" href="fullcalendar/packages/list/main.css" />
 
+<link rel="stylesheet" href="/css/fullcalendar-custom.css" />
+
 <script src="/fullcalendar/packages/core/main.js"></script>
 <script src="/fullcalendar/packages/core/locales/es.js"></script>
 <script src="/fullcalendar/packages/interaction/main.js"></script>
@@ -25,8 +27,6 @@
     <div class="card-body">
 
         <div id="calendar"></div>
-        <br>
-        <div id="calendar2"></div>
 
     </div>
 </div>
