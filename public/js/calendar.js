@@ -86,76 +86,75 @@ document.addEventListener('DOMContentLoaded', function () {
             var eventObj = info.event;
             location.href = "/ver/" + eventObj.id;
         },
+        
+        eventRender: function(info) {
+            
+            var newcontent = document.createElement('div');
+            newcontent.innerHTML = info.event.extendedProps.id_simulador;
 
+            while (newcontent.firstChild) {
+                info.el.appendChild(newcontent.firstChild);
+            }
+            
+	        //console.log(info.el);
+            //info.el.firstChild.innerHTML = info.event.extendedProps.id_simulador;
+            
+            
+            //console.log(eventData.event.extendedProps.id_simulador);
+            //$('#fc-title').html(eventData.event.extendedProps.id_simulador);
+            //var a = eventData.event.extendedProps.id_simulador;
+            //console.log(a);
+            
+            //document.getElementsByClassName("fc-title").html(eventData.event.extendedProps.id_simulador);
+            //document.find('fc-title').html(eventData.event.extendedProps.id_simulador);
+            
+        },
+        
         resources: '/api/resources/salas',
         eventSources: [
-
+            //psicologia ciclos form 
             {
                 url: '/api/eventosFisioterapia/calendar',
-                color: '#93FFFB',
+                color: '#FFFFFF',
                 borderColor: 'red'
             },
             {
                 url: '/api/eventosEnfermeria/calendar',
-                color: '#E3FA9B',
+                color: '#00CBFF',
                 borderColor: 'red'
             },
             {
                 url: '/api/eventosFarmacia/calendar',
-                color: '#FCFC84',
+                color: '#AA1C47',
                 borderColor: 'red'
             },
             {
                 url: '/api/eventosMedicina/calendar',
-                color: '#FC9A84',
+                color: '#84FC9F',
                 borderColor: 'red'
             },
             {
                 url: '/api/eventosOdontologia/calendar',
-                color: '#9384FC',
+                color: '#0043E2',
+                borderColor: 'red',
+                textColor: 'white'
+            },
+            {
+                url: '/api/eventosPsicologia/calendar',
+                color: '#C3C0C0',
                 borderColor: 'red'
             },
             {
-                url: '/api/eventosBiotecnologia/calendar',
-                color: '#FC84D7',
+                url: '/api/eventosCiclos/calendar',
+                color: '#FC9900',
                 borderColor: 'red'
             },
 
         ]
-        
+
 
     });
-
 
     calendar.render();
-    /*
-    var calendarEl2 = document.getElementById('calendar2');
-    var calendar2 = new FullCalendar.Calendar(calendarEl2, {
-        schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
-        locale: 'es',
-        plugins: ['resourceTimeGrid'],
-        timeZone: 'local',
-        defaultView: 'resourceTimeGridDay',
-        allDaySlot: false,
-        views: {
-            resourceTimeGridDay: {
-                buttonText: 'Día'
-            },
-        },
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'resourceTimeGridDay'
-        },
 
-        resources: '/api/resources/salas',
-        events: 'api/eventos/calendar'
-        //format start: "2019-04-19T07:30:00+00:00",
-    });
-
-    calendar2.gotoDate(currentDate);
-
-
-    calendar2.render();
-    */
 });

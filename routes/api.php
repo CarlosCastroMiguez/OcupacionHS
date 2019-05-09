@@ -33,5 +33,8 @@ Route::get ('/eventosMedicina/calendar', 'ApiController@eventosMedicina');
 //api/eventosOdontologia/calendar
 Route::get ('/eventosOdontologia/calendar', 'ApiController@eventosOdontologia');
 
-//api/eventosBiotecnologia/calendar
-Route::get ('/eventosBiotecnologia/calendar', 'ApiController@eventosBiotecnologia');
+//api/eventosPsicologia/calendar
+Route::get ('/eventosPsicologia/calendar', 'ApiController@eventosPsicologia');
+
+//api/eventosCiclos/calendar
+Route::get ('/eventosCiclos/calendar', 'ApiController@eventosCiclos');

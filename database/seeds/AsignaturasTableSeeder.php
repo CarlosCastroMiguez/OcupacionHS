@@ -14,14 +14,14 @@ class AsignaturasTableSeeder extends Seeder
     {
         //Fisioterapia
         Asignatura::create([
-            'nombre' => 'Física',
+            'nombre' => 'Asignatura Fisioterapia1',
             'codigo' => '1111111111',
             'grado' => 'Fisioterapia',
             'curso' => 2,
             'grupo' => 'T11'
         ]);
         Asignatura::create([
-            'nombre' => 'Física',
+            'nombre' => 'Asignatura Fisioterapia2',
             'codigo' => '1111111111',
             'grado' => 'Fisioterapia',
             'curso' => 2,
@@ -29,14 +29,14 @@ class AsignaturasTableSeeder extends Seeder
         ]);
         //Enfermeria
         Asignatura::create([
-            'nombre' => 'Química',
+            'nombre' => 'Asignatura Enfermeria1',
             'codigo' => '2222222222',
             'grado' => 'Enfermeria',
             'curso' => 3,
             'grupo' => 'T31'
         ]);
         Asignatura::create([
-            'nombre' => 'Química',
+            'nombre' => 'Asignatura Enfermeria2',
             'codigo' => '2222222222',
             'grado' => 'Enfermeria',
             'curso' => 3,
@@ -44,14 +44,14 @@ class AsignaturasTableSeeder extends Seeder
         ]);
         //Farmacia
         Asignatura::create([
-            'nombre' => 'Física',
+            'nombre' => 'Asignatura Farmacia1',
             'codigo' => '3333333333',
             'grado' => 'Farmacia',
             'curso' => 2,
             'grupo' => 'M11'
         ]);
         Asignatura::create([
-            'nombre' => 'Física',
+            'nombre' => 'Asignatura Farmacia2',
             'codigo' => '3333333333',
             'grado' => 'Farmacia',
             'curso' => 2,
@@ -59,14 +59,14 @@ class AsignaturasTableSeeder extends Seeder
         ]);
         //Medicina
         Asignatura::create([
-            'nombre' => 'Física',
+            'nombre' => 'Asignatura Medicina1',
             'codigo' => '4444444444',
             'grado' => 'Medicina',
             'curso' => 2,
             'grupo' => 'M31'
         ]);
         Asignatura::create([
-            'nombre' => 'Física',
+            'nombre' => 'Asignatura Medicina2',
             'codigo' => '4444444444',
             'grado' => 'Medicina',
             'curso' => 2,
@@ -74,32 +74,47 @@ class AsignaturasTableSeeder extends Seeder
         ]);
         //Odontologia
         Asignatura::create([
-            'nombre' => 'Física',
+            'nombre' => 'Asignatura Odontologia1',
             'codigo' => '5555555555',
             'grado' => 'Odontologia',
             'curso' => 2,
             'grupo' => 'M12'
         ]);
         Asignatura::create([
-            'nombre' => 'Física',
+            'nombre' => 'Asignatura Odontologia2',
             'codigo' => '5555555555',
             'grado' => 'Odontologia',
             'curso' => 2,
             'grupo' => 'M22'
         ]);
-        //Biotecnologia
+        //Psicologia
         Asignatura::create([
-            'nombre' => 'Matemáticas',
+            'nombre' => 'Asignatura Psicologia1',
             'codigo' => '6666666666',
-            'grado' => 'Biotecnologia',
+            'grado' => 'Psicologia',
             'curso' => 1,
             'grupo' => 'T12'
         ]);
         Asignatura::create([
-            'nombre' => 'Matemáticas',
+            'nombre' => 'Asignatura Psicologia2',
             'codigo' => '6666666666',
-            'grado' => 'Biotecnologia',
+            'grado' => 'Psicologia',
             'curso' => 1,
+            'grupo' => 'T22'
+        ]);
+        //Ciclos Formativos
+        Asignatura::create([
+            'nombre' => 'Asignatura ciclos1',
+            'codigo' => '7777777777',
+            'grado' => 'Ciclos Formativos',
+            'curso' => 4,
+            'grupo' => 'T12'
+        ]);
+        Asignatura::create([
+            'nombre' => 'Asignatura ciclos2',
+            'codigo' => '7777777777',
+            'grado' => 'Ciclos Formativos',
+            'curso' => 4,
             'grupo' => 'T22'
         ]);
     }

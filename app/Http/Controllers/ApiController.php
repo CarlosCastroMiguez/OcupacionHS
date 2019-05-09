@@ -21,7 +21,7 @@ class ApiController extends Controller
         }
         
         $events = DB::table('tfg.eventos')
-                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId', 'id_simulador')
                         ->whereIn('id_asignatura', $array)->get();
         
         return $events;
@@ -37,7 +37,7 @@ class ApiController extends Controller
         }
         
         $events = DB::table('tfg.eventos')
-                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId', 'id_simulador')
                         ->whereIn('id_asignatura', $array)->get();
         
         return $events;
@@ -53,7 +53,7 @@ class ApiController extends Controller
         }
         
         $events = DB::table('tfg.eventos')
-                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId', 'id_simulador')
                         ->whereIn('id_asignatura', $array)->get();
         
         return $events;
@@ -69,7 +69,7 @@ class ApiController extends Controller
         }
         
         $events = DB::table('tfg.eventos')
-                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId', 'id_simulador')
                         ->whereIn('id_asignatura', $array)->get();
         
         return $events;
@@ -85,23 +85,40 @@ class ApiController extends Controller
         }
         
         $events = DB::table('tfg.eventos')
-                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId', 'id_simulador')
                         ->whereIn('id_asignatura', $array)->get();
         
         return $events;
         
     }
-    //api/eventosBiotecnologia/calendar
-    public function eventosBiotecnologia(){
+    //api/eventosPsicologia/calendar
+    public function eventosPsicologia(){
         
-        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Biotecnologia")->get();
+        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Psicologia")->get();
         $array =[];
         foreach($enfermeria as $obj){
             $array[] = $obj->id;
         }
         
         $events = DB::table('tfg.eventos')
-                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId', 'id_simulador')
+                        ->whereIn('id_asignatura', $array)->get();
+        
+        return $events;
+        
+    }
+    
+    //api/eventosCiclos/calendar
+    public function eventosCiclos(){
+        
+        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Ciclos Formativos")->get();
+        $array =[];
+        foreach($enfermeria as $obj){
+            $array[] = $obj->id;
+        }
+        
+        $events = DB::table('tfg.eventos')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId', 'id_simulador')
                         ->whereIn('id_asignatura', $array)->get();
         
         return $events;

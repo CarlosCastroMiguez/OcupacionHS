@@ -65,13 +65,33 @@ class EventosTableSeeder extends Seeder
             'id_simulador' => 1
         ]);
         Evento::create([
-            'nombre' => 'Clase Biotecnologia',
+            'nombre' => 'Clase Psicología',
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
             'id_asignatura' => 11,
             'id_profesor' => 1,
-            'id_sala' => 4,
+            'id_sala' => 6,
+            'id_simulador' => 1
+        ]);
+        Evento::create([
+            'nombre' => 'Clase Ciclos',
+            'numAlumnos' => '10',
+            'start_date' => $s_date,
+            'end_date' => $e_date,
+            'id_asignatura' => 13,
+            'id_profesor' => 1,
+            'id_sala' => 6,
+            'id_simulador' => 1
+        ]);
+        Evento::create([
+            'nombre' => 'Clase Ciclos2',
+            'numAlumnos' => '10',
+            'start_date' => $s_date,
+            'end_date' => $e_date,
+            'id_asignatura' => 14,
+            'id_profesor' => 1,
+            'id_sala' => 1,
             'id_simulador' => 1
         ]);
     
