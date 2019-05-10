@@ -11,7 +11,7 @@ class Asignatura extends Model
             'nombre' => 'required|min:5|max:150',
             'codigo' => 'required|integer|digits:10',
             'grado' => 'required|min:5|max:150',
-            'curso' => 'required|integer|between:1,6',
+            'curso' => 'required|integer|between:0,6',
             'grupo' => 'required|min:3|max:3',
             
         ];

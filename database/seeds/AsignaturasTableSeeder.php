@@ -11,7 +11,15 @@ class AsignaturasTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {   
+        //Otros
+        Asignatura::create([
+            'nombre' => 'Otros',
+            'codigo' => '0000000000',
+            'grado' => 'Otros',
+            'curso' => 2,
+            'grupo' => '---'
+        ]);
         //Fisioterapia
         Asignatura::create([
             'nombre' => 'Asignatura Fisioterapia1',

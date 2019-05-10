@@ -40,3 +40,6 @@ Route::get ('/eventosPsicologia/calendar', 'ApiController@eventosPsicologia');
 
 //api/eventosCiclos/calendar
 Route::get ('/eventosCiclos/calendar', 'ApiController@eventosCiclos');
+
+//api/eventosOtros/calendar
+Route::get ('/eventosOtros/calendar', 'ApiController@eventosOtros');

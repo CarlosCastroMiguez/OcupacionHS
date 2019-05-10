@@ -87,7 +87,7 @@ class EventoController extends Controller
     }
     
     public function update($id, Request $request) {
-        dd($request);
+        
         //obtengo la asignatura resultante para usar su id.
         //Gracias a esto evito hacerlo mediante js->ajax y aumento la seguridad de la web
         //para no exponer mi BBDD.

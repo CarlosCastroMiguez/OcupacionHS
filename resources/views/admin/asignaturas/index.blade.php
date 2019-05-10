@@ -43,12 +43,14 @@
                 <label for="grado">Grado</label>
                 <select name="grado" class="form-control">
                     <option value="{{ old('grado')}} ">{{ old('grado', 'Seleccione grado') }}</option>
+                    <option value="Otros">Otros</option>
                     <option value="Fisioterapia">Fisioterapia</option>
                     <option value="Enfermeria">Enfermería</option>
                     <option value="Farmacia">Farmacia</option>
                     <option value="Medicina">Medicina</option>
                     <option value="Odontologia">Odontología</option>
-                    <option value="Biotecnologia">Biotecnología</option>
+                    <option value="Psicologia">Psicologia</option>
+                    <option value="Ciclos Formativos">Ciclos Formativos</option>
                 </select>
             </div>
 
@@ -56,6 +58,7 @@
                 <label for="curso">Curso</label>
                 <select name="curso" class="form-control">
                     <option value="{{ old('curso')}} ">{{ old('curso' , 'Seleccione curso') }}</option>
+                    <option value="0">Otros</option>
                     <option value="1">1º</option>
                     <option value="2">2º</option>
                     <option value="3">3º</option>

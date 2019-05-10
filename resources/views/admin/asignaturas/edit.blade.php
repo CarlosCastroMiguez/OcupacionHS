@@ -35,15 +35,27 @@
                 <input name="codigo" name="codigo" class="form-control" value="{{ old('codigo', $asignatura->codigo) }}"></input>
             </div>
 
+
             <div class="form-group">
                 <label for="grado">Grado</label>
-                <input name="grado" name="grado" class="form-control" value="{{ old('grado', $asignatura->grado) }}"></input>
+                <select name="grado" class="form-control">
+                    <option value="{{ old('grado', $asignatura->grado) }}">{{ old('grado', $asignatura->grado) }}</option>
+                    <option value="Otros">Otros</option>
+                    <option value="Fisioterapia">Fisioterapia</option>
+                    <option value="Enfermeria">Enfermería</option>
+                    <option value="Farmacia">Farmacia</option>
+                    <option value="Medicina">Medicina</option>
+                    <option value="Odontologia">Odontología</option>
+                    <option value="Psicologia">Psicologia</option>
+                    <option value="Ciclos Formativos">Ciclos Formativos</option>
+                </select>
             </div>
 
             <div class="form-group">
                 <label for="curso">Curso</label>
                 <select name="curso" class="form-control">
                     <option value="{{ old('curso', $asignatura->curso) }}">{{ old('curso', $asignatura->curso) }}º</option>
+                    <option value="0">Otros</option>
                     <option value="1">1º</option>
                     <option value="2">2º</option>
                     <option value="3">3º</option>

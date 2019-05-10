@@ -6,12 +6,7 @@
     width: 215%;
 }
 
-.th.fc-resource-cell {
+.fc th, .fc td {
     vertical-align: middle;
 }
 
-/*
-.fc-view .fc-resourceTimeGridDay-view > table{
-    overflow-y: visible;
-}
-*/

@@ -14,12 +14,12 @@ class EventosTableSeeder extends Seeder
         $s_date = strftime('%Y-%m-%dT%H:%M:%S', strtotime($date));
         $e_date = strftime('%Y-%m-%dT%H:%M:%S', strtotime('+2 hours'));
     
-         Evento::create([
+        Evento::create([
             'nombre' => 'Clase Fisioterapia',
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
-            'id_asignatura' => 1,
+            'id_asignatura' => 2,
             'id_profesor' => 1,
             'id_sala' => 1,
             'id_simulador' => 1
@@ -29,7 +29,7 @@ class EventosTableSeeder extends Seeder
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
-            'id_asignatura' => 3,
+            'id_asignatura' => 4,
             'id_profesor' => 1,
             'id_sala' => 2,
             'id_simulador' => 2
@@ -39,7 +39,7 @@ class EventosTableSeeder extends Seeder
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
-            'id_asignatura' => 5,
+            'id_asignatura' => 6,
             'id_profesor' => 1,
             'id_sala' => 3,
             'id_simulador' => 3
@@ -49,7 +49,7 @@ class EventosTableSeeder extends Seeder
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
-            'id_asignatura' => 7,
+            'id_asignatura' => 8,
             'id_profesor' => 1,
             'id_sala' => 4,
             'id_simulador' => 2
@@ -59,7 +59,7 @@ class EventosTableSeeder extends Seeder
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
-            'id_asignatura' => 9,
+            'id_asignatura' => 10,
             'id_profesor' => 1,
             'id_sala' => 5,
             'id_simulador' => 4
@@ -69,7 +69,7 @@ class EventosTableSeeder extends Seeder
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
-            'id_asignatura' => 11,
+            'id_asignatura' => 12,
             'id_profesor' => 1,
             'id_sala' => 6,
             'id_simulador' => 5
@@ -79,7 +79,7 @@ class EventosTableSeeder extends Seeder
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
-            'id_asignatura' => 13,
+            'id_asignatura' => 14,
             'id_profesor' => 1,
             'id_sala' => 6,
             'id_simulador' => 2
@@ -89,10 +89,20 @@ class EventosTableSeeder extends Seeder
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
-            'id_asignatura' => 14,
+            'id_asignatura' => 15,
             'id_profesor' => 1,
             'id_sala' => 1,
             'id_simulador' => 4
+        ]);
+        Evento::create([
+            'nombre' => 'VISITA',
+            'numAlumnos' => '10',
+            'start_date' => $s_date,
+            'end_date' => $e_date,
+            'id_asignatura' => 1,
+            'id_profesor' => 1,
+            'id_sala' => 1,
+            'id_simulador' => 1
         ]);
     
     }

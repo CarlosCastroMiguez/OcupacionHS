@@ -25,7 +25,7 @@ class SalasTableSeeder extends Seeder
             'capacidad' => 10
         ]);
         Sala::create([
-            'tipo' => 'Consulta ',
+            'tipo' => 'Consulta 1',
             'capacidad' => 10
         ]);
         Sala::create([

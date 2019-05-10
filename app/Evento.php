@@ -64,6 +64,12 @@ class Evento extends Model
         return mb_strimwidth($this->nombre,0,11,'...');        
         
     }
+    
+    public function getSalaShortAttribute(){
+    
+        return mb_strimwidth($this->sala->tipo,0,11,'...');        
+        
+    }
     //devuelve la fecha final del evento
     public function getFechaFinalAttribute(){
         

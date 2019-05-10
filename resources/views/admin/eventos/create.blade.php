@@ -83,12 +83,14 @@
                         <label for="grado">Grado</label>
                         <select name="grado" class="form-control" id="select-grado">
                             <option value=" ">Seleccione grado</option>
+                            <option value="Otros">Otros</option>
                             <option value="Fisioterapia">Fisioterapia</option>
                             <option value="Enfermeria">Enfermería</option>
                             <option value="Farmacia">Farmacia</option>
                             <option value="Medicina">Medicina</option>
                             <option value="Odontologia">Odontología</option>
-                            <option value="Biotecnologia">Biotecnología</option>
+                            <option value="Psicologia">Psicologia</option>
+                            <option value="Ciclos Formativos">Ciclos Formativos</option>
                         </select>
                     </div>
 

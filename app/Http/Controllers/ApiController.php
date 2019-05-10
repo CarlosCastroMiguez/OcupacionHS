@@ -126,6 +126,23 @@ class ApiController extends Controller
         
     }
     
+    //api/eventosOtros/calendar
+    public function eventosOtros(){
+        
+        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Otros")->get();
+        $array =[];
+        foreach($enfermeria as $obj){
+            $array[] = $obj->id;
+        }
+        
+        $events = DB::table('tfg.eventos')
+                    ->select('id', 'nombre as title', 'start_date as start', 'end_date as end', 'id_sala as resourceId', 'id_simulador')
+                        ->whereIn('id_asignatura', $array)->get();
+        
+        return $events;
+        
+    }
+    
     //api/simuladores
     public function simuladores(){
         

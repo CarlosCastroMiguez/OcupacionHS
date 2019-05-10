@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     var calendarEl = document.getElementById('calendar');
-    
+
     var simuladores = [];
     //antes de cargar el calendario guardamos las tuplas de idy nombre de simulador en un array.
     //Esto lo hacemos para evitar que por cada evento se realice una consulta a la BBDD.
@@ -30,6 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
         eventBorderColor: "#000000",
         eventLimit: true,
         eventLimitText: "Eventos, haz click aquí",
+        slotLabelInterval: '00:30:00',
+        slotDuration: '00:30:00',
+        slotLabelFormat: {
+            hour: 'numeric',
+            minute: '2-digit',
+            meridiem: 'short'
+        },
         views: {
             resourceTimeGridDay: {
                 buttonText: 'Día'
@@ -95,8 +102,10 @@ document.addEventListener('DOMContentLoaded', function () {
         //Por cada evento que renderizamos agregamos la siguiente información
         eventRender: function (info) {
             
+            //$(info.el).tooltip({title: info.event.title});
+            
             //creamos una variable simulador
-            var nombre_sim = 'SIMULADOR';
+            var nombre_sim = '';
             //por cada elemento/conjunto en el array simuladores (Este array lo cargamos antes que el calendario)
             for (var i = 0; i < simuladores.length; ++i) {
                 //Si el primer valor de la tupla es igual al id del simulador del evento en el que estamos:
@@ -154,7 +163,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 color: '#FC9900',
                 borderColor: 'red'
             },
-
+            {
+                url: '/api/eventosOtros/calendar',
+                color: '#FCFC00',
+                borderColor: 'red'
+            },
+            
         ]
 
 
