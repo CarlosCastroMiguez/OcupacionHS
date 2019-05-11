@@ -13,28 +13,40 @@ class TipoSalasTableSeeder extends Seeder
     public function run()
     {
         TipoSala::create([
-            'nombre' => 'Consulta',
+            'nombre' => 'Hospitalización',
+            
         ]);
         TipoSala::create([
-            'nombre' => 'Simulación Compleja',
+            'nombre' => 'Apoyo',
+            
+        ]);
+        TipoSala::create([
+            'nombre' => 'Quirófano A 048',
+            
+        ]);
+        TipoSala::create([
+            'nombre' => 'Consulta',
+            
         ]);
         TipoSala::create([
             'nombre' => 'Task Training',
+            
         ]);
         TipoSala::create([
-            'nombre' => 'Hospitalización',
+            'nombre' => 'Simulación Compleja',
+            
         ]);
         TipoSala::create([
-            'nombre' => 'Farmacia',
-        ]);
-        TipoSala::create([
-            'nombre' => 'Quirófano',
+            'nombre' => 'Farmacia Hospital',
+            
         ]);
         TipoSala::create([
             'nombre' => 'Farmacia Comunitaria',
+            
         ]);
         TipoSala::create([
             'nombre' => 'Ambulancia',
+            
         ]);
     }
 }
