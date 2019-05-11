@@ -18,7 +18,8 @@ class CreateSimuladorsTable extends Migration
             
             $table->increments('id');
             $table->string('nombre');
-                      
+            
+            $table->softDeletes();          
             $table->timestamps();
         });
     }

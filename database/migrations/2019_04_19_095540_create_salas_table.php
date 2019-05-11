@@ -19,7 +19,8 @@ class CreateSalasTable extends Migration
             $table->increments('id');
             $table->string('tipo');
             $table->TinyInteger('capacidad');
-                       
+            
+            $table->softDeletes();
             $table->timestamps();
         });
     }

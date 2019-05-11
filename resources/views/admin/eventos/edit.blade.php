@@ -77,38 +77,22 @@
                         <label for="end_date">Fecha de fin</label>
                         <input type="datetime-local" class="form-control" name="end_date" placeholder="Introduce la fecha de inicio" value="{{ old('end_date', $evento->fecha_final) }}"></input>
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="grado">Grado</label>
-                        <select name="grado" class="form-control" id="select-grado">
-                            <option value=""> Seleccione grado </option>
-                            <option value="Otros">Otros</option>
-                            <option value="Fisioterapia">Fisioterapia</option>
-                            <option value="Enfermeria">Enfermería</option>
-                            <option value="Farmacia">Farmacia</option>
-                            <option value="Medicina">Medicina</option>
-                            <option value="Odontologia">Odontología</option>
-                            <option value="Psicologia">Psicologia</option>
-                            <option value="Ciclos Formativos">Ciclos Formativos</option>
-                        </select>
+                        <label for="grado"><b>Grado</b></label>
+                        <input type="text" class="form-control" name="grado" readonly value="{{ old('grado', $evento->asignatura->grado) }} ">
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="asignatura">Asignatura</label>
-                        <select name="asignatura" class="form-control" id="select-asignatura">
-                            <option value=""> Seleccione asignatura </option>
-                        </select>
+                        <label for="asignatura"><b>Asignatura</b></label>
+                        <input type="text" class="form-control" name="asignatura" readonly value="{{ old('asignatura', $evento->asignatura->nombre) }} ">
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="grupo">Grupo</label>
-                        <select name="grupo" class="form-control" id="select-grupo">
-                            <option value=""> Seleccione grupo </option>
-                        </select>
+                        <label for="grupo"><b>Grupo</b></label>
+                        <input type="text" class="form-control" name="grupo" readonly value="{{ old('grupo', $evento->asignatura->grupo) }} ">
                     </div>
-
-
-
+                    
                 </div>
             </div>
             <div class="form-group">
@@ -127,6 +111,3 @@
 </div>
 @endsection
 
-@section('scripts')
-<script src="/js/admin/evento/crear.js"></script>
-@endsection

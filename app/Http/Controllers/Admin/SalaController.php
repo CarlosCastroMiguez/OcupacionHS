@@ -6,16 +6,14 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Sala;
-use App\TipoSala;
 
 class SalaController extends Controller
 {   
     
     public function index() {
         
-        $salas = Sala::all();
-        $tipos_sala = TipoSala::all();
-        return view('admin.salas.index')->with(compact('salas', 'tipos_sala'));
+        $salas = Sala::withTrashed()->get();
+        return view('admin.salas.index')->with(compact('salas'));
     }
     public function store(Request $request) {
                 
@@ -37,8 +35,7 @@ class SalaController extends Controller
     public function edit($id){
         
         $sala = Sala::find($id);
-        $tipos_sala = TipoSala::all();
-        return view('admin.salas.edit')->with(compact('sala',  'tipos_sala'));
+        return view('admin.salas.edit')->with(compact('sala'));
         
     }
     public function update($id, Request $request) {
@@ -58,9 +55,16 @@ class SalaController extends Controller
     }
     public function delete($id) {
         
-        $salas = Sala::find($id)->delete();
+        Sala::find($id)->delete();
                 
-        return back()->with('notification', 'Sala eliminada correctamente'); 
+        return back()->with('notification', 'Sala deshabilitada correctamente'); 
         
+    }
+    
+    public function restore($id)
+    {   
+        Sala::withTrashed()->find($id)->restore();
+
+        return back()->with('notification', 'Sala habilitada correctamente');
     }
 }

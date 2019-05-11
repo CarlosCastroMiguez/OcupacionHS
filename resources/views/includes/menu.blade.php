@@ -25,7 +25,7 @@
                     Ver Informes
                 </a>
 
-                <ul class="list-group-item list-group-flush @if(request()->is('salas')) active @endif @if(request()->is('profesores*')) active @endif @if(request()->is('asignaturas*')) active @endif @if(request()->is('otros*')) active @endif">
+                <ul class="list-group-item list-group-flush @if(request()->is('salas')) active @endif @if(request()->is('profesores*')) active @endif @if(request()->is('asignaturas*')) active @endif @if(request()->is('simuladores*')) active @endif">
                     <a class="nav-item dropdown">
                         <a class="nav-link- dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administrar</a>
                         <div class="dropdown-menu">
@@ -35,7 +35,7 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/asignaturas">Asignaturas</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/otros">Otros</a>
+                            <a class="dropdown-item" href="/simuladores">Simuladores</a>
                         </div>
                     </a>
 

@@ -107,15 +107,21 @@
                     <td>{{ $asignatura->curso }}</td>
                     <td>{{ $asignatura->grupo }}</td>
 
-                    <th>
-                        <a href="/asignaturas/{{ $asignatura-> id }}" class="btn btn-info" title="Editar">
-                            <i class="fas fa-edit"></i>
-                        </a>
-                        <a href="/asignaturas/{{ $asignatura-> id }}/eliminar" class="btn btn-danger" title="Eliminar">
-                            <i class="fas fa-trash"></i>
-                        </a>
+                    <td>
+                        @if($asignatura->trashed())
+                            <a href="/asignaturas/{{ $asignatura-> id }}/restaurar" class="btn btn-success" title="Restaurar">
+                                <i class="fas fa-sync"></i>
+                            </a>
+                        @else
+                            <a href="/asignaturas/{{ $asignatura-> id }}" class="btn btn-info" title="Editar">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="/asignaturas/{{ $asignatura-> id }}/eliminar" class="btn btn-danger" title="Eliminar">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        @endif
 
-                    </th>
+                    </td>
 
                 </tr>
             </tbody>

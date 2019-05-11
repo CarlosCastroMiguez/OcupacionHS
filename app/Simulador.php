@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class Simulador extends Model
 {
+        use SoftDeletes;
         public static $rules = [
             
             'nombre' => 'required|min:5|max:20',

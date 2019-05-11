@@ -20,7 +20,8 @@ class CreateProfesorsTable extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->string('departamento');
-                      
+            
+            $table->softDeletes();
             $table->timestamps();
         });
     }

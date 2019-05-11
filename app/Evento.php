@@ -87,7 +87,7 @@ class Evento extends Model
     
         public static $rules = [
             
-            'nombre' => 'required|min:5|max:150',
+            'nombre' => 'required|min:5|max:44',
             'numAlumnos' => 'required|between:2,75|integer',
             'start_date' => 'required',
             'end_date' => 'required|after:start_date',
@@ -96,7 +96,7 @@ class Evento extends Model
             'asignatura' => 'required',
             'grupo' => 'required',
             'profesor' => 'required',
-            'actor' => 'nullable|min:15',
+            'actor' => 'nullable|min:10',
             
         ];
         
@@ -104,7 +104,7 @@ class Evento extends Model
             
             'nombre.required' => 'Es necesario ingresar un nombre de evento',
             'nombre.min' => 'El nombre ha de tener una longitud mínima de 5 caracteres',
-            'nombre.max' => 'El nombre ha de tener una longitud mínima de 150 caracteres',
+            'nombre.max' => 'El nombre ha de tener una longitud máxima de 44 caracteres',
             
             'numAlumnos.between' => 'El numero de alumnos introducido debe ser mayor que 1 y menor que 76.',
             'numAlumnos.required' => 'Es necesario ingresar un valor para el número de alumnos.',
@@ -121,7 +121,7 @@ class Evento extends Model
             'grupo.required' => 'Es necesario seleccionar un grupo',
             'profesor.required' => 'Es necesario seleccionar un profesor',
             
-            'actor.min' => 'La descripcion debe tener una longitud mínima de 15 caracteres.',
+            'actor.min' => 'La descripcion debe tener una longitud mínima de 10 caracteres.',
             
         ];
     

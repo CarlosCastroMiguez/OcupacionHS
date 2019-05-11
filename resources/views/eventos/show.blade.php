@@ -39,7 +39,7 @@
             <tbody>
                 <tr>
                     <td>{{ $evento->id }}</td>
-                    <td>{{ $evento->nombre_short }}</td>
+                    <td>{{ $evento->nombre }}</td>
                     <td>{{ $evento ->numAlumnos }}</td>
                     <td>{{ $evento->start_date }}</td>
                     <td>{{ $evento->end_date }}</td>
@@ -62,7 +62,7 @@
 
                 </tr>
                 <tr>
-                    <th>Asignatura</th>
+                    <th>Asignatura/Grupo</th>
                     <td>{{ $evento -> info_academica}}</td>
 
                 </tr>

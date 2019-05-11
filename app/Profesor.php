@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class Profesor extends Model
 {
+        use SoftDeletes;
+    
         public static $rules = [
             
             'nombre' => 'required|string|min:2|max:15',

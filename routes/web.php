@@ -49,6 +49,7 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/asignaturas/{id}','AsignaturaController@edit');
     Route::post('/asignaturas/{id}','AsignaturaController@update');
     Route::get('/asignaturas/{id}/eliminar','AsignaturaController@delete');
+    Route::get('/asignaturas/{id}/restaurar','AsignaturaController@restore');
     
     //Salas
     Route::get('/salas','SalaController@index');
@@ -56,6 +57,7 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/salas/{id}','SalaController@edit');
     Route::post('/salas/{id}','SalaController@update');
     Route::get('/salas/{id}/eliminar','SalaController@delete');
+    Route::get('/salas/{id}/restaurar','SalaController@restore');
 
     //TiposSala
     
@@ -65,18 +67,14 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/profesores/{id}','ProfesorController@edit');
     Route::post('/profesores/{id}','ProfesorController@update');
     Route::get('/profesores/{id}/eliminar','ProfesorController@delete');
-    
-    //Simulador y Tipo sala
-    Route::get('/otros','SimuladorController@index');
+    Route::get('/profesores/{id}/restaurar','ProfesorController@restore');
     
     //Simulador
+    Route::get('/simuladores','SimuladorController@index');
     Route::post('/simuladores','SimuladorController@store');
     Route::post('/simuladores/editar','SimuladorController@update');
     Route::get('/simuladores/{id}/eliminar','SimuladorController@delete');
+    Route::get('/simuladores/{id}/restaurar','SimuladorController@restore');
     
-    //Tipo Sala
-    Route::post('/tiposala','TipoSalaController@store');
-    Route::post('/tiposala/editar','TipoSalaController@update');
-    Route::get('/tiposala/{id}/eliminar','TipoSalaController@delete');
     
 });

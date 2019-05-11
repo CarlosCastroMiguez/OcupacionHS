@@ -163,7 +163,7 @@ class ApiController extends Controller
         //Agrupame por nombre de asignatura y que pertenezcan al grado indicado(me quito las que se repiten pero tienen dist grupo)
         $asignaturas = DB::table('tfg.asignaturas')
                  ->select('nombre', DB::raw('count(*) as total'))
-                 ->groupBy('nombre')->where('grado', $grad)
+                 ->groupBy('nombre')->where('grado', $grad)->whereNull("deleted_at")
                  ->get();
         
         return $asignaturas;

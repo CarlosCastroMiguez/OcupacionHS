@@ -26,14 +26,10 @@
             {{ csrf_field() }}
 
             <div class="form-group">
-                <label for="tipo">Tipo de Sala</label>
-                <select name="tipo" class="form-control">
-                    <option value="{{ old('tipo', $sala->tipo) }}">{{ old('tipo', $sala->tipo) }}</option>
-                    @foreach($tipos_sala as $tipo)
-                    <option value="{{ $tipo -> nombre }}">{{ $tipo -> nombre }}</option>
-                    @endforeach
-                </select>
+                <label for="tipo">Nombre de la sala</label>
+                <input name="tipo" name="tipo" class="form-control" value="{{ old('tipo', $sala->tipo) }}"></input>
             </div>
+            
             <div class="form-group">
                 <label for="capacidad">Capacidad de la sala</label>
                 <input name="capacidad" name="capacidad" class="form-control" value="{{ old('capacidad' , $sala->capacidad) }}"></input>

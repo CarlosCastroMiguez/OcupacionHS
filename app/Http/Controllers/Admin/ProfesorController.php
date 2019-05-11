@@ -11,7 +11,7 @@ class ProfesorController extends Controller
 {
     public function index() {
         
-        $profesores = Profesor::all();
+        $profesores = Profesor::withTrashed()->get();
         return view('admin.profesores.index')->with(compact('profesores'));
     }
     public function store(Request $request) {
@@ -56,9 +56,15 @@ class ProfesorController extends Controller
     }
     public function delete($id) {
         
-        $profesores = Profesor::find($id)->delete();
+        Profesor::find($id)->delete();
                 
-        return back()->with('notification', 'Profesor eliminado correctamente'); 
+        return back()->with('notification', 'Profesor deshabilitado correctamente'); 
         
+    }
+    
+    public function restore($id)
+    {   
+        Profesor::withTrashed()->find($id)->restore();        
+        return back()->with('notification', 'Profesor habilitado correctamente');
     }
 }

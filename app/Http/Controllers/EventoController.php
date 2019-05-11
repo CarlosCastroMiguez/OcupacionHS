@@ -145,7 +145,7 @@ class EventoController extends Controller
             
         $evento->save();
         
-        return back();
+        return back()->with('notification', 'Evento actualizado correctamente');
         
     }
     

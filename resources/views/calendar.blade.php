@@ -20,6 +20,21 @@
 <script src="/fullcalendar/packages/resource-timegrid/main.js"></script>
 <script src="/fullcalendar/packages/resource-daygrid/main.js"></script>
 
+@if(count($errors)>0)
+<div class="alert alert-danger">
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+@if(session('notification'))
+<div class="alert alert-success">
+    {{ session('notification') }}
+</div>
+@endif
+
 
 <div class="card border-primary mb-3">
     <div class="card-header">Bienvenido - Sistema de gestión de la ocupación del Hospital Simulado de la UEM</div>
@@ -46,7 +61,7 @@
                 <div class="modal-body bg-light">
 
                     <input type="hidden" name="evento_id" id="evento_id" value=""></input>
-                    
+
                     <div class="form-group">
                         <label for="nombre"><b>Nombre del Evento</b></label>
                         <input type="text" class="form-control" name="nombre" id="evento_name" readonly value=" ">

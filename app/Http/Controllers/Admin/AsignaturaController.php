@@ -13,7 +13,7 @@ class AsignaturaController extends Controller
     
     public function index() {
         
-        $asignaturas = Asignatura::all();
+        $asignaturas = Asignatura::withTrashed()->get();
         return view('admin.asignaturas.index')->with(compact('asignaturas'));
     }
     public function store(Request $request) {
@@ -62,9 +62,15 @@ class AsignaturaController extends Controller
     }
     public function delete($id) {
         
-        $asignaturas = Asignatura::find($id)->delete();
+        Asignatura::find($id)->delete();
                 
-        return back()->with('notification', 'Asignatura eliminada correctamente'); 
+        return back()->with('notification', 'Asignatura deshabilitada correctamente'); 
         
+    }
+    
+    public function restore($id)
+    {   
+        Asignatura::withTrashed()->find($id)->restore();
+        return back()->with('notification', 'Asignatura habilitada correctamente');
     }
 }

@@ -24,6 +24,7 @@ class CreateAsignaturasTable extends Migration
             $table->TinyInteger('curso');
             $table->string('grupo');
             
+            $table->softDeletes();
             $table->timestamps();
         });
     }

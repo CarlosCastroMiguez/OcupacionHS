@@ -73,15 +73,22 @@
                     <td>{{ $profesor->nombre }}</td>
                     <td>{{ $profesor->apellido }}</td>
                     <td>{{ $profesor->departamento }}</td>
-
-                    <th>
+                    
+                    <td>
+                        @if($profesor->trashed())
+                        <a href="/profesores/{{ $profesor-> id }}/restaurar" class="btn btn-success" title="Restaurar">
+                            <i class="fas fa-sync"></i>
+                        </a>
+                        @else
                         <a href="/profesores/{{ $profesor-> id }}" class="btn btn-info" title="Editar">
                             <i class="fas fa-edit"></i>
                         </a>
                         <a href="/profesores/{{ $profesor-> id }}/eliminar" class="btn btn-danger" title="Eliminar">
                             <i class="fas fa-trash"></i>
                         </a>
-                    </th>
+                        @endif
+
+                    </td>
 
                 </tr>
             </tbody>

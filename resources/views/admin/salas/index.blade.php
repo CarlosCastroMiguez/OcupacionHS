@@ -30,13 +30,8 @@
             {{ csrf_field() }}
 
             <div class="form-group">
-                <label for="tipo">Tipo de Sala</label>
-                <select name="tipo" class="form-control">
-                    <option value="{{ old('tipo')}} ">{{ old('tipo' , 'Seleccione tipo de sala') }}</option>
-                    @foreach($tipos_sala as $tipo)
-                    <option value="{{ $tipo -> nombre }}">{{ $tipo -> nombre }}</option>
-                    @endforeach
-                </select>
+                <label for="tipo">Nombre de la sala</label>
+                <input name="tipo" name="tipo" class="form-control" value="{{ old('tipo') }}"></input>
             </div>
             <div class="form-group">
                 <label for="capacidad">Capacidad de la sala</label>
@@ -70,13 +65,21 @@
                     <td>{{ $sala->id }}</td>
                     <td>{{ $sala->tipo }}</td>
                     <td>{{ $sala->capacidad }}</td>
+
                     <td>
-                        <a href="/salas/{{ $sala-> id }}" class="btn btn-info" title="Editar">
-                            <i class="fas fa-edit"></i>
-                        </a>
-                        <a href="/salas/{{ $sala-> id }}/eliminar" class="btn btn-danger" title="Eliminar">
-                            <i class="fas fa-trash"></i>
-                        </a>
+                        @if($sala->trashed())
+                            <a href="/salas/{{ $sala-> id }}/restaurar" class="btn btn-success" title="Restaurar">
+                                <i class="fas fa-sync"></i>
+                            </a>
+                        @else
+                            <a href="/salas/{{ $sala-> id }}" class="btn btn-info" title="Editar">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="/salas/{{ $sala-> id }}/eliminar" class="btn btn-danger" title="Eliminar">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        @endif
+
                     </td>
 
                 </tr>

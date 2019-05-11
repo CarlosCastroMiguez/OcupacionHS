@@ -6,15 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Simulador;
-use App\TipoSala;
 
 class SimuladorController extends Controller
 {
     public function index() {
         
-        $simuladores = Simulador::all();
-        $tipos_sala = TipoSala::all();
-        return view('admin.otros.index')->with(compact('simuladores','tipos_sala'));
+        $simuladores = Simulador::withTrashed()->get();
+        return view('admin.simuladores.index')->with(compact('simuladores'));
     }
     public function store(Request $request) {
                 
@@ -28,7 +26,7 @@ class SimuladorController extends Controller
             
         $simulador->save();
         
-        return back()->with('notification1', 'Simulador añadido correctamente');
+        return back()->with('notification', 'Simulador añadido correctamente');
         
     }
     public function update(Request $request) {
@@ -42,14 +40,20 @@ class SimuladorController extends Controller
         
         $simulador->save();
         
-        return back();
+        return back()->with('notification', 'Simulador actualizado correctamente');
         
     }
     public function delete($id) {
         
         Simulador::find($id)->delete();
-                
-        return back()->with('notification1', 'Simulador eliminado correctamente'); 
         
+        return back()->with('notification', 'Simulador deshabilitado correctamente'); 
+        
+    }
+    
+    public function restore($id)
+    {   
+        Simulador::withTrashed()->find($id)->restore();
+        return back()->with('notification', 'Simulador habilitado correctamente');
     }
 }

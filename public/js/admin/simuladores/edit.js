@@ -1,6 +1,5 @@
 $(function(){
     $('[data-simulador]').on('click',editSimuladorModal);
-    $('[data-tiposala]').on('click',editTipoSalaModal);
 });
 
 function editSimuladorModal(){
@@ -12,16 +11,5 @@ function editSimuladorModal(){
     $('#simulador_name').val(simulador_name);
     //show
     $('#modalEditSimulador').modal('show');
-}
-
-function editTipoSalaModal(){
-    //id
-    var tiposala_id = $(this).data('tiposala');
-    $('#tiposala_id').val(tiposala_id);
-    //name
-    var tiposala_name = $(this).parent().prev().text();
-    $('#tiposala_name').val(tiposala_name);
-    //show
-    $('#modalEditTipoSala').modal('show');
 }
 
