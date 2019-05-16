@@ -13,59 +13,59 @@ class SalasTableSeeder extends Seeder
     public function run()
     {
         Sala::create([
-            'tipo' => 'Hospitalización',
+            'tipo' => 'Hospital',
             'capacidad' => 10
+        ]);
+        Sala::create([
+            'tipo' => 'TT',
+            'capacidad' => 10
+        ]);
+        Sala::create([
+            'tipo' => 'C1',
+            'capacidad' => 10
+        ]);
+        Sala::create([
+            'tipo' => 'C2',
+            'capacidad' => 10
+        ]);
+        Sala::create([
+            'tipo' => 'C3',
+            'capacidad' => 20
+        ]);
+        Sala::create([
+            'tipo' => 'C4',
+            'capacidad' => 20
+        ]);
+        Sala::create([
+            'tipo' => 'SC1',
+            'capacidad' => 20
+        ]);
+        Sala::create([
+            'tipo' => 'SC2',
+            'capacidad' => 30
+        ]);
+        Sala::create([
+            'tipo' => 'SC3',
+            'capacidad' => 30
+        ]);
+        Sala::create([
+            'tipo' => 'SC4',
+            'capacidad' => 30
         ]);
         Sala::create([
             'tipo' => 'Apoyo',
-            'capacidad' => 10
-        ]);
-        Sala::create([
-            'tipo' => 'Quirófano A 048',
-            'capacidad' => 10
-        ]);
-        Sala::create([
-            'tipo' => 'Consulta 1',
-            'capacidad' => 10
-        ]);
-        Sala::create([
-            'tipo' => 'Consulta 2',
-            'capacidad' => 20
-        ]);
-        Sala::create([
-            'tipo' => 'Consulta 3',
-            'capacidad' => 20
-        ]);
-        Sala::create([
-            'tipo' => 'Consulta 4',
-            'capacidad' => 20
-        ]);
-        Sala::create([
-            'tipo' => 'Task Training',
             'capacidad' => 30
         ]);
         Sala::create([
-            'tipo' => 'Simulación Compleja 1',
+            'tipo' => 'Q048',
             'capacidad' => 30
         ]);
         Sala::create([
-            'tipo' => 'Simulación Compleja 2',
+            'tipo' => 'FC',
             'capacidad' => 30
         ]);
         Sala::create([
-            'tipo' => 'Simulación Compleja 3',
-            'capacidad' => 30
-        ]);
-        Sala::create([
-            'tipo' => 'Simulación Compleja 4',
-            'capacidad' => 30
-        ]);
-        Sala::create([
-            'tipo' => 'Farmacia Hospital',
-            'capacidad' => 30
-        ]);
-        Sala::create([
-            'tipo' => 'Farmacia Comunitaria',
+            'tipo' => 'FH',
             'capacidad' => 30
         ]);
         Sala::create([

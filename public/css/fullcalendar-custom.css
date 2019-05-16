@@ -3,10 +3,9 @@
 }
 
 .fc-timeGrid-view > table {
-    width: 215%;
+    width: 150%;
 }
 
 .fc th, .fc td {
     vertical-align: middle;
 }
-
