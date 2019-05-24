@@ -39,13 +39,19 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         views: {
             resourceTimeGridDay: {
-                buttonText: 'Día'
+                buttonText: 'Día',
+                weekends: false,
             },
+            timeGridWeek: {
+                weekends: false,
+            },
+            
+
         },
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'resourceTimeGridDay,dayGridMonth'
+            right: 'resourceTimeGridDay,timeGridWeek,dayGridMonth'
         },
         eventDrop: function (eventDropInfo) {
 
@@ -101,9 +107,9 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         //Por cada evento que renderizamos agregamos la siguiente información
         eventRender: function (info) {
-            
+
             //$(info.el).tooltip({title: info.event.title});
-            
+
             //creamos una variable simulador
             var nombre_sim = '';
             //por cada elemento/conjunto en el array simuladores (Este array lo cargamos antes que el calendario)
@@ -168,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 color: '#FCFC00',
                 borderColor: 'red'
             },
-            
+
         ]
 
 

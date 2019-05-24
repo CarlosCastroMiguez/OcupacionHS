@@ -1,11 +1,16 @@
-.fc-timeGrid-view{
+.fc-resourceTimeGridDay-view{
     overflow-x: scroll;
 }
 
-.fc-timeGrid-view > table {
+
+
+.fc-resourceTimeGridDay-view > table {
     width: 150%;
 }
 
 .fc th, .fc td {
     vertical-align: middle;
 }
+
+.fc-sun { background-color:#fce5e0; }
+.fc-sat { background-color:#fce5e0;  }

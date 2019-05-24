@@ -6,7 +6,7 @@
         <div class="list-group">
 
             @if (auth()->check())
-            <a href="{{ url('/home') }}" class="list-group-item @if(request()->is('home*')) active @endif">
+            <a href="{{ url('/') }}" class="list-group-item @if(request()->is('/*')) active @endif">
                 Inicio
             </a>
             <a href="{{ url('/calendario') }}" class="list-group-item @if(request()->is('calendario*')) active @endif">
@@ -43,7 +43,7 @@
                 @endif
 
             @else
-            <a href="{{ url('/home') }}" class="list-group-item list-group-item">
+            <a href="{{ url('/') }}" class="list-group-item @if(request()->is('/')) active @endif">
                 Inicio
             </a>
             @endif

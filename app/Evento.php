@@ -85,44 +85,46 @@ class Evento extends Model
         
     }
     
-        public static $rules = [
-            
-            'nombre' => 'required|min:5|max:44',
-            'numAlumnos' => 'required|between:2,75|integer',
-            'start_date' => 'required',
-            'end_date' => 'required|after:start_date',
-            'sala' => 'required',
-            'grado' => 'required',
-            'asignatura' => 'required',
-            'grupo' => 'required',
-            'profesor' => 'required',
-            'actor' => 'nullable|min:10',
-            
-        ];
-        
-        public static $messages = [
-            
-            'nombre.required' => 'Es necesario ingresar un nombre de evento',
-            'nombre.min' => 'El nombre ha de tener una longitud mínima de 5 caracteres',
-            'nombre.max' => 'El nombre ha de tener una longitud máxima de 44 caracteres',
-            
-            'numAlumnos.between' => 'El numero de alumnos introducido debe ser mayor que 1 y menor que 76.',
-            'numAlumnos.required' => 'Es necesario ingresar un valor para el número de alumnos.',
-            'numAlumnos.integer' => 'El numero de alumnos debe de ser un número',
-            
-            'start_date.required' => 'Es necesario introducir una fecha de inicio',
-            
-            'end_date.required' => 'Es necesario introducir una fecha de fin',
-            'end_date.after' => 'La fecha final ha de ser posterior a la fecha de inicio',
-            
-            'sala.required' => 'Es necesario seleccionar una sala',
-            'grado.required' => 'Es necesario seleccionar un grado',
-            'asignatura.required' => 'Es necesario seleccionar una asignatura',
-            'grupo.required' => 'Es necesario seleccionar un grupo',
-            'profesor.required' => 'Es necesario seleccionar un profesor',
-            
-            'actor.min' => 'La descripcion debe tener una longitud mínima de 10 caracteres.',
-            
-        ];
+    
+    
+    public static $rules = [
+
+        'nombre' => 'required|min:5|max:44',
+        'numAlumnos' => 'required|between:2,75|integer',
+        'start_date' => 'required',
+        'end_date' => 'required|after:start_date',
+        'sala' => 'required',
+        'grado' => 'required',
+        'asignatura' => 'required',
+        'grupo' => 'required',
+        'profesor' => 'required',
+        'actor' => 'nullable|min:10',
+
+    ];
+
+    public static $messages = [
+
+        'nombre.required' => 'Es necesario ingresar un nombre de evento',
+        'nombre.min' => 'El nombre ha de tener una longitud mínima de 5 caracteres',
+        'nombre.max' => 'El nombre ha de tener una longitud máxima de 44 caracteres',
+
+        'numAlumnos.between' => 'El numero de alumnos introducido debe ser mayor que 1 y menor que 76.',
+        'numAlumnos.required' => 'Es necesario ingresar un valor para el número de alumnos.',
+        'numAlumnos.integer' => 'El numero de alumnos debe de ser un número',
+
+        'start_date.required' => 'Es necesario introducir una fecha de inicio',
+
+        'end_date.required' => 'Es necesario introducir una fecha de fin',
+        'end_date.after' => 'La fecha final ha de ser posterior a la fecha de inicio',
+
+        'sala.required' => 'Es necesario seleccionar una sala',
+        'grado.required' => 'Es necesario seleccionar un grado',
+        'asignatura.required' => 'Es necesario seleccionar una asignatura',
+        'grupo.required' => 'Es necesario seleccionar un grupo',
+        'profesor.required' => 'Es necesario seleccionar un profesor',
+
+        'actor.min' => 'La descripcion del actor debe tener una longitud mínima de 10 caracteres.',
+
+    ];
     
 }

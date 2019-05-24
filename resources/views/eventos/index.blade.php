@@ -30,10 +30,10 @@
                 <tr class="warning">
                     <th>Id</th>
                     <th>Nombre</th>
-                    <th>Alumnos</th>
-                    <th>Fecha de inicio</th>
-                    <th>Fecha de fin</th>
+                    <th>Asignatura</th>
                     <th>Sala</th>
+                    <th>Fecha de inicio</th>
+                    <th>Alumnos</th>
                     @if(auth()->user()->is_admin)
                     <th>Opciones</th>
                     @endif
@@ -48,10 +48,10 @@
                         </a>
                     </td>
                     <td>{{ $evento->nombre_short }}</td>
-                    <td>{{ $evento->numAlumnos }}</td>
-                    <td>{{ $evento->start_date }}</td>
-                    <td>{{ $evento->end_date }}</td>
+                    <td>{{ $evento->asignatura->grado}}</td>
                     <td>{{ $evento->sala_short }}</td>
+                    <td>{{ $evento->start_date }}</td>
+                    <td>{{ $evento->numAlumnos }}</td>
                     @if(auth()->user()->is_admin)
                     <td>
                         <a href="/eventos/{{ $evento-> id }}" class="btn btn-info" title="Editar">

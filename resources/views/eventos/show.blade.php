@@ -63,7 +63,7 @@
                 </tr>
                 <tr>
                     <th>Asignatura/Grupo</th>
-                    <td>{{ $evento -> info_academica}}</td>
+                    <td>{{ $evento ->info_academica}}</td>
 
                 </tr>
                 <tr>

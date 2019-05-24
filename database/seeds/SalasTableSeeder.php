@@ -62,6 +62,7 @@ class SalasTableSeeder extends Seeder
         ]);
         Sala::create([
             'tipo' => 'FC',
+            
             'capacidad' => 30
         ]);
         Sala::create([
@@ -69,7 +70,7 @@ class SalasTableSeeder extends Seeder
             'capacidad' => 30
         ]);
         Sala::create([
-            'tipo' => 'Ambulancia',
+            'tipo' => 'Ambulanc',
             'capacidad' => 30
         ]);
         
