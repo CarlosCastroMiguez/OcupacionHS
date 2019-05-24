@@ -29,43 +29,53 @@
         <form action="" method="POST">
             {{ csrf_field() }}
 
-            <div class="form-group">
-                <label for="nombre">Nombre de la asignatura</label>
-                <input name="nombre" name="nombre" class="form-control" value="{{ old('nombre') }}"></input>
-            </div>
+            <div class="row">
 
-            <div class="form-group">
-                <label for="codigo">Codigo</label>
-                <input name="codigo" name="codigo" class="form-control" value="{{ old('codigo') }}"></input>
-            </div>
+                <div class="col-md-6">
 
-            <div class="form-group">
-                <label for="grado">Grado</label>
-                <select name="grado" class="form-control">
-                    <option value="{{ old('grado')}} ">{{ old('grado', 'Seleccione grado') }}</option>
-                    <option value="Otros">Otros</option>
-                    <option value="Fisioterapia">Fisioterapia</option>
-                    <option value="Enfermeria">Enfermería</option>
-                    <option value="Farmacia">Farmacia</option>
-                    <option value="Medicina">Medicina</option>
-                    <option value="Odontologia">Odontología</option>
-                    <option value="Psicologia">Psicologia</option>
-                    <option value="Ciclos Formativos">Ciclos Formativos</option>
-                </select>
-            </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre de la asignatura</label>
+                        <input name="nombre" name="nombre" class="form-control" value="{{ old('nombre') }}"></input>
+                    </div>
 
-            <div class="form-group">
-                <label for="curso">Curso</label>
-                <select name="curso" class="form-control">
-                    <option value="{{ old('curso')}} ">{{ old('curso' , 'Seleccione curso') }}</option>
-                    <option value="0">Otros</option>
-                    <option value="1">1º</option>
-                    <option value="2">2º</option>
-                    <option value="3">3º</option>
-                    <option value="4">4º</option>
-                    <option value="5">5º</option>
-                    <option value="6">6º</option>
-                </select>
+                    <div class="form-group">
+                        <label for="grado">Grado</label>
+                        <select name="grado" class="form-control">
+                            <option value="{{ old('grado')}} ">{{ old('grado', 'Seleccione grado') }}</option>
+                            <option value="Otros">Otros</option>
+                            <option value="Fisioterapia">Fisioterapia</option>
+                            <option value="Enfermeria">Enfermería</option>
+                            <option value="Farmacia">Farmacia</option>
+                            <option value="Medicina">Medicina</option>
+                            <option value="Odontologia">Odontología</option>
+                            <option value="Psicologia">Psicologia</option>
+                            <option value="Ciclos Formativos">Ciclos Formativos</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="codigo">Codigo</label>
+                        <input name="codigo" name="codigo" class="form-control" value="{{ old('codigo') }}"></input>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="curso">Curso</label>
+                        <select name="curso" class="form-control">
+                            <option value="{{ old('curso')}} ">{{ old('curso' , 'Seleccione curso') }}</option>
+                            <option value="0">Otros</option>
+                            <option value="1">1º</option>
+                            <option value="2">2º</option>
+                            <option value="3">3º</option>
+                            <option value="4">4º</option>
+                            <option value="5">5º</option>
+                            <option value="6">6º</option>
+                        </select>
+                    </div>
+                </div>
+
             </div>
 
             <div class="form-group">
@@ -109,16 +119,16 @@
 
                     <td>
                         @if($asignatura->trashed())
-                            <a href="/asignaturas/{{ $asignatura-> id }}/restaurar" class="btn btn-success" title="Restaurar">
-                                <i class="fas fa-sync"></i>
-                            </a>
+                        <a href="/asignaturas/{{ $asignatura-> id }}/restaurar" class="btn btn-success" title="Restaurar">
+                            <i class="fas fa-sync"></i>
+                        </a>
                         @else
-                            <a href="/asignaturas/{{ $asignatura-> id }}" class="btn btn-info" title="Editar">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                            <a href="/asignaturas/{{ $asignatura-> id }}/eliminar" class="btn btn-danger" title="Eliminar">
-                                <i class="fas fa-trash"></i>
-                            </a>
+                        <a href="/asignaturas/{{ $asignatura-> id }}" class="btn btn-info" title="Editar">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a href="/asignaturas/{{ $asignatura-> id }}/eliminar" class="btn btn-danger" title="Eliminar">
+                            <i class="fas fa-trash"></i>
+                        </a>
                         @endif
 
                     </td>
@@ -127,7 +137,7 @@
             </tbody>
             @endforeach
         </table>
-
+        {{$asignaturas->links()}}
     </div>
 </div>
 @endsection

@@ -18,8 +18,8 @@ Route::get('/', 'HomeController@index');
 //calendario -> Admin & client
 Route::get('/calendario', 'EventoController@calendar');
 
-//Ver eventos-> Admin & client
-Route::get('/eventos','EventoController@index');
+//Ver eventos-> Admin & client                      //Renombro para crear el metodo de ordenacion de tabla
+Route::get('/eventos','EventoController@index')->name('eventos.index');
 Route::get('/ver/{id}','EventoController@show');
 
 

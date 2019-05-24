@@ -12,7 +12,7 @@ class SalaController extends Controller
     
     public function index() {
         
-        $salas = Sala::withTrashed()->get();
+        $salas = Sala::withTrashed()->paginate(5);
         return view('admin.salas.index')->with(compact('salas'));
     }
     public function store(Request $request) {

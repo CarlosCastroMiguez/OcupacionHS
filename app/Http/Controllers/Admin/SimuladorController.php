@@ -11,7 +11,7 @@ class SimuladorController extends Controller
 {
     public function index() {
         
-        $simuladores = Simulador::withTrashed()->get();
+        $simuladores = Simulador::withTrashed()->paginate(7);
         return view('admin.simuladores.index')->with(compact('simuladores'));
     }
     public function store(Request $request) {

@@ -86,6 +86,7 @@
             </tbody>
             @endforeach
         </table>
+        {{$salas->links()}}
     </div>
 </div>
 @endsection

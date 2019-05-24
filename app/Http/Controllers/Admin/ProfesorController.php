@@ -11,7 +11,7 @@ class ProfesorController extends Controller
 {
     public function index() {
         
-        $profesores = Profesor::withTrashed()->get();
+        $profesores = Profesor::withTrashed()->paginate(5);
         return view('admin.profesores.index')->with(compact('profesores'));
     }
     public function store(Request $request) {

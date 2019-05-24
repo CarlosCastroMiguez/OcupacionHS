@@ -79,6 +79,7 @@
             </tbody>
             @endforeach
         </table>
+        {{$simuladores->links()}}
 
     </div>
 </div>

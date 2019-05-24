@@ -22,9 +22,33 @@ class EventoController extends Controller
         return view ('calendar');
     }
     
-    public function index(){   
-        $eventos = Evento::all();
+    public function index(){  
+        
+        $eventos = new Evento;
+        $consultas = [];
+        
+        $columns =[
+            'id_sala', 'id_asignatura'
+        ];
+        
+        foreach($columns as $column){
+            if(request()->has($column)){
+                $eventos = $eventos->where($column, request($column));
+                $consultas[$column] = request($column);
+            }
+        }
+        
+        
+        if(request()->has('sort')){
+            $eventos = $eventos->orderBy('id', request('sort'));
+            $consultas['sort'] = request('sort');
+        }
+        
+        
+        $eventos = $eventos->paginate(10)->appends($consultas);
+        
         return view('eventos.index')->with(compact('eventos'));
+        
     }
     
     public function show($id){   

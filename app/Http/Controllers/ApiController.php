@@ -15,9 +15,9 @@ class ApiController extends Controller
     //api/eventosFisioterapia/calendar
     public function eventosFisioterapia(){
         
-        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Fisioterapia")->get();
+        $fisioterapia = DB::table('tfg.asignaturas')->select('id')->where('grado', "Fisioterapia")->get();
         $array =[];
-        foreach($enfermeria as $obj){
+        foreach($fisioterapia as $obj){
             $array[] = $obj->id;
         }
         
@@ -47,9 +47,9 @@ class ApiController extends Controller
     //api/eventosFarmacia/calendar
     public function eventosFarmacia(){
         
-        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Farmacia")->get();
+        $farmacia = DB::table('tfg.asignaturas')->select('id')->where('grado', "Farmacia")->get();
         $array =[];
-        foreach($enfermeria as $obj){
+        foreach($farmacia as $obj){
             $array[] = $obj->id;
         }
         
@@ -63,9 +63,9 @@ class ApiController extends Controller
     //api/eventosMedicina/calendar
     public function eventosMedicina(){
         
-        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Medicina")->get();
+        $medicina = DB::table('tfg.asignaturas')->select('id')->where('grado', "Medicina")->get();
         $array =[];
-        foreach($enfermeria as $obj){
+        foreach($medicina as $obj){
             $array[] = $obj->id;
         }
         
@@ -79,9 +79,9 @@ class ApiController extends Controller
     //api/eventosOdontologia/calendar
     public function eventosOdontologia(){
         
-        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Odontologia")->get();
+        $odontologia = DB::table('tfg.asignaturas')->select('id')->where('grado', "Odontologia")->get();
         $array =[];
-        foreach($enfermeria as $obj){
+        foreach($odontologia as $obj){
             $array[] = $obj->id;
         }
         
@@ -95,9 +95,9 @@ class ApiController extends Controller
     //api/eventosPsicologia/calendar
     public function eventosPsicologia(){
         
-        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Psicologia")->get();
+        $psicologia = DB::table('tfg.asignaturas')->select('id')->where('grado', "Psicologia")->get();
         $array =[];
-        foreach($enfermeria as $obj){
+        foreach($psicologia as $obj){
             $array[] = $obj->id;
         }
         
@@ -112,9 +112,9 @@ class ApiController extends Controller
     //api/eventosCiclos/calendar
     public function eventosCiclos(){
         
-        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Ciclos Formativos")->get();
+        $ciclos = DB::table('tfg.asignaturas')->select('id')->where('grado', "Ciclos Formativos")->get();
         $array =[];
-        foreach($enfermeria as $obj){
+        foreach($ciclos as $obj){
             $array[] = $obj->id;
         }
         
@@ -129,9 +129,9 @@ class ApiController extends Controller
     //api/eventosOtros/calendar
     public function eventosOtros(){
         
-        $enfermeria = DB::table('tfg.asignaturas')->select('id')->where('grado', "Otros")->get();
+        $otros = DB::table('tfg.asignaturas')->select('id')->where('grado', "Otros")->get();
         $array =[];
-        foreach($enfermeria as $obj){
+        foreach($otros as $obj){
             $array[] = $obj->id;
         }
         

@@ -13,7 +13,7 @@ class AsignaturaController extends Controller
     
     public function index() {
         
-        $asignaturas = Asignatura::withTrashed()->get();
+        $asignaturas = Asignatura::withTrashed()->paginate(5);
         return view('admin.asignaturas.index')->with(compact('asignaturas'));
     }
     public function store(Request $request) {

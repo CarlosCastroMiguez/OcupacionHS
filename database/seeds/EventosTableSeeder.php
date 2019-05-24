@@ -15,7 +15,7 @@ class EventosTableSeeder extends Seeder
         $e_date = strftime('%Y-%m-%dT%H:%M:%S', strtotime('+2 hours'));
     
         Evento::create([
-            'nombre' => 'Clase Fisioterapia',
+            'nombre' => 'Fisioterapia',
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
@@ -25,7 +25,7 @@ class EventosTableSeeder extends Seeder
             'id_simulador' => 1
         ]);
         Evento::create([
-            'nombre' => 'Clase  Enfermeria',
+            'nombre' => 'Enfermeria',
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
@@ -35,7 +35,7 @@ class EventosTableSeeder extends Seeder
             'id_simulador' => 2
         ]);
         Evento::create([
-            'nombre' => 'Clase Farmacia',
+            'nombre' => 'Farmacia',
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
@@ -45,7 +45,7 @@ class EventosTableSeeder extends Seeder
             'id_simulador' => 3
         ]);
         Evento::create([
-            'nombre' => 'Clase Medicina',
+            'nombre' => 'Medicina',
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
@@ -55,7 +55,7 @@ class EventosTableSeeder extends Seeder
             'id_simulador' => 2
         ]);
         Evento::create([
-            'nombre' => 'Clase Odontologia',
+            'nombre' => 'Odontologia',
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
@@ -65,7 +65,7 @@ class EventosTableSeeder extends Seeder
             'id_simulador' => 4
         ]);
         Evento::create([
-            'nombre' => 'Clase Psicología',
+            'nombre' => 'Psicología',
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
@@ -75,7 +75,7 @@ class EventosTableSeeder extends Seeder
             'id_simulador' => 5
         ]);
         Evento::create([
-            'nombre' => 'Clase Ciclos',
+            'nombre' => 'Ciclos',
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
@@ -85,7 +85,7 @@ class EventosTableSeeder extends Seeder
             'id_simulador' => 2
         ]);
         Evento::create([
-            'nombre' => 'Clase Ciclos2',
+            'nombre' => 'Ciclos2',
             'numAlumnos' => '10',
             'start_date' => $s_date,
             'end_date' => $e_date,
