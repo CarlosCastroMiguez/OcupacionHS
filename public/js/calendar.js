@@ -146,7 +146,8 @@ document.addEventListener('DOMContentLoaded', function () {
             {
                 url: '/api/eventosFarmacia/calendar',
                 color: '#AA1C47',
-                borderColor: 'red'
+                borderColor: 'red',
+                textColor: 'white'
             },
             {
                 url: '/api/eventosMedicina/calendar',

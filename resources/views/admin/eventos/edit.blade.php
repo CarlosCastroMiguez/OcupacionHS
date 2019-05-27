@@ -29,16 +29,45 @@
                 <label for="nombre">Nombre del evento</label>
                 <input type="text" class="form-control" name="nombre" placeholder="Introduce el nombre" value="{{ old('nombre', $evento->nombre) }}"></input>
             </div>
-            <div class="form-group">
-                <label for="numAlumnos">Número de alumnos</label>
-                <input type="text" class="form-control" name="numAlumnos" placeholder="Introduce el numero de alumnos" value="{{ old('numAlumnos', $evento->numAlumnos) }}"></input>
-            </div>
+
             <div class="row">
 
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="start_date">Fecha de inicio</label>
                         <input type="datetime-local" class="form-control" name="start_date" placeholder="Introduce la fecha de inicio" value="{{ old('start_date', $evento->fecha_inicio) }}"></input>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grado"><b>Grado</b></label>
+                        <input type="text" class="form-control" name="grado" readonly value="{{ old('grado', $evento->asignatura->grado) }} ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="curso"><b>Curso</b></label>
+                        <input type="text" class="form-control" name="grado" readonly value="{{ old('curso', $evento->asignatura->curso) }} ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asignatura"><b>Asignatura</b></label>
+                        <input type="text" class="form-control" name="asignatura" readonly value="{{ old('asignatura', $evento->asignatura->nombre) }} ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grupo"><b>Grupo</b></label>
+                        <input type="text" class="form-control" name="grupo" readonly value="{{ old('grupo', $evento->asignatura->grupo) }} ">
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="end_date">Fecha de fin</label>
+                        <input type="datetime-local" class="form-control" name="end_date" placeholder="Introduce la fecha de inicio" value="{{ old('end_date', $evento->fecha_final) }}"></input>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numAlumnos">Número de alumnos</label>
+                        <input type="text" class="form-control" name="numAlumnos" placeholder="Introduce el numero de alumnos" value="{{ old('numAlumnos', $evento->numAlumnos) }}"></input>
                     </div>
 
                     <div class="form-group">
@@ -71,28 +100,8 @@
                         </select>
                     </div>
 
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="end_date">Fecha de fin</label>
-                        <input type="datetime-local" class="form-control" name="end_date" placeholder="Introduce la fecha de inicio" value="{{ old('end_date', $evento->fecha_final) }}"></input>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="grado"><b>Grado</b></label>
-                        <input type="text" class="form-control" name="grado" readonly value="{{ old('grado', $evento->asignatura->grado) }} ">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="asignatura"><b>Asignatura</b></label>
-                        <input type="text" class="form-control" name="asignatura" readonly value="{{ old('asignatura', $evento->asignatura->nombre) }} ">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="grupo"><b>Grupo</b></label>
-                        <input type="text" class="form-control" name="grupo" readonly value="{{ old('grupo', $evento->asignatura->grupo) }} ">
-                    </div>
-                    
+
+
                 </div>
             </div>
             <div class="form-group">
@@ -110,4 +119,3 @@
     </div>
 </div>
 @endsection
-

@@ -25,7 +25,7 @@ class AsignaturasTableSeeder extends Seeder
             'nombre' => 'Asignatura Fisioterapia1',
             'codigo' => '1111111111',
             'grado' => 'Fisioterapia',
-            'curso' => 2,
+            'curso' => 1,
             'grupo' => 'T11'
         ]);
         Asignatura::create([
@@ -47,7 +47,7 @@ class AsignaturasTableSeeder extends Seeder
             'nombre' => 'Asignatura Enfermeria2',
             'codigo' => '2222222222',
             'grado' => 'Enfermeria',
-            'curso' => 3,
+            'curso' => 4,
             'grupo' => 'T41'
         ]);
         //Farmacia
@@ -62,7 +62,7 @@ class AsignaturasTableSeeder extends Seeder
             'nombre' => 'Asignatura Farmacia2',
             'codigo' => '3333333333',
             'grado' => 'Farmacia',
-            'curso' => 2,
+            'curso' => 4,
             'grupo' => 'M21'
         ]);
         //Medicina
@@ -70,14 +70,14 @@ class AsignaturasTableSeeder extends Seeder
             'nombre' => 'Asignatura Medicina1',
             'codigo' => '4444444444',
             'grado' => 'Medicina',
-            'curso' => 2,
+            'curso' => 1,
             'grupo' => 'M31'
         ]);
         Asignatura::create([
             'nombre' => 'Asignatura Medicina2',
             'codigo' => '4444444444',
             'grado' => 'Medicina',
-            'curso' => 2,
+            'curso' => 3,
             'grupo' => 'M41'
         ]);
         //Odontologia
@@ -85,14 +85,14 @@ class AsignaturasTableSeeder extends Seeder
             'nombre' => 'Asignatura Odontologia1',
             'codigo' => '5555555555',
             'grado' => 'Odontologia',
-            'curso' => 2,
+            'curso' => 1,
             'grupo' => 'M12'
         ]);
         Asignatura::create([
             'nombre' => 'Asignatura Odontologia2',
             'codigo' => '5555555555',
             'grado' => 'Odontologia',
-            'curso' => 2,
+            'curso' => 4,
             'grupo' => 'M22'
         ]);
         //Psicologia
@@ -100,14 +100,14 @@ class AsignaturasTableSeeder extends Seeder
             'nombre' => 'Asignatura Psicologia1',
             'codigo' => '6666666666',
             'grado' => 'Psicologia',
-            'curso' => 1,
+            'curso' => 2,
             'grupo' => 'T12'
         ]);
         Asignatura::create([
             'nombre' => 'Asignatura Psicologia2',
             'codigo' => '6666666666',
             'grado' => 'Psicologia',
-            'curso' => 1,
+            'curso' => 3,
             'grupo' => 'T22'
         ]);
         //Ciclos Formativos

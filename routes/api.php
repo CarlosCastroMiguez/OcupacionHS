@@ -5,13 +5,17 @@ use Illuminate\Http\Request;
 //api/resources/salas
 Route::get ('/resources/salas', 'ApiController@salas');
 
-//asignaturas para un grado concreto.
-//api/asignaturas/{grado_val}
-Route::get ('/asignaturas/{grad}', 'ApiController@byAsignatura');
+//cursos para un grado concreto.
+//api/cursos/{grad_val}
+Route::get ('/cursos/{grad}', 'ApiController@byCurso');
+
+//asignaturas para un grado y curso concreto .
+//api/asignaturas/{grado_val}/{curso_val}
+Route::get ('/asignaturas/{grad}/{curs}', 'ApiController@byAsignatura');
 
 //Grupos para un grado y asignatura concretos.
 //api/grupos/{grado_val}/{asignatura_val}
-Route::get ('/asignaturas/{grad}/{asig}', 'ApiController@byGrupo');
+Route::get ('/asignaturas/{grad}/{curs}/{asig}', 'ApiController@byGrupo');
 
 //id para una asignatura concreta
 //api/id/{grado_val}/{asignatura_val}/{grup_val}

@@ -157,25 +157,37 @@ class ApiController extends Controller
         return response()->json($salas);
     }
     
-    //api/asignaturas/{grado_val}
-    public function byAsignatura($grad){
+    //api/cursos/{grado_val}
+    public function byCurso($grad){
+        
+        //Agrupame por curso y que pertenezcan al grado indicado(me quito las que se repiten pero tienen dist grupo)
+        $cursos = DB::table('tfg.asignaturas')
+                 ->select('curso', DB::raw('count(*) as total'))
+                 ->groupBy('curso')->where('grado', $grad)->whereNull("deleted_at")
+                 ->get();
+        
+        return $cursos;
+    }
+    
+    //api/asignaturas/{grado_val}/{curso_val}
+    public function byAsignatura($grad, $curs){
         
         //Agrupame por nombre de asignatura y que pertenezcan al grado indicado(me quito las que se repiten pero tienen dist grupo)
         $asignaturas = DB::table('tfg.asignaturas')
                  ->select('nombre', DB::raw('count(*) as total'))
-                 ->groupBy('nombre')->where('grado', $grad)->whereNull("deleted_at")
+                 ->groupBy('nombre')->where('grado', $grad)->where('curso', $curs)
                  ->get();
         
         return $asignaturas;
     }
     
-    //api/grupos/{grado_val}/{asignatura_val}
-    public function byGrupo($grad, $asig){
+    //api/grupos/{grado_val}/{curso_val}/{asignatura_val}
+    public function byGrupo($grad, $curs, $asig){
         
         //Agrupame por nombre de asignatura y que pertenezcan al grado indicado(me quito las que se repiten pero tienen dist grupo)
         $grupos = DB::table('tfg.asignaturas')
                  ->select("grupo", DB::raw('count(*) as total'))
-                 ->groupBy("grupo")->where('grado', $grad)->where('nombre', $asig)
+                 ->groupBy("grupo")->where('grado', $grad)->where('curso', $curs)->where('nombre', $asig)
                  ->get();
         
         return $grupos;
@@ -183,11 +195,11 @@ class ApiController extends Controller
     
     //Api para obtener todos los datos sobre la asignatura que desea implementar el usuario en crear evento.
     
-    //api/id/{grado_val}/{asignatura_val}/{grup_val}
-    public function idAsignatura($grad, $asig, $grup){
+    //api/id/{grado_val}/{curso_val}/{asignatura_val}/{grup_val}
+    public function idAsignatura($grad,$curs, $asig, $grup){
         
         //Agrupame por nombre de asignatura y que pertenezcan al grado indicado(me quito las que se repiten pero tienen dist grupo)
-        $id = Asignatura::where('grado', $grad)->where('nombre', $asig)->where('grupo', $grup)->get();
+        $id = Asignatura::where('grado', $grad)->where('curso', $curs)->where('nombre', $asig)->where('grupo', $grup)->get();
         
         return $id;
     }

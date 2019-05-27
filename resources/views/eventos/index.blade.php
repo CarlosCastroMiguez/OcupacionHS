@@ -26,32 +26,35 @@
 
         <div class="row">
             <div class="col-md-6 text-left">
-                Ordenar ID:
-                <a href="{{route('eventos.index', ['id_sala' => request('id_sala') , 'id_asignatura' => request('id_asignatura') , 'sort' => 'asc']) }}"> Ascendiente </a> |
-                <a href="{{route('eventos.index', ['id_sala' => request('id_sala') , 'id_asignatura' => request('id_asignatura') , 'sort' => 'desc']) }}"> Descendiente </a>
+                <a class="badge badge-pill badge-info" style="color: white;" margin="auto" >Ordenación: </a>
+                <div class="text-left">
+                <a class="badge badge-pill badge-primary" href="{{route('eventos.index', ['id_sala' => request('id_sala') , 'id_asignatura' => request('id_asignatura') , 'sort' => 'asc']) }}">Ascendente</a>
+                <a class="badge badge-pill badge-primary" href="{{route('eventos.index', ['id_sala' => request('id_sala') , 'id_asignatura' => request('id_asignatura') , 'sort' => 'desc']) }}">Descendiente</a>
 
             </div>
-            <div class="col-md-6 text-right">
-                Filtrar :
-                <a href="/eventos"> Todos </a> |
-                <a href="/eventos/?id_sala=1"> Hospital </a> |
-                <a href="/eventos/?id_sala=2"> TT </a> |
-                <a href="/eventos/?id_sala=3"> C1 </a> |
-                <a href="/eventos/?id_sala=4"> C2 </a> |
-                <a href="/eventos/?id_sala=5"> C3 </a> |
-                <a href="/eventos/?id_sala=6"> C4 </a> |
-                <a href="/eventos/?id_sala=7"> SC1 </a> |
-                <a href="/eventos/?id_sala=8"> SC2 </a>
-                <a href="/eventos/?id_sala=9"> SC3 </a> |
-                <a href="/eventos/?id_sala=10"> SC4 </a> |
-                <a href="/eventos/?id_sala=11"> Apoyo </a> |
-                <a href="/eventos/?id_sala=12"> Q048 </a> |
-                <a href="/eventos/?id_sala=13"> FC </a> |
-                <a href="/eventos/?id_sala=14"> FH </a> |
-                <a href="/eventos/?id_sala=15"> Ambulancia </a>
-                <br>
-                <br>
-
+            </div>
+            <div class="col-md-6" >
+                <a class="badge badge-pill badge-info" style="color: white;" margin="auto" >Filtros: </a>
+                <div class="text-left">
+                    <a class="badge badge-pill badge-primary" href="/eventos">Todos</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=1">Hospital</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=2">TT</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=3">C1</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=4">C2</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=5">C3</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=6">C4</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=7">SC1</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=8">SC2</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=9">SC3</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=10">SC4</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=11">Apoyo</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=12">Q048</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=13">FC</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=14">FH</a>
+                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=15">Ambulancia</a>
+                    <br>
+                    <br>
+                </div>
 
             </div>
         </div>
