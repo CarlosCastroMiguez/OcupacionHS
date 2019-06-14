@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 <div class="card border-primary mb-3">
-    <div class="card-header">Agregar Sala</div>
+    <div class="card-header"><b><u>Agregar Sala</u></b></div>
     <div class="card-body">
 
         @if(session('notification'))
@@ -48,7 +48,7 @@
 </div>
 
 <div class="card border-primary mb-3">
-    <div class="card-header">Administrar Salas</div>
+    <div class="card-header"><b><u>Administrar Salas</u></b></div>
     <div class="card-body">
         <table class="table table-bordered table-striped table-hover ">
             <thead class="thead-dark">

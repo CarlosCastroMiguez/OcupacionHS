@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 <div class="card border-primary mb-3">
-    <div class="card-header">Detalles del evento</div>
+    <div class="card-header"><b><u>Detalles del Evento</u></b></div>
 
     <div class="card-body">
 

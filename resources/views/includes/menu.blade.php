@@ -1,5 +1,5 @@
 <div class="card border-primary mb-3">
-    <div class="card-header">Menú</div>
+    <div class="card-header"><b><u>Menú</u></b></div>
 
     <div class="card-body">
 

@@ -21,7 +21,7 @@
 @endif
 
 <div class="card border-primary mb-3">
-    <div class="card-header">Lista de eventos</div>
+    <div class="card-header"><b><u>Lista de Eventos</u></b></div>
     <div class="card-body">
 
         <div class="row">

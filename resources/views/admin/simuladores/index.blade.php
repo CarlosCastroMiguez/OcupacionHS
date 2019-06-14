@@ -18,7 +18,7 @@
 
 
 <div class="card border-primary mb-3">
-    <div class="card-header">Agregar Simulador</div>
+    <div class="card-header"><b><u>Agregar Simulador</u></b></div>
     <div class="card-body">
 
         @if(session('notification'))
@@ -43,7 +43,7 @@
     </div>
 </div>
 <div class="card border-primary mb-3">
-    <div class="card-header">Administrar Simuladores</div>
+    <div class="card-header"><b><u>Administrar Simuladores</u></b></div>
     <div class="card-body">
 
         <table class="table table-bordered table-striped table-hover ">

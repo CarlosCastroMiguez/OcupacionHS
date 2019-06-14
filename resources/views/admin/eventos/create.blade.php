@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="card border-primary mb-3">
-    <div class="card-header">Agregar Evento</div>
+    <div class="card-header"><b><u>Agregar Evento</u></b></div>
     <div class="card-body">
 
         @if(session('notification'))
