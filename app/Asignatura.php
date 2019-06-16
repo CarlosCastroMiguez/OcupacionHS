@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Asignatura extends Model
 {
         use SoftDeletes;
+    
+        
+            
         public static $rules = [
             
             'nombre' => 'required|min:5|max:150',

@@ -5,7 +5,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Evento extends Model
-{
+{   
+    
     public function asignatura(){
         
         return $this->belongsTo('App\Asignatura', 'id_asignatura');

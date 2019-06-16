@@ -42,7 +42,7 @@
                     <!--/panel-header-->
                     <div class="list-group">
                        
-                        <div class="list-group-item disabled divider"> Información</div>
+                        <div class="list-group-item disabled divider"><i class="fas fa-info-circle"></i> Información</div>
                         
                         <a target="_blank" href="https://universidadeuropea.es/" class="list-group-item">
                             <i class="fas fa-university"></i>
@@ -53,7 +53,7 @@
                             <span class="text-primary">Hospital Simulado UEM</span>
                         </a>
 
-                        <div class="list-group-item disabled divider"> Contacto</div>
+                        <div class="list-group-item disabled divider"><i class="fas fa-at"></i> Contacto</div>
 
                         <a href="mailto:ocupacionuem@gmail.com?Subject=[OcupacionHS]" class="list-group-item list-group-item-info">
                             <i class="fas fa-envelope"></i>

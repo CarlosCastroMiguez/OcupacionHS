@@ -34,6 +34,7 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/eventos/{id}','EventoController@edit');
     Route::post('/eventos/{id}','EventoController@update');
     Route::get('/eventos/{id}/eliminar','EventoController@delete');
+        
 });
 
 //rutas que requieren ser admin y estan en \Admin:
@@ -54,8 +55,6 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
     Route::post('/salas/{id}','SalaController@update');
     Route::get('/salas/{id}/eliminar','SalaController@delete');
     Route::get('/salas/{id}/restaurar','SalaController@restore');
-
-    //TiposSala
     
     //Profesor
     Route::get('/profesores','ProfesorController@index');
@@ -72,5 +71,8 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/simuladores/{id}/eliminar','SimuladorController@delete');
     Route::get('/simuladores/{id}/restaurar','SimuladorController@restore');
     
+    //Importar
+    Route::get('/importar','ImportController@index');
+    Route::post('/importar','ImportController@import');
     
 });

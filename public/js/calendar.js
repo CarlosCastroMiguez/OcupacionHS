@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         views: {
             resourceTimeGridDay: {
                 buttonText: 'Día',
-                weekends: false,
+                
             },
             timeGridWeek: {
                 weekends: false,
