@@ -124,8 +124,6 @@
 
             <div class="form-group">
                 <button class="btn btn-primary">Registrar Evento</button>
-                <a href="/calendario" class="btn btn-info"> Atrás </a>
-
             </div>
         </form>
 

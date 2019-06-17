@@ -22,7 +22,7 @@
                 </a>
 
                 <a href="{{ url('/importar') }}" class="list-group-item @if(request()->is('importar*')) active @endif">
-                    Importar Eventos
+                    Gestionar Eventos
                 </a>
 
                 <ul class="list-group-item list-group-flush @if(request()->is('salas')) active @endif @if(request()->is('profesores*')) active @endif @if(request()->is('asignaturas*')) active @endif @if(request()->is('simuladores*')) active @endif">

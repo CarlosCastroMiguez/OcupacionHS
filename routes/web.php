@@ -74,5 +74,7 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
     //Importar
     Route::get('/importar','ImportController@index');
     Route::post('/importar','ImportController@import');
+    Route::get('/exportar','ImportController@export');
+
     
 });
