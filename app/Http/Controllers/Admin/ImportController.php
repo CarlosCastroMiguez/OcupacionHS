@@ -30,9 +30,7 @@ class ImportController extends Controller
 
 
     public function import(Request $request){
-        
-        
-            
+
             $rules = [
                 'csv'  => 'required|mimes:csv,txt', 
             ];
@@ -56,7 +54,6 @@ class ImportController extends Controller
 
 
             $path = public_path('uploads\\' . $path2->getClientOriginalName());
-
 
             $lines = file($path);
             $utf8_lines = array_map('utf8_encode', $lines);
@@ -95,7 +92,7 @@ class ImportController extends Controller
                 }
             
             if($errores > 0){
-                return back()->withErrors($errores . ' registros contenian errores, el resto se han importado correctamente.');
+                return back()->withErrors($errores . ' registros contenían errores, el resto se han importado correctamente.');
             }
         
             return back()->with('notification', 'Archivo importado correctamente');

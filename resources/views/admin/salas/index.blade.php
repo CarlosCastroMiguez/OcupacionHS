@@ -31,11 +31,11 @@
 
             <div class="form-group">
                 <label for="tipo">Nombre de la sala</label>
-                <input name="tipo" name="tipo" class="form-control" value="{{ old('tipo') }}"></input>
+                <input name="tipo" name="tipo" class="form-control" placeholder="Introduce el nombre de la sala" value="{{ old('tipo') }}"></input>
             </div>
             <div class="form-group">
                 <label for="capacidad">Capacidad de la sala</label>
-                <input name="capacidad" name="capacidad" class="form-control" value="{{ old('capacidad') }}"></input>
+                <input name="capacidad" name="capacidad" placeholder="Introduce la capacidad de la sala" class="form-control" value="{{ old('capacidad') }}"></input>
             </div>
 
             <div class="form-group">

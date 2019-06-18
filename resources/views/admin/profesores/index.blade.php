@@ -31,17 +31,17 @@
 
             <div class="form-group">
                 <label for="nombre">Nombre del profesor</label>
-                <input name="nombre" name="nombre" class="form-control" value="{{ old('nombre') }}"></input>
+                <input name="nombre" name="nombre" placeholder="Nombre del profesor" class="form-control" value="{{ old('nombre') }}"></input>
             </div>
 
             <div class="form-group">
                 <label for="apellido">Apellido del profesor</label>
-                <input name="apellido" name="apellido" class="form-control" value="{{ old('apellido') }}"></input>
+                <input name="apellido" name="apellido" placeholder="Apellido del profesor" class="form-control" value="{{ old('apellido') }}"></input>
             </div>
 
             <div class="form-group">
                 <label for="departamento">Departamento</label>
-                <input name="departamento" name="departamento" class="form-control" value="{{ old('departamento') }}"></input>
+                <input name="departamento" name="departamento" placeholder="Departamento" class="form-control" value="{{ old('departamento') }}"></input>
             </div>
 
             <div class="form-group">

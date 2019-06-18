@@ -32,7 +32,7 @@
 
             <div class="form-group">
                 <label for="nombre">Nombre del Simulador</label>
-                <input name="nombre" name="nombre" class="form-control" value="{{ old('nombre') }}"></input>
+                <input name="nombre" name="nombre" placeholder="Nombre del simulador" class="form-control" value="{{ old('nombre') }}"></input>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary">Agregar Simulador</button>

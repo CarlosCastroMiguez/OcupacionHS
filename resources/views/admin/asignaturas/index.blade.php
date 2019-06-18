@@ -35,7 +35,7 @@
 
                     <div class="form-group">
                         <label for="nombre">Nombre de la asignatura</label>
-                        <input name="nombre" name="nombre" class="form-control" value="{{ old('nombre') }}"></input>
+                        <input name="nombre" name="nombre" placeholder="Introduce el nombre" class="form-control" value="{{ old('nombre') }}"></input>
                     </div>
 
                     <div class="form-group">
@@ -58,7 +58,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="codigo">Codigo</label>
-                        <input name="codigo" name="codigo" class="form-control" value="{{ old('codigo') }}"></input>
+                        <input name="codigo" name="codigo" placeholder="Introduce el código de la asignatura" class="form-control" value="{{ old('codigo') }}"></input>
                     </div>
 
                     <div class="form-group">
@@ -80,7 +80,7 @@
 
             <div class="form-group">
                 <label for="grupo">Grupo</label>
-                <input name="grupo" name="grupo" class="form-control" value="{{ old('grupo') }}"></input>
+                <input name="grupo" name="grupo" placeholder="Introduce el grupo" class="form-control" value="{{ old('grupo') }}"></input>
             </div>
 
             <div class="form-group">

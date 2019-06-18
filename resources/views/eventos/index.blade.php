@@ -77,7 +77,7 @@
             <tbody>
                 <tr>
                     <td>
-                        <a href="/ver/{{ $evento->id }}">
+                        <a class="badge badge-success" href="/ver/{{ $evento->id }}">
                             {{ $evento->id }}
                         </a>
                     </td>
