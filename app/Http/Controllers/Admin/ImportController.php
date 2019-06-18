@@ -24,7 +24,7 @@ class ImportController extends Controller
     
     public function export() 
     {
-        return Excel::download(new EventosExport, 'eventos.xlsx');
+        return Excel::download(new EventosExport, 'EventosHS.xlsx');
         
     }
 
@@ -62,34 +62,34 @@ class ImportController extends Controller
         
             $errores = 0;
                 
-                for ($i=1; $i<$size; ++$i){
-                    
-                    try {
-                    
-                    $evento = new Evento();
+            for ($i=1; $i<$size; ++$i){
 
-                    $evento->nombre = $array[$i][0];
-                    $evento->numAlumnos = $array[$i][1];
-                    $evento->start_date = $array[$i][2];
-                    $evento->end_date = $array[$i][3];
-                    if($array[$i][8] == '')
-                        $evento->actor = null;
-                    else
-                        $evento->actor = $array[$i][8];
+                try {
+
+                $evento = new Evento();
+
+                $evento->nombre = $array[$i][0];
+                $evento->numAlumnos = $array[$i][1];
+                $evento->start_date = $array[$i][2];
+                $evento->end_date = $array[$i][3];
+                if($array[$i][8] == '')
+                    $evento->actor = null;
+                else
+                    $evento->actor = $array[$i][8];
 
 
-                    $evento->id_asignatura = $this->getIdAsignatura($array[$i][4]);
-                    $evento->id_profesor = $this->getIdProfesor($array[$i][5]);
-                    $evento->id_sala = $this->getIdSala($array[$i][6]);
-                    $evento->id_simulador = $this->getIdSimulador($array[$i][7]);
-                    
-                    $evento->save();
-                        
-                    }catch (\Exception $ex) {
-                        $errores += 1;
-                        
-                    }
+                $evento->id_asignatura = $this->getIdAsignatura($array[$i][4]);
+                $evento->id_profesor = $this->getIdProfesor($array[$i][5], $array[$i][6]);
+                $evento->id_sala = $this->getIdSala($array[$i][7]);
+                $evento->id_simulador = $this->getIdSimulador($array[$i][8]);
+
+                $evento->save();
+
+                }catch (\Exception $ex) {
+                    $errores += 1;
+
                 }
+            }
             
             if($errores > 0){
                 return back()->withErrors($errores . ' registros contenían errores, el resto se han importado correctamente.');
@@ -107,28 +107,17 @@ class ImportController extends Controller
             return $asignatura->id;
         }
         
-        $asignatura = new Asignatura();
-        $asignatura->nombre = $nombreAsignatura;
-        
-        $asignatura->save();
-        
-        return $asignatura->id;
     }
     
-    public function getIdProfesor($nombreProfesor){
+    public function getIdProfesor($nombreProfesor, $apellidoProfesor){
         
-        $profesor = Profesor::where('nombre', $nombreProfesor)->first();
+        $profesor = Profesor::where('nombre', $nombreProfesor)
+                ->where('apellido', $apellidoProfesor)->first();
         
         if($profesor){
             return $profesor->id;
         }
         
-        $profesor = new Asignatura();
-        $profesor->nombre = $nombreProfesor;
-        
-        $profesor->save();
-        
-        return $profesor->id;
     }
     
     public function getIdSala($nombreSala){
@@ -139,12 +128,6 @@ class ImportController extends Controller
             return $sala->id;
         }
         
-        $sala = new Asignatura();
-        $sala->tipo = $nombreSala;
-        
-        $sala->save();
-        
-        return $sala->id;
     }
     
     public function getIdSimulador($nombreSimulador){
@@ -155,11 +138,6 @@ class ImportController extends Controller
             return $simulador->id;
         }
         
-        $simulador = new Asignatura();
-        $simulador->nombre = $nombreSimulador;
-        
-        $simulador->save();
-        
-        return $simulador->id;
     }
 }
+

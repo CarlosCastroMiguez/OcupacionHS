@@ -30,5 +30,11 @@ class ProfesoresTableSeeder extends Seeder
             'departamento' => 'departamento C'
             
         ]);
+        Profesor::create([
+            'nombre' => 'Borja',
+            'apellido' => 'Rodriguez Vila',
+            'departamento' => 'departamento A'
+            
+        ]);
     }
 }

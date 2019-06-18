@@ -43,7 +43,7 @@
                 @endif
 
             @else
-            <a href="{{ url('/') }}" class="list-group-item @if(request()->is('/')) active @endif">
+            <a href="{{ url('/') }}" class="list-group-item @if(request()->is('/*')) active @endif">
                 Inicio
             </a>
             @endif
