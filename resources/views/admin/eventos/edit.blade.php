@@ -45,7 +45,7 @@
 
                     <div class="form-group">
                         <label for="curso"><b>Curso</b></label>
-                        <input type="text" class="form-control" name="grado" readonly value="{{ old('curso', $evento->asignatura->curso) }} ">
+                        <input type="text" class="form-control" name="curso" readonly value="{{ old('curso', $evento->asignatura->curso) }} ">
                     </div>
 
                     <div class="form-group">

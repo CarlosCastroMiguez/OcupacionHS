@@ -70,6 +70,12 @@ class EventoController extends Controller
         
         $this->validate($request, Evento::$rules, Evento::$messages );
         
+        $capacidad = Sala::where('id', $request->input('sala'))->first()->capacidad;
+        
+        if($capacidad < $request->input('numAlumnos')){
+            return back()->withErrors('El numero de alumnos designado para el evento es mayor a la capacidad de la sala seleccionada.');
+        }
+        
         //obtengo la asignatura resultante para usar su id.
         //Gracias a esto evito hacerlo mediante js->ajax y aumento la seguridad de la web
         //para no exponer mi BBDD.
@@ -118,6 +124,12 @@ class EventoController extends Controller
         $asig = Asignatura::where('grado', $request->input('grado'))
                                     ->where('nombre', $request->input('asignatura'))
                                         ->where('grupo', $request->input('grupo'))->first();
+        
+        $capacidad = Sala::where('id', $request->input('sala'))->first()->capacidad;
+
+        if($capacidad < $request->input('numAlumnos')){
+            return back()->withErrors('El numero de alumnos designado para el evento es mayor a la capacidad de la sala seleccionada.');
+        }
         
         $evento = Evento::find($id);
         

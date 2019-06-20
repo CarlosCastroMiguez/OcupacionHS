@@ -27,8 +27,7 @@ class ImportController extends Controller
         return Excel::download(new EventosExport, 'EventosHS.xlsx');
         
     }
-
-
+    
     public function import(Request $request){
 
             $rules = [
@@ -66,25 +65,33 @@ class ImportController extends Controller
 
                 try {
 
-                $evento = new Evento();
+                    $evento = new Evento();
 
-                $evento->nombre = $array[$i][0];
-                $evento->numAlumnos = $array[$i][1];
-                $evento->start_date = $array[$i][2];
-                $evento->end_date = $array[$i][3];
-                if($array[$i][8] == '')
-                    $evento->actor = null;
-                else
-                    $evento->actor = $array[$i][8];
+                    $capacidad = Sala::where('id', $this->getIdSala($array[$i][7]))->first()->capacidad;
+                    
+                    
+                    if($array[$i][1]<= $capacidad){
+                        
+                        $evento->nombre = $array[$i][0];
+                        $evento->numAlumnos = $array[$i][1];
+                        $evento->start_date = $array[$i][2];
+                        $evento->end_date = $array[$i][3];
+                        if($array[$i][8] == '')
+                            $evento->actor = null;
+                        else
+                            $evento->actor = $array[$i][8];
 
 
-                $evento->id_asignatura = $this->getIdAsignatura($array[$i][4]);
-                $evento->id_profesor = $this->getIdProfesor($array[$i][5], $array[$i][6]);
-                $evento->id_sala = $this->getIdSala($array[$i][7]);
-                $evento->id_simulador = $this->getIdSimulador($array[$i][8]);
+                        $evento->id_asignatura = $this->getIdAsignatura($array[$i][4]);
+                        $evento->id_profesor = $this->getIdProfesor($array[$i][5], $array[$i][6]);
+                        $evento->id_sala = $this->getIdSala($array[$i][7]);
+                        $evento->id_simulador = $this->getIdSimulador($array[$i][8]);
 
-                $evento->save();
-
+                        $evento->save();
+                    }else{
+                        
+                        $errores +=1;
+                    }
                 }catch (\Exception $ex) {
                     $errores += 1;
 
@@ -140,4 +147,3 @@ class ImportController extends Controller
         
     }
 }
-

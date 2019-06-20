@@ -96,6 +96,7 @@ class Evento extends Model
         'end_date' => 'required|after:start_date',
         'sala' => 'required',
         'grado' => 'required',
+        'curso' => 'required',
         'asignatura' => 'required',
         'grupo' => 'required',
         'profesor' => 'required',
@@ -120,6 +121,7 @@ class Evento extends Model
 
         'sala.required' => 'Es necesario seleccionar una sala',
         'grado.required' => 'Es necesario seleccionar un grado',
+        'curso.required' => 'Es necesario seleccionar un curso',
         'asignatura.required' => 'Es necesario seleccionar una asignatura',
         'grupo.required' => 'Es necesario seleccionar un grupo',
         'profesor.required' => 'Es necesario seleccionar un profesor',
