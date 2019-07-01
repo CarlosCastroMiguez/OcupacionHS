@@ -52,6 +52,13 @@
                             <i class="fas fa-hospital"></i>
                             <span class="text-primary">Hospital Simulado UEM</span>
                         </a>
+                        
+                        <div class="list-group-item disabled divider"><i class="fas fa-link"></i> Enlaces de Interés</div>
+                        
+                        <a target="_blank" href="http://esp.uem.es/hsimulado/" class="list-group-item">
+                            <i class="fas fa-boxes"></i>
+                            <span class="text-primary">Gestor de Inventario HSUEM</span>
+                        </a>
 
                         <div class="list-group-item disabled divider"><i class="fas fa-at"></i> Contacto</div>
 
