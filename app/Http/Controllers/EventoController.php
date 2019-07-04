@@ -121,11 +121,12 @@ class EventoController extends Controller
         //obtengo la asignatura resultante para usar su id.
         //Gracias a esto evito hacerlo mediante js->ajax y aumento la seguridad de la web
         //para no exponer mi BBDD.
-        $asig = Asignatura::where('grado', $request->input('grado'))
-                                    ->where('nombre', $request->input('asignatura'))
-                                        ->where('grupo', $request->input('grupo'))->first();
+        $asig = Asignatura::withTrashed()->where('grado', $request->input('grado'))
+                                            ->where('nombre', $request->input('asignatura'))
+                                                ->where('grupo', $request->input('grupo'))->first();
         
-        $capacidad = Sala::where('id', $request->input('sala'))->first()->capacidad;
+        $capacidad = Sala::withTrashed()->where('id', $request->input('sala'))->first()->capacidad;
+        
 
         if($capacidad < $request->input('numAlumnos')){
             return back()->withErrors('El numero de alumnos designado para el evento es mayor a la capacidad de la sala seleccionada.');

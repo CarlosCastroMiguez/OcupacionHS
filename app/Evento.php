@@ -9,18 +9,18 @@ class Evento extends Model
     
     public function asignatura(){
         
-        return $this->belongsTo('App\Asignatura', 'id_asignatura');
+        return $this->belongsTo('App\Asignatura', 'id_asignatura')->withTrashed();
     }
     public function profesor(){
-        return $this->belongsTo('App\Profesor', 'id_profesor');
+        return $this->belongsTo('App\Profesor', 'id_profesor')->withTrashed();
     }
     
     public function sala(){
-        return $this->belongsTo('App\Sala', 'id_sala');
+        return $this->belongsTo('App\Sala', 'id_sala')->withTrashed();
     }
     
     public function simulador(){
-        return $this->belongsTo('App\Simulador', 'id_simulador');
+        return $this->belongsTo('App\Simulador', 'id_simulador')->withTrashed();
     }
     //Si tiene asignado un simulador devuelve el nombre, sino "Sin Simulador"
     public function getNombreSimuladorAttribute(){
