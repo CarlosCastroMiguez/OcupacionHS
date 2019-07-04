@@ -2,18 +2,20 @@
 
 @section('content')
 
+<link rel="stylesheet" href="/css/importar.css" />
+
 <div class="card border-primary mb-3">
-    <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+    <div class="card-header">{{ __('Verifica tu dirección E-Mail') }}</div>
 
     <div class="card-body">
         @if (session('resent'))
         <div class="alert alert-success" role="alert">
-            {{ __('A fresh verification link has been sent to your email address.') }}
+            {{ __('Se ha enviado un nuevo enlace de verificación a su dirección de correo electrónico.') }}
         </div>
         @endif
 
-        {{ __('Before proceeding, please check your email for a verification link.') }}
-        {{ __('If you did not receive the email') }}, <a href="{{ route('verification.resend') }}">{{ __('click here to request another') }}</a>.
+        {{ __('Antes de continuar, consulte su correo electrónico, tendrá un enlace de verificación.') }}
+        {{ __('Si no has recibido un E-Mail') }}, <a href="{{ route('verification.resend') }}">{{ __('haz click aquí para solicitar un reenvio') }}</a>.
     </div>
 </div>
 
