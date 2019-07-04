@@ -2,6 +2,8 @@
 
 @section('content')
 
+<link rel="stylesheet" href="/css/importar.css" />
+
 <div class="card border-primary mb-3">
     <div class="card-header"><b><u>Editar Sala</u></b></div>
     <div class="card-body">

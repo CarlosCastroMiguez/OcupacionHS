@@ -41,7 +41,7 @@
     <div class="card-header"><b><u>Exportar Eventos</u></b></div>
     <div class="card-body">
 
-        <a href="/exportar" class="btn btn-info" align="left"><i class="fas fa-download"></i> Exportar CSV</a>
+        <a href="/exportar" class="btn btn-info" align="left"><i class="fas fa-download"></i> Exportar XLSX</a>
 
     </div>
 </div>

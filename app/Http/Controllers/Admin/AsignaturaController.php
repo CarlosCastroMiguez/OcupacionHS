@@ -21,7 +21,7 @@ class AsignaturaController extends Controller
         //si la validacion no se cumple no se avanza
         $this->validate($request, Asignatura::$rules, Asignatura::$messages );
         
-        //Forma 2 de crear incident:
+        //Forma 2 de crear:
         $asignatura = new Asignatura();
         
         $asignatura->nombre = $request->input('nombre');
