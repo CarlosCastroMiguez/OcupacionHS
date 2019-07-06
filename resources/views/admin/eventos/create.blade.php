@@ -90,7 +90,7 @@
                         <select name="sala" class="form-control">
                             <option value=""> Seleccione sala</option>
                             @foreach($salas as $sala)
-                            <option value="{{ $sala -> id }}"> {{$sala->tipo}}</option>
+                            <option value="{{ $sala -> id }}"> {{$sala->tipo}} - {{$sala->capacidad}} personas</option>
                             @endforeach
                         </select>
                     </div>
@@ -100,7 +100,7 @@
                         <select name="profesor" class="form-control">
                             <option value=""> Seleccione profesor</option>
                             @foreach($profesores as $profesor)
-                            <option value="{{ $profesor -> id }}"> {{$profesor->nombre}}</option>
+                            <option value="{{ $profesor -> id }}"> {{$profesor->nombre}}  {{ $profesor->apellido}}</option>
                             @endforeach
                         </select>
                     </div>

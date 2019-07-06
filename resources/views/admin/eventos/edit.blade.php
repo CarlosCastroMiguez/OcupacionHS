@@ -73,9 +73,9 @@
                     <div class="form-group">
                         <label for="sala">Sala</label>
                         <select name="sala" class="form-control">
-                            <option value="{{ $evento->sala->id }}">{{ $evento->tipo_sala }}</option>
+                            <option value="{{ $evento->sala->id }}">{{ $evento->tipo_sala }} - {{ $evento->sala->capacidad }} personas</option>
                             @foreach($salas as $sala)
-                            <option value="{{ $sala -> id }}"> {{$sala->tipo}}</option>
+                            <option value="{{ $sala -> id }}"> {{$sala->tipo}} - {{$sala->capacidad}} personas</option>
                             @endforeach
                         </select>
                     </div>
@@ -83,9 +83,9 @@
                     <div class="form-group">
                         <label for="profesor">Profesor</label>
                         <select name="profesor" class="form-control">
-                            <option value="{{ $evento->id_profesor }}">{{ $evento->profesor->nombre }}</option>
+                            <option value="{{ $evento->id_profesor }}">{{ $evento->profesor->nombre }} {{ $evento->profesor->apellido }}</option>
                             @foreach($profesores as $profesor)
-                            <option value="{{ $profesor->id }}"> {{$profesor->nombre}}</option>
+                            <option value="{{ $profesor->id }}"> {{$profesor->nombre}} {{$profesor->apellido}}</option>
                             @endforeach
                         </select>
                     </div>

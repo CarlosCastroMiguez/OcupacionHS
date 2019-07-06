@@ -13,7 +13,7 @@
                 Calendario
             </a>
             <a href="{{ url('/eventos') }}" class="list-group-item @if(request()->is('eventos*')) active @endif @if(request()->is('ver*')) active @endif">
-                Lista eventos
+                Lista de eventos
             </a>
 
                 @if (auth()->user()->is_admin)

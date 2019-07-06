@@ -55,12 +55,12 @@
             <tbody>
                 <tr>
                     <th>Sala</th>
-                    <td>{{ $evento ->sala->tipo }}</td>
+                    <td>{{ $evento ->sala->tipo }} - {{ $evento ->sala->capacidad }} personas</td>
 
                 </tr>
                 <tr>
                     <th>Profesor</th>
-                    <td>{{ $evento ->profesor->nombre }}</td>
+                    <td>{{ $evento ->profesor->nombre }} {{ $evento ->profesor->apellido }}</td>
 
                 </tr>
                 <tr>
