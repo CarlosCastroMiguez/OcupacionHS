@@ -74,8 +74,12 @@ class ImportController extends Controller
                         
                         $evento->nombre = $array[$i][0];
                         $evento->numAlumnos = $array[$i][1];
-                        $evento->start_date = $array[$i][2];
-                        $evento->end_date = $array[$i][3];
+                        
+                        if(strtotime($array[$i][2]) < strtotime($array[$i][3])){
+                            $evento->start_date = $array[$i][2];
+                            $evento->end_date = $array[$i][3];
+                        }
+                        
                         if($array[$i][8] == '')
                             $evento->actor = null;
                         else
