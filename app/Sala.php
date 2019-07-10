@@ -17,7 +17,7 @@ class Sala extends Model
         
         public static $messages = [
             
-            'tipo.required' => 'Es seleccionar un tipo de sala',
+            'tipo.required' => 'Es necesario introducir el nombre de la sala.',
             'tipo.min' => 'El nombre de la sala debe contener como mínimo 2 caracteres.',
             
             

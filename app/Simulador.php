@@ -11,14 +11,14 @@ class Simulador extends Model
         use SoftDeletes;
         public static $rules = [
             
-            'nombre' => 'required|min:5|max:20',
+            'nombre' => 'required|min:3|max:20',
         ];
     
         public static $messages = [
             
             'nombre.required' => 'Es necesario ingresar un nombre de simulador',
                     
-            'nombre.min' => 'El nombre debe presentar al menos 5 caracteres', 
+            'nombre.min' => 'El nombre debe presentar al menos 3 caracteres', 
             'nombre.max' => 'El nombre debe presentar como máximo 20 caracteres',
             
         ];

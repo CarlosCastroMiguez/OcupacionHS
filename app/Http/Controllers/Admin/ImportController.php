@@ -80,10 +80,10 @@ class ImportController extends Controller
                             $evento->end_date = $array[$i][3];
                         }
                         
-                        if($array[$i][8] == '')
+                        if($array[$i][9] == '')
                             $evento->actor = null;
                         else
-                            $evento->actor = $array[$i][8];
+                            $evento->actor = $array[$i][9];
 
 
                         $evento->id_asignatura = $this->getIdAsignatura($array[$i][4]);
