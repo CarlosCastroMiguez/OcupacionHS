@@ -1,6 +1,4 @@
 nombre,numAlumnos,start_date,end_date,asignatura,profesor,apellido,sala,simulador,actor
-
-//Hospital
 HHCC 1,10,2019/07/22T08:00:00,2019/07/22T10:00:00,ANATOMIA I,Lourdes,Martin Mendez,Hospital,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/22T10:00:00,2019/07/22T12:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,Hospital,ISTAN,Anciano con problemas auditivos
 ODONTODISPLASIA ,10,2019/07/22T12:00:00,2019/07/22T14:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,Hospital,ISTAN,Anciano con problemas auditivos
@@ -8,8 +6,6 @@ TALLER,10,2019/07/22T19:00:00,2019/07/22T21:00:00,MECANISMOS Y PROCESOS DE ENFER
 Expl. Abdominal,10,2019/07/22T17:00:00,2019/07/22T19:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,Hospital,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/22T21:00:00,2019/07/22T23:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,Hospital,ISTAN,Anciano con problemas auditivos
 Escenario 1: CV y CNV,10,2019/07/22T15:00:00,2019/07/22T17:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO II,Maria,Fuencisla Gilsanz,Hospital,ISTAN,Anciano con problemas auditivos
-
-//TT
 Visita del HU de la princesa,10,2019/07/22T08:00:00,2019/07/22T10:00:00,OTROS,Lourdes,Martin Mendez,TT,ISTAN,Anciano con problemas auditivos															
 Tecnicas de rehabilitacion,10,2019/07/22T10:00:00,2019/07/22T12:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,TT,ISTAN,Anciano con problemas auditivos			
 Practica 1,10,2019/07/22T12:00:00,2019/07/22T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,TT,ISTAN,Anciano con problemas auditivos	
@@ -17,8 +13,6 @@ Practica de rehabilitacion,10,2019/07/22T15:00:00,2019/07/22T17:00:00,TERAPIAS F
 Visita del Doctor S,10,2019/07/22T17:00:00,2019/07/22T19:00:00,OTROS,Lourdes,Martin Mendez,TT,ISTAN,
 Practica 2,10,2019/07/22T21:00:00,2019/07/22T23:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,TT,ISTAN,Anciano con problemas auditivos	
 Introduccion a CCFF,10,2019/07/22T19:00:00,2019/07/22T21:00:00,CICLOS,Borja,Rodriguez Vila,TT,ISTAN,Anciano con problemas auditivos
-
-//C1
 Expl. Abdominal,10,2019/07/22T08:00:00,2019/07/22T10:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,C1,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/22T10:00:00,2019/07/22T12:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,C1,ISTAN,Anciano con problemas auditivos
 Escenario 1: CV y CNV,10,2019/07/22T12:00:00,2019/07/22T14:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO II,Maria,Fuencisla Gilsanz,C1,ISTAN,Anciano con problemas auditivos
@@ -26,8 +20,6 @@ HHCC 1,10,2019/07/22T19:00:00,2019/07/22T21:00:00,ANATOMIA I,Lourdes,Martin Mend
 SINDROME VANDE WOUDER,10,2019/07/22T17:00:00,2019/07/22T19:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,C1,ISTAN,Anciano con problemas auditivos
 ODONTODISPLASIA ,10,2019/07/22T21:00:00,2019/07/22T23:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,C1,ISTAN,Anciano con problemas auditivos
 TALLER,10,2019/07/22T15:00:00,2019/07/22T17:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,C1,ISTAN,Anciano con problemas auditivos
-
-//C2
 Practica de rehabilitacion,10,2019/07/22T08:00:00,2019/07/22T10:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,C2,ISTAN,Anciano con problemas auditivos		
 Visita del Doctor S,10,2019/07/22T10:00:00,2019/07/22T12:00:00,OTROS,Lourdes,Martin Mendez,C2,ISTAN,
 Practica 2,10,2019/07/22T12:00:00,2019/07/22T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,C2,ISTAN,Anciano con problemas auditivos	
@@ -35,16 +27,12 @@ Introduccion a CCFF,10,2019/07/22T15:00:00,2019/07/22T17:00:00,CICLOS,Borja,Rodr
 Visita del HU de la princesa,10,2019/07/22T17:00:00,2019/07/22T19:00:00,OTROS,Lourdes,Martin Mendez,C2,ISTAN,Anciano con problemas auditivos															
 Tecnicas de rehabilitacion,10,2019/07/22T21:00:00,2019/07/22T23:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,C2,ISTAN,Anciano con problemas auditivos			
 Practica 1,10,2019/07/22T19:00:00,2019/07/22T21:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,C2,ISTAN,Anciano con problemas auditivos	
-
-//C3
 ODONTODISPLASIA ,10,2019/07/22T08:00:00,2019/07/22T10:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,C3,ISTAN,Anciano con problemas auditivos
 TALLER,10,2019/07/22T10:30:00,2019/07/22T13:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,C3,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/22T14:00:00,2019/07/22T16:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,C3,ISTAN,Anciano con problemas auditivos
 Expl. Abdominal,10,2019/07/22T16:00:00,2019/07/22T18:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,C3,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/22T19:00:00,2019/07/22T21:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,C3,ISTAN,Anciano con problemas auditivos
 HHCC 1,10,2019/07/22T21:00:00,2019/07/22T23:00:00,ANATOMIA I,Lourdes,Martin Mendez,C3,ISTAN,Anciano con problemas auditivos
-
-//C4
 Practica 1,10,2019/07/22T12:00:00,2019/07/22T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,C4,ISTAN,Anciano con problemas auditivos	
 Practica de rehabilitacion,10,2019/07/22T15:00:00,2019/07/22T17:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,C4,ISTAN,Anciano con problemas auditivos	
 Tecnicas de rehabilitacion,10,2019/07/22T10:00:00,2019/07/22T12:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,C4,ISTAN,Anciano con problemas auditivos	
@@ -52,8 +40,6 @@ Visita del Doctor S,10,2019/07/22T17:00:00,2019/07/22T19:00:00,OTROS,Lourdes,Mar
 Practica 2,10,2019/07/22T21:00:00,2019/07/22T23:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,C4,ISTAN,Anciano con problemas auditivos	
 Visita del HU de la princesa,10,2019/07/22T08:00:00,2019/07/22T10:00:00,OTROS,Lourdes,Martin Mendez,C4,ISTAN,Anciano con problemas auditivos		
 Introduccion a CCFF,10,2019/07/22T19:00:00,2019/07/22T21:00:00,CICLOS,Borja,Rodriguez Vila,C4,ISTAN,Anciano con problemas auditivos
-
-//SC1
 TALLER,10,2019/07/22T19:00:00,2019/07/22T21:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,SC1,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/22T10:00:00,2019/07/22T12:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,SC1,ISTAN,Anciano con problemas auditivos
 HHCC 1,10,2019/07/22T08:00:00,2019/07/22T10:00:00,ANATOMIA I,Lourdes,Martin Mendez,SC1,ISTAN,Anciano con problemas auditivos
@@ -61,24 +47,18 @@ Escenario 1: CV y CNV,10,2019/07/22T15:00:00,2019/07/22T17:00:00,ANATOMIA Y FISI
 ODONTODISPLASIA ,10,2019/07/22T12:00:00,2019/07/22T14:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,SC1,ISTAN,Anciano con problemas auditivos
 Expl. Abdominal,10,2019/07/22T17:00:00,2019/07/22T19:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,SC1,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/22T21:00:00,2019/07/22T23:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,SC1,ISTAN,Anciano con problemas auditivos
-
-//SC2
 Practica de rehabilitacion,10,2019/07/22T08:00:00,2019/07/22T10:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,SC2,ISTAN,Anciano con problemas auditivos		
 Visita del Doctor S,10,2019/07/22T10:00:00,2019/07/22T12:00:00,OTROS,Lourdes,Martin Mendez,SC2,ISTAN,
 Practica 2,10,2019/07/22T12:00:00,2019/07/22T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,SC2,ISTAN,Anciano con problemas auditivos	
 Visita del HU de la princesa,10,2019/07/22T17:00:00,2019/07/22T19:00:00,OTROS,Lourdes,Martin Mendez,SC2,ISTAN,Anciano con problemas auditivos															
 Tecnicas de rehabilitacion,10,2019/07/22T21:00:00,2019/07/22T23:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,SC2,ISTAN,Anciano con problemas auditivos			
-Practica 1,10,2019/07/22T19:00:00,2019/07/22T21:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,SC2,ISTAN,Anciano con problemas auditivos	
-
-//SC3
+Practica 1,10,2019/07/22T19:00:00,2019/07/22T21:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,SC2,ISTAN,Anciano con problemas auditivos
 ODONTODISPLASIA ,10,2019/07/22T08:00:00,2019/07/22T10:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,SC3,ISTAN,Anciano con problemas auditivos
 TALLER,10,2019/07/22T10:30:00,2019/07/22T13:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,SC3,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/22T14:00:00,2019/07/22T16:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,SC3,ISTAN,Anciano con problemas auditivos
 Expl. Abdominal,10,2019/07/22T16:00:00,2019/07/22T18:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,SC3,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/22T19:00:00,2019/07/22T21:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,SC3,ISTAN,Anciano con problemas auditivos
 HHCC 1,10,2019/07/22T21:00:00,2019/07/22T23:00:00,ANATOMIA I,Lourdes,Martin Mendez,SC3,ISTAN,Anciano con problemas auditivos
-
-//SC4
 Expl. Abdominal,10,2019/07/22T08:00:00,2019/07/22T10:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,SC4,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/22T10:00:00,2019/07/22T12:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,SC4,ISTAN,Anciano con problemas auditivos
 Escenario 1: CV y CNV,10,2019/07/22T12:00:00,2019/07/22T14:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO II,Maria,Fuencisla Gilsanz,SC4,ISTAN,Anciano con problemas auditivos
@@ -86,8 +66,6 @@ HHCC 1,10,2019/07/22T19:00:00,2019/07/22T21:00:00,ANATOMIA I,Lourdes,Martin Mend
 SINDROME VANDE WOUDER,10,2019/07/22T17:00:00,2019/07/22T19:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,SC4,ISTAN,Anciano con problemas auditivos
 ODONTODISPLASIA ,10,2019/07/22T21:00:00,2019/07/22T23:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,SC4,ISTAN,Anciano con problemas auditivos
 TALLER,10,2019/07/22T15:00:00,2019/07/22T17:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,SC4,ISTAN,Anciano con problemas auditivos
-
-//Apoyo
 Practica de rehabilitacion,10,2019/07/22T08:00:00,2019/07/22T10:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,Apoyo,ISTAN,Anciano con problemas auditivos		
 Visita del Doctor S,10,2019/07/22T10:00:00,2019/07/22T12:00:00,OTROS,Lourdes,Martin Mendez,Apoyo,ISTAN,
 Practica 2,10,2019/07/22T12:00:00,2019/07/22T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,Apoyo,ISTAN,Anciano con problemas auditivos	
@@ -95,8 +73,6 @@ Introduccion a CCFF,10,2019/07/22T15:00:00,2019/07/22T17:00:00,CICLOS,Borja,Rodr
 Visita del HU de la princesa,10,2019/07/22T17:00:00,2019/07/22T19:00:00,OTROS,Lourdes,Martin Mendez,Apoyo,ISTAN,Anciano con problemas auditivos															
 Tecnicas de rehabilitacion,10,2019/07/22T21:00:00,2019/07/22T23:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,Apoyo,ISTAN,Anciano con problemas auditivos			
 Practica 1,10,2019/07/22T19:00:00,2019/07/22T21:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,Apoyo,ISTAN,Anciano con problemas auditivos	
-
-//Q048
 HHCC 1,10,2019/07/22T08:00:00,2019/07/22T10:00:00,ANATOMIA I,Lourdes,Martin Mendez,Q048,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/22T10:00:00,2019/07/22T12:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,Q048,ISTAN,Anciano con problemas auditivos
 ODONTODISPLASIA ,10,2019/07/22T12:00:00,2019/07/22T14:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,Q048,ISTAN,Anciano con problemas auditivos
@@ -104,16 +80,12 @@ TALLER,10,2019/07/22T19:00:00,2019/07/22T21:00:00,MECANISMOS Y PROCESOS DE ENFER
 Expl. Abdominal,10,2019/07/22T17:00:00,2019/07/22T19:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,Q048,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/22T21:00:00,2019/07/22T23:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,Q048,ISTAN,Anciano con problemas auditivos
 Escenario 1: CV y CNV,10,2019/07/22T15:00:00,2019/07/22T17:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO II,Maria,Fuencisla Gilsanz,Q048,ISTAN,Anciano con problemas auditivos
-
-//FC
 Practica de rehabilitacion,10,2019/07/22T08:00:00,2019/07/22T10:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,FC,ISTAN,Anciano con problemas auditivos		
 Visita del Doctor S,10,2019/07/22T10:00:00,2019/07/22T12:00:00,OTROS,Lourdes,Martin Mendez,FC,ISTAN,
 Practica 2,10,2019/07/22T12:00:00,2019/07/22T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,FC,ISTAN,Anciano con problemas auditivos	
 Visita del HU de la princesa,10,2019/07/22T17:00:00,2019/07/22T19:00:00,OTROS,Lourdes,Martin Mendez,FC,ISTAN,Anciano con problemas auditivos															
 Tecnicas de rehabilitacion,10,2019/07/22T21:00:00,2019/07/22T23:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,FC,ISTAN,Anciano con problemas auditivos			
 Practica 1,10,2019/07/22T19:00:00,2019/07/22T21:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,FC,ISTAN,Anciano con problemas auditivos	
-
-//FH
 Visita del HU de la princesa,10,2019/07/22T08:00:00,2019/07/22T10:00:00,OTROS,Lourdes,Martin Mendez,FH,ISTAN,Anciano con problemas auditivos															
 Tecnicas de rehabilitacion,10,2019/07/22T10:00:00,2019/07/22T12:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,FH,ISTAN,Anciano con problemas auditivos			
 Practica 1,10,2019/07/22T12:00:00,2019/07/22T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,FH,ISTAN,Anciano con problemas auditivos	
@@ -121,19 +93,12 @@ Practica de rehabilitacion,10,2019/07/22T15:00:00,2019/07/22T17:00:00,TERAPIAS F
 Visita del Doctor S,10,2019/07/22T17:00:00,2019/07/22T19:00:00,OTROS,Lourdes,Martin Mendez,FH,ISTAN,
 Practica 2,10,2019/07/22T21:00:00,2019/07/22T23:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,FH,ISTAN,Anciano con problemas auditivos	
 Introduccion a CCFF,10,2019/07/22T19:00:00,2019/07/22T21:00:00,CICLOS,Borja,Rodriguez Vila,FH,ISTAN,Anciano con problemas auditivos
-
-//Ambulanc
-
 ODONTODISPLASIA ,10,2019/07/22T08:00:00,2019/07/22T10:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,Ambulanc,ISTAN,Anciano con problemas auditivos
 TALLER,10,2019/07/22T10:30:00,2019/07/22T13:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,Ambulanc,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/22T14:00:00,2019/07/22T16:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,Ambulanc,ISTAN,Anciano con problemas auditivos
 Expl. Abdominal,10,2019/07/22T16:00:00,2019/07/22T18:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,Ambulanc,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/22T19:00:00,2019/07/22T21:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,Ambulanc,ISTAN,Anciano con problemas auditivos
 HHCC 1,10,2019/07/22T21:00:00,2019/07/22T23:00:00,ANATOMIA I,Lourdes,Martin Mendez,Ambulanc,ISTAN,Anciano con problemas auditivos
-
-nombre,numAlumnos,start_date,end_date,asignatura,profesor,apellido,sala,simulador,actor
-
-//Hospital
 HHCC 1,10,2019/07/23T08:00:00,2019/07/23T10:00:00,ANATOMIA I,Lourdes,Martin Mendez,Hospital,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/23T10:00:00,2019/07/23T12:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,Hospital,ISTAN,Anciano con problemas auditivos
 ODONTODISPLASIA ,10,2019/07/23T12:00:00,2019/07/23T14:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,Hospital,ISTAN,Anciano con problemas auditivos
@@ -141,8 +106,6 @@ TALLER,10,2019/07/23T19:00:00,2019/07/23T21:00:00,MECANISMOS Y PROCESOS DE ENFER
 Expl. Abdominal,10,2019/07/23T17:00:00,2019/07/23T19:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,Hospital,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/23T21:00:00,2019/07/23T23:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,Hospital,ISTAN,Anciano con problemas auditivos
 Escenario 1: CV y CNV,10,2019/07/23T15:00:00,2019/07/23T17:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO II,Maria,Fuencisla Gilsanz,Hospital,ISTAN,Anciano con problemas auditivos
-
-//TT
 Visita del HU de la princesa,10,2019/07/23T08:00:00,2019/07/23T10:00:00,OTROS,Lourdes,Martin Mendez,TT,ISTAN,Anciano con problemas auditivos															
 Tecnicas de rehabilitacion,10,2019/07/23T10:00:00,2019/07/23T12:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,TT,ISTAN,Anciano con problemas auditivos			
 Practica 1,10,2019/07/23T12:00:00,2019/07/23T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,TT,ISTAN,Anciano con problemas auditivos	
@@ -150,8 +113,6 @@ Practica de rehabilitacion,10,2019/07/23T15:00:00,2019/07/23T17:00:00,TERAPIAS F
 Visita del Doctor S,10,2019/07/23T17:00:00,2019/07/23T19:00:00,OTROS,Lourdes,Martin Mendez,TT,ISTAN,
 Practica 2,10,2019/07/23T21:00:00,2019/07/23T23:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,TT,ISTAN,Anciano con problemas auditivos	
 Introduccion a CCFF,10,2019/07/23T19:00:00,2019/07/23T21:00:00,CICLOS,Borja,Rodriguez Vila,TT,ISTAN,Anciano con problemas auditivos
-
-//C1
 Expl. Abdominal,10,2019/07/23T08:00:00,2019/07/23T10:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,C1,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/23T10:00:00,2019/07/23T12:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,C1,ISTAN,Anciano con problemas auditivos
 Escenario 1: CV y CNV,10,2019/07/23T12:00:00,2019/07/23T14:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO II,Maria,Fuencisla Gilsanz,C1,ISTAN,Anciano con problemas auditivos
@@ -159,8 +120,6 @@ HHCC 1,10,2019/07/23T19:00:00,2019/07/23T21:00:00,ANATOMIA I,Lourdes,Martin Mend
 SINDROME VANDE WOUDER,10,2019/07/23T17:00:00,2019/07/23T19:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,C1,ISTAN,Anciano con problemas auditivos
 ODONTODISPLASIA ,10,2019/07/23T21:00:00,2019/07/23T23:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,C1,ISTAN,Anciano con problemas auditivos
 TALLER,10,2019/07/23T15:00:00,2019/07/23T17:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,C1,ISTAN,Anciano con problemas auditivos
-
-//C2
 Practica de rehabilitacion,10,2019/07/23T08:00:00,2019/07/23T10:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,C2,ISTAN,Anciano con problemas auditivos		
 Visita del Doctor S,10,2019/07/23T10:00:00,2019/07/23T12:00:00,OTROS,Lourdes,Martin Mendez,C2,ISTAN,
 Practica 2,10,2019/07/23T12:00:00,2019/07/23T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,C2,ISTAN,Anciano con problemas auditivos	
@@ -168,16 +127,12 @@ Introduccion a CCFF,10,2019/07/23T15:00:00,2019/07/23T17:00:00,CICLOS,Borja,Rodr
 Visita del HU de la princesa,10,2019/07/23T17:00:00,2019/07/23T19:00:00,OTROS,Lourdes,Martin Mendez,C2,ISTAN,Anciano con problemas auditivos															
 Tecnicas de rehabilitacion,10,2019/07/23T21:00:00,2019/07/23T23:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,C2,ISTAN,Anciano con problemas auditivos			
 Practica 1,10,2019/07/23T19:00:00,2019/07/23T21:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,C2,ISTAN,Anciano con problemas auditivos	
-
-//C3
 ODONTODISPLASIA ,10,2019/07/23T08:00:00,2019/07/23T10:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,C3,ISTAN,Anciano con problemas auditivos
 TALLER,10,2019/07/23T10:30:00,2019/07/23T13:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,C3,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/23T14:00:00,2019/07/23T16:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,C3,ISTAN,Anciano con problemas auditivos
 Expl. Abdominal,10,2019/07/23T16:00:00,2019/07/23T18:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,C3,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/23T19:00:00,2019/07/23T21:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,C3,ISTAN,Anciano con problemas auditivos
 HHCC 1,10,2019/07/23T21:00:00,2019/07/23T23:00:00,ANATOMIA I,Lourdes,Martin Mendez,C3,ISTAN,Anciano con problemas auditivos
-
-//C4
 Practica 1,10,2019/07/23T12:00:00,2019/07/23T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,C4,ISTAN,Anciano con problemas auditivos	
 Practica de rehabilitacion,10,2019/07/23T15:00:00,2019/07/23T17:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,C4,ISTAN,Anciano con problemas auditivos	
 Tecnicas de rehabilitacion,10,2019/07/23T10:00:00,2019/07/23T12:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,C4,ISTAN,Anciano con problemas auditivos	
@@ -185,8 +140,6 @@ Visita del Doctor S,10,2019/07/23T17:00:00,2019/07/23T19:00:00,OTROS,Lourdes,Mar
 Practica 2,10,2019/07/23T21:00:00,2019/07/23T23:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,C4,ISTAN,Anciano con problemas auditivos	
 Visita del HU de la princesa,10,2019/07/23T08:00:00,2019/07/23T10:00:00,OTROS,Lourdes,Martin Mendez,C4,ISTAN,Anciano con problemas auditivos		
 Introduccion a CCFF,10,2019/07/23T19:00:00,2019/07/23T21:00:00,CICLOS,Borja,Rodriguez Vila,C4,ISTAN,Anciano con problemas auditivos
-
-//SC1
 TALLER,10,2019/07/23T19:00:00,2019/07/23T21:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,SC1,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/23T10:00:00,2019/07/23T12:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,SC1,ISTAN,Anciano con problemas auditivos
 HHCC 1,10,2019/07/23T08:00:00,2019/07/23T10:00:00,ANATOMIA I,Lourdes,Martin Mendez,SC1,ISTAN,Anciano con problemas auditivos
@@ -194,24 +147,17 @@ Escenario 1: CV y CNV,10,2019/07/23T15:00:00,2019/07/23T17:00:00,ANATOMIA Y FISI
 ODONTODISPLASIA ,10,2019/07/23T12:00:00,2019/07/23T14:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,SC1,ISTAN,Anciano con problemas auditivos
 Expl. Abdominal,10,2019/07/23T17:00:00,2019/07/23T19:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,SC1,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/23T21:00:00,2019/07/23T23:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,SC1,ISTAN,Anciano con problemas auditivos
-
-//SC2
 Practica de rehabilitacion,10,2019/07/23T08:00:00,2019/07/23T10:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,SC2,ISTAN,Anciano con problemas auditivos		
 Visita del Doctor S,10,2019/07/23T10:00:00,2019/07/23T12:00:00,OTROS,Lourdes,Martin Mendez,SC2,ISTAN,
 Practica 2,10,2019/07/23T12:00:00,2019/07/23T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,SC2,ISTAN,Anciano con problemas auditivos	
 Visita del HU de la princesa,10,2019/07/23T17:00:00,2019/07/23T19:00:00,OTROS,Lourdes,Martin Mendez,SC2,ISTAN,Anciano con problemas auditivos															
-Tecnicas de rehabilitacion,10,2019/07/23T21:00:00,2019/07/23T23:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,SC2,ISTAN,Anciano con problemas auditivos			
 Practica 1,10,2019/07/23T19:00:00,2019/07/23T21:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,SC2,ISTAN,Anciano con problemas auditivos	
-
-//SC3
 ODONTODISPLASIA ,10,2019/07/23T08:00:00,2019/07/23T10:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,SC3,ISTAN,Anciano con problemas auditivos
 TALLER,10,2019/07/23T10:30:00,2019/07/23T13:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,SC3,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/23T14:00:00,2019/07/23T16:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,SC3,ISTAN,Anciano con problemas auditivos
 Expl. Abdominal,10,2019/07/23T16:00:00,2019/07/23T18:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,SC3,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/23T19:00:00,2019/07/23T21:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,SC3,ISTAN,Anciano con problemas auditivos
 HHCC 1,10,2019/07/23T21:00:00,2019/07/23T23:00:00,ANATOMIA I,Lourdes,Martin Mendez,SC3,ISTAN,Anciano con problemas auditivos
-
-//SC4
 Expl. Abdominal,10,2019/07/23T08:00:00,2019/07/23T10:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,SC4,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/23T10:00:00,2019/07/23T12:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,SC4,ISTAN,Anciano con problemas auditivos
 Escenario 1: CV y CNV,10,2019/07/23T12:00:00,2019/07/23T14:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO II,Maria,Fuencisla Gilsanz,SC4,ISTAN,Anciano con problemas auditivos
@@ -219,8 +165,6 @@ HHCC 1,10,2019/07/23T19:00:00,2019/07/23T21:00:00,ANATOMIA I,Lourdes,Martin Mend
 SINDROME VANDE WOUDER,10,2019/07/23T17:00:00,2019/07/23T19:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,SC4,ISTAN,Anciano con problemas auditivos
 ODONTODISPLASIA ,10,2019/07/23T21:00:00,2019/07/23T23:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,SC4,ISTAN,Anciano con problemas auditivos
 TALLER,10,2019/07/23T15:00:00,2019/07/23T17:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,SC4,ISTAN,Anciano con problemas auditivos
-
-//Apoyo
 Practica de rehabilitacion,10,2019/07/23T08:00:00,2019/07/23T10:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,Apoyo,ISTAN,Anciano con problemas auditivos		
 Visita del Doctor S,10,2019/07/23T10:00:00,2019/07/23T12:00:00,OTROS,Lourdes,Martin Mendez,Apoyo,ISTAN,
 Practica 2,10,2019/07/23T12:00:00,2019/07/23T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,Apoyo,ISTAN,Anciano con problemas auditivos	
@@ -228,8 +172,6 @@ Introduccion a CCFF,10,2019/07/23T15:00:00,2019/07/23T17:00:00,CICLOS,Borja,Rodr
 Visita del HU de la princesa,10,2019/07/23T17:00:00,2019/07/23T19:00:00,OTROS,Lourdes,Martin Mendez,Apoyo,ISTAN,Anciano con problemas auditivos															
 Tecnicas de rehabilitacion,10,2019/07/23T21:00:00,2019/07/23T23:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,Apoyo,ISTAN,Anciano con problemas auditivos			
 Practica 1,10,2019/07/23T19:00:00,2019/07/23T21:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,Apoyo,ISTAN,Anciano con problemas auditivos	
-
-//Q048
 HHCC 1,10,2019/07/23T08:00:00,2019/07/23T10:00:00,ANATOMIA I,Lourdes,Martin Mendez,Q048,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/23T10:00:00,2019/07/23T12:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,Q048,ISTAN,Anciano con problemas auditivos
 ODONTODISPLASIA ,10,2019/07/23T12:00:00,2019/07/23T14:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,Q048,ISTAN,Anciano con problemas auditivos
@@ -237,31 +179,21 @@ TALLER,10,2019/07/23T19:00:00,2019/07/23T21:00:00,MECANISMOS Y PROCESOS DE ENFER
 Expl. Abdominal,10,2019/07/23T17:00:00,2019/07/23T19:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,Q048,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/23T21:00:00,2019/07/23T23:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,Q048,ISTAN,Anciano con problemas auditivos
 Escenario 1: CV y CNV,10,2019/07/23T15:00:00,2019/07/23T17:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO II,Maria,Fuencisla Gilsanz,Q048,ISTAN,Anciano con problemas auditivos
-
-//FC
 Practica de rehabilitacion,10,2019/07/23T08:00:00,2019/07/23T10:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,FC,ISTAN,Anciano con problemas auditivos		
 Visita del Doctor S,10,2019/07/23T10:00:00,2019/07/23T12:00:00,OTROS,Lourdes,Martin Mendez,FC,ISTAN,
 Practica 2,10,2019/07/23T12:00:00,2019/07/23T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,FC,ISTAN,Anciano con problemas auditivos	
 Visita del HU de la princesa,10,2019/07/23T17:00:00,2019/07/23T19:00:00,OTROS,Lourdes,Martin Mendez,FC,ISTAN,Anciano con problemas auditivos															
 Tecnicas de rehabilitacion,10,2019/07/23T21:00:00,2019/07/23T23:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,FC,ISTAN,Anciano con problemas auditivos			
 Practica 1,10,2019/07/23T19:00:00,2019/07/23T21:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,FC,ISTAN,Anciano con problemas auditivos	
-
-//FH
 Visita del HU de la princesa,10,2019/07/23T08:00:00,2019/07/23T10:00:00,OTROS,Lourdes,Martin Mendez,FH,ISTAN,Anciano con problemas auditivos															
 Tecnicas de rehabilitacion,10,2019/07/23T10:00:00,2019/07/23T12:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,FH,ISTAN,Anciano con problemas auditivos			
 Practica 1,10,2019/07/23T12:00:00,2019/07/23T14:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,FH,ISTAN,Anciano con problemas auditivos	
 Practica de rehabilitacion,10,2019/07/23T15:00:00,2019/07/23T17:00:00,TERAPIAS FISICAS BASICAS,Lourdes,Martin Mendez,FH,ISTAN,Anciano con problemas auditivos		
 Visita del Doctor S,10,2019/07/23T17:00:00,2019/07/23T19:00:00,OTROS,Lourdes,Martin Mendez,FH,ISTAN,
-Practica 2,10,2019/07/23T21:00:00,2019/07/23T23:00:00,TECNICAS INSTRUMENTALES,Lourdes,Martin Mendez,FH,ISTAN,Anciano con problemas auditivos	
 Introduccion a CCFF,10,2019/07/23T19:00:00,2019/07/23T21:00:00,CICLOS,Borja,Rodriguez Vila,FH,ISTAN,Anciano con problemas auditivos
-
-//Ambulanc
-
 ODONTODISPLASIA ,10,2019/07/23T08:00:00,2019/07/23T10:00:00,ANATOMIA Y FISIOLOGIA DEL CUERPO HUMANO I,Maria,Fuencisla Gilsanz,Ambulanc,ISTAN,Anciano con problemas auditivos
 TALLER,10,2019/07/23T10:30:00,2019/07/23T13:00:00,MECANISMOS Y PROCESOS DE ENFERMEDAD I,Borja,Rodriguez Vila,Ambulanc,ISTAN,Anciano con problemas auditivos
 SINDROME VANDE WOUDER,10,2019/07/23T14:00:00,2019/07/23T16:00:00,SENSACION PERCEPCION Y ATENCION,Emilia,Condes Moreno,Ambulanc,ISTAN,Anciano con problemas auditivos
 Expl. Abdominal,10,2019/07/23T16:00:00,2019/07/23T18:00:00,FISIOLOGIA I,Lourdes,Martin Mendez,Ambulanc,ISTAN,Anciano con problemas auditivos
 ENTR.ESCUCHA ACTIVA,10,2019/07/23T19:00:00,2019/07/23T21:00:00,IDIOMA MODERNO,Emilia,Condes Moreno,Ambulanc,ISTAN,Anciano con problemas auditivos
 HHCC 1,10,2019/07/23T21:00:00,2019/07/23T23:00:00,ANATOMIA I,Lourdes,Martin Mendez,Ambulanc,ISTAN,Anciano con problemas auditivos
-
-

@@ -37,21 +37,9 @@
                 <a class="badge badge-pill badge-info" style="color: white;" margin="auto" >Filtros: </a>
                 <div class="text-left">
                     <a class="badge badge-pill badge-primary" href="/eventos">Todos</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=1">Hospital</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=2">TT</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=3">C1</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=4">C2</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=5">C3</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=6">C4</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=7">SC1</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=8">SC2</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=9">SC3</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=10">SC4</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=11">Apoyo</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=12">Q048</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=13">FC</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=14">FH</a>
-                    <a class="badge badge-pill badge-primary" href="/eventos/?id_sala=15">Ambulancia</a>
+                    @foreach($salas as $sala)
+                       <a class="badge badge-pill badge-primary" href="/eventos/?id_sala={{ $sala->id }}">{{ $sala->tipo }}</a>
+                    @endforeach
                     <br>
                     <br>
                 </div>

@@ -24,6 +24,7 @@ class EventoController extends Controller
     
     public function index(){  
         
+        $salas = Sala::all();
         $eventos = new Evento;
         $consultas = [];
         
@@ -47,7 +48,7 @@ class EventoController extends Controller
         
         $eventos = $eventos->paginate(10)->appends($consultas);
         
-        return view('eventos.index')->with(compact('eventos'));
+        return view('eventos.index')->with(compact('eventos', 'salas'));
         
     }
     
