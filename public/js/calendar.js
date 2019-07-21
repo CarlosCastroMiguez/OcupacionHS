@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 buttonText: 'Día',
                 
             },
-            timeGridWeek: {
-                weekends: false,
+            dayGridMonth: {
+                eventLimitClick: "day",
             },
             
 
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'resourceTimeGridDay,timeGridWeek,dayGridMonth'
+            right: 'resourceTimeGridDay,dayGridMonth'
         },
         eventDrop: function (eventDropInfo) {
 

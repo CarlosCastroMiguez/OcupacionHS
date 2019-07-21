@@ -13,27 +13,27 @@ class ProfesoresTableSeeder extends Seeder
     public function run()
     {
         Profesor::create([
-            'nombre' => 'Borja',
-            'apellido' => 'Rodriguez',
-            'departamento' => 'departamento A'
+            'nombre' => 'Lourdes',
+            'apellido' => 'Martin Mendez',
+            'departamento' => 'Hospital Simulado'
             
         ]);
         Profesor::create([
-            'nombre' => 'Rodrigo',
-            'apellido' => 'Fernandez',
-            'departamento' => 'departamento B'
+            'nombre' => 'Maria',
+            'apellido' => 'Fuencisla Gilsanz',
+            'departamento' => 'Hospital Simulado'
             
         ]);
         Profesor::create([
-            'nombre' => 'Federico',
-            'apellido' => 'Gutierrez',
-            'departamento' => 'departamento C'
+            'nombre' => 'Emilia',
+            'apellido' => 'Condes Moreno',
+            'departamento' => 'Hospital Simulado'
             
         ]);
         Profesor::create([
             'nombre' => 'Borja',
             'apellido' => 'Rodriguez Vila',
-            'departamento' => 'departamento A'
+            'departamento' => 'TIC'
             
         ]);
     }

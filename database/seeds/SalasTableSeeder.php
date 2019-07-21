@@ -14,64 +14,64 @@ class SalasTableSeeder extends Seeder
     {
         Sala::create([
             'tipo' => 'Hospital',
-            'capacidad' => 10
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'TT',
-            'capacidad' => 10
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'C1',
-            'capacidad' => 10
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'C2',
-            'capacidad' => 10
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'C3',
-            'capacidad' => 20
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'C4',
-            'capacidad' => 20
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'SC1',
-            'capacidad' => 20
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'SC2',
-            'capacidad' => 30
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'SC3',
-            'capacidad' => 30
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'SC4',
-            'capacidad' => 30
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'Apoyo',
-            'capacidad' => 30
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'Q048',
-            'capacidad' => 30
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'FC',
             
-            'capacidad' => 30
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'FH',
-            'capacidad' => 30
+            'capacidad' => 40
         ]);
         Sala::create([
             'tipo' => 'Ambulanc',
-            'capacidad' => 30
+            'capacidad' => 40
         ]);
         
     }
